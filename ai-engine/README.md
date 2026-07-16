@@ -68,8 +68,3 @@ DATABASE_URL=postgresql://...      # provided by Backend team
 ENV=development
 ```
 
-## Contacts
-
-- AI Lead: _[fill in]_
-- Digital Twin sub-team lead: _[fill in]_
-- Backend integration point of contact: _[fill in]_
