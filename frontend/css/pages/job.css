@@ -1,0 +1,1028 @@
+/*====================================================
+        JOB RECOMMENDATIONS PAGE
+====================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#08111f;
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+
+}
+
+
+/*=========================================
+MAIN CONTENT
+=========================================*/.main-content{
+
+    margin-left:280px;
+
+    min-height:100vh;
+
+    padding:35px;
+
+}
+
+
+/*=========================================
+TOP NAVBAR
+=========================================*/.top-navbar{
+
+    margin-bottom:35px;
+
+}.top-navbar h1{
+
+    font-size:34px;
+
+    font-weight:700;
+
+}.top-navbar p{
+
+    margin-top:8px;
+
+    color:#9FAECC;
+
+}
+
+
+/*=========================================
+SUMMARY CARDS
+=========================================*/.job-summary{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}.summary-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+    backdrop-filter:blur(12px);
+
+    transition:.3s;
+
+}.summary-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#5B5FFB;
+
+    box-shadow:0 15px 35px rgba(91,95,251,.25);
+
+}.summary-card i{
+
+    font-size:38px;
+
+    color:#00D4FF;
+
+    margin-bottom:15px;
+
+}.summary-card h2{
+
+    font-size:30px;
+
+    margin-bottom:8px;
+
+}.summary-card p{
+
+    color:#9FAECC;
+
+}
+
+
+/*=========================================
+FILTER CARD
+=========================================*/.filter-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    backdrop-filter:blur(12px);
+
+    margin-bottom:40px;
+
+}.filter-card h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+}.filter-card h2 i{
+
+    color:#00D4FF;
+
+}
+
+
+/*=========================================
+FILTER GRID
+=========================================*/.filter-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}.form-group label{
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+}.form-group input,.form-group select{
+
+    background:#101B31;
+
+    color:#ffffff;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:10px;
+
+    padding:14px;
+
+    outline:none;
+
+    transition:.3s;
+
+}.form-group input:focus,.form-group select:focus{
+
+    border-color:#00D4FF;
+
+}
+
+
+/*=========================================
+FILTER BUTTONS
+=========================================*/.filter-actions{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:30px;
+
+}.ai-match-btn,.clear-filter-btn{
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:14px 28px;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}.ai-match-btn{
+
+    background:linear-gradient(135deg,#5B5FFB,#00D4FF);
+
+}.clear-filter-btn{
+
+    background:#DC2626;
+
+}.ai-match-btn:hover,.clear-filter-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+/*=========================================
+        AI RECOMMENDED JOBS
+=========================================*/.recommended-jobs{
+
+    margin-bottom:40px;
+
+}.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}.section-header h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:28px;
+
+}.section-header h2 i{
+
+    color:#00D4FF;
+
+}.job-count{
+
+    background:#101B31;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    color:#00D4FF;
+
+    font-weight:600;
+
+}
+
+
+/*=========================================
+JOB LIST
+=========================================*/.job-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+
+/*=========================================
+JOB CARD
+=========================================*/.job-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    backdrop-filter:blur(12px);
+
+    transition:.35s;
+
+}.job-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#5B5FFB;
+
+    box-shadow:0 15px 35px rgba(91,95,251,.20);
+
+}
+
+
+/*=========================================
+JOB TOP
+=========================================*/.job-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}.company-logo{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #5B5FFB,
+
+        #00D4FF
+
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#ffffff;
+
+    font-size:30px;
+
+    margin-right:20px;
+
+}.job-info{
+
+    flex:1;
+
+}.job-info h3{
+
+    font-size:24px;
+
+    margin-bottom:8px;
+
+}.job-info p{
+
+    color:#9FAECC;
+
+}
+
+
+/*=========================================
+MATCH BADGE
+=========================================*/.match-badge{
+
+    background:#16A34A;
+
+    color:#ffffff;
+
+    padding:12px 18px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    font-size:15px;
+
+}
+
+
+/*=========================================
+JOB DETAILS
+=========================================*/.job-details{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+    margin-bottom:25px;
+
+}.job-details span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#DCE4FF;
+
+}.job-details i{
+
+    color:#00D4FF;
+
+}
+
+
+/*=========================================
+SKILL TAGS
+=========================================*/.skills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+}.skills span{
+
+    background:#101B31;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    color:#00D4FF;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}.skills span:hover{
+
+    background:#5B5FFB;
+
+    color:#ffffff;
+
+}
+
+
+/*=========================================
+AI ANALYSIS
+=========================================*/.ai-analysis{
+
+    background:#101B31;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    margin-bottom:25px;
+
+}.ai-analysis h4{
+
+    color:#00D4FF;
+
+    margin-bottom:12px;
+
+}.ai-analysis p{
+
+    color:#DCE4FF;
+
+    line-height:1.8;
+
+}
+
+
+/*=========================================
+ACTION BUTTONS
+=========================================*/.job-actions{
+
+    display:flex;
+
+    gap:20px;
+
+}.details-btn,.apply-btn{
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:14px 28px;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}.details-btn{
+
+    background:#2563EB;
+
+}.apply-btn{
+
+    background:#16A34A;
+
+}.details-btn:hover,.apply-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+
+}
+/*=========================================
+        CAREER INSIGHTS
+=========================================*/.career-insights{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+    margin-bottom:40px;
+
+}.insight-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    backdrop-filter:blur(12px);
+
+    transition:.3s;
+
+}.insight-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#5B5FFB;
+
+    box-shadow:0 15px 35px rgba(91,95,251,.20);
+
+}.insight-card h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+}.insight-card h2 i{
+
+    color:#00D4FF;
+
+}
+
+
+/*=========================================
+        SKILL GAP
+=========================================*/.skill-gap{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}.skill{
+
+    display:grid;
+
+    grid-template-columns:130px 1fr 60px;
+
+    align-items:center;
+
+    gap:15px;
+
+}.skill span{
+
+    font-weight:600;
+
+}.skill strong{
+
+    text-align:right;
+
+    color:#00D4FF;
+
+}.skill progress{
+
+    width:100%;
+
+    height:12px;
+
+    appearance:none;
+
+}.skill progress::-webkit-progress-bar{
+
+    background:#1E293B;
+
+    border-radius:20px;
+
+}.skill progress::-webkit-progress-value{
+
+    background:linear-gradient(
+
+        90deg,
+
+        #5B5FFB,
+
+        #00D4FF
+
+    );
+
+    border-radius:20px;
+
+}
+
+
+/*=========================================
+        CERTIFICATIONS
+=========================================*/.insight-card ul{
+
+    list-style:none;
+
+}.insight-card ul li{
+
+    background:#101B31;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin-bottom:12px;
+
+    transition:.3s;
+
+}.insight-card ul li:hover{
+
+    background:#1A2845;
+
+    padding-left:22px;
+
+}
+
+
+/*=========================================
+        ROADMAP
+=========================================*/.insight-card ol{
+
+    padding-left:22px;
+
+}.insight-card ol li{
+
+    margin-bottom:15px;
+
+    color:#DCE4FF;
+
+    line-height:1.7;
+
+}
+
+
+/*=========================================
+        READINESS
+=========================================*/.readiness-section{
+
+    margin-bottom:40px;
+
+}.readiness-card{
+
+    background:linear-gradient(
+
+        135deg,
+
+        rgba(91,95,251,.20),
+
+        rgba(0,212,255,.15)
+
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:40px;
+
+    text-align:center;
+
+}.readiness-card h2{
+
+    margin-bottom:25px;
+
+}.readiness-card h2 i{
+
+    color:#00D4FF;
+
+}.readiness-score h1{
+
+    font-size:70px;
+
+    color:#00D4FF;
+
+    margin-bottom:10px;
+
+}.readiness-score p{
+
+    font-size:18px;
+
+    color:#DCE4FF;
+
+}
+
+
+/*=========================================
+        PAGE ACTIONS
+=========================================*/.page-actions{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:35px;
+
+}.refresh-btn,.download-btn,.dashboard-btn{
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:15px 30px;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}.refresh-btn{
+
+    background:#5B5FFB;
+
+}.download-btn{
+
+    background:#16A34A;
+
+}.dashboard-btn{
+
+    background:#2563EB;
+
+}.refresh-btn:hover,.download-btn:hover,.dashboard-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+
+}
+/*=========================================
+        RESPONSIVE DESIGN
+=========================================*/
+
+@media(max-width:1400px){.job-summary{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:1200px){.filter-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }.career-insights{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:992px){.main-content{
+
+        padding:25px;
+
+    }.job-top{
+
+        flex-wrap:wrap;
+
+        gap:20px;
+
+    }.match-badge{
+
+        margin-top:10px;
+
+    }.job-actions{
+
+        flex-direction:column;
+
+    }.details-btn,.apply-btn{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:768px){.job-summary{
+
+        grid-template-columns:1fr;
+
+    }.filter-grid{
+
+        grid-template-columns:1fr;
+
+    }.page-actions{
+
+        flex-direction:column;
+
+    }.refresh-btn,.download-btn,.dashboard-btn{
+
+        width:100%;
+
+    }.skill{
+
+        grid-template-columns:1fr;
+
+        gap:8px;
+
+    }
+
+}
+
+@media(max-width:576px){.main-content{
+
+        padding:18px;
+
+    }.top-navbar h1{
+
+        font-size:28px;
+
+    }.summary-card{
+
+        padding:20px;
+
+    }.job-card{
+
+        padding:20px;
+
+    }.company-logo{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:24px;
+
+    }.job-info h3{
+
+        font-size:20px;
+
+    }
+
+}
+
+
+/*=========================================
+        CUSTOM SCROLLBAR
+=========================================*/::-webkit-scrollbar{
+
+    width:10px;
+
+}::-webkit-scrollbar-track{
+
+    background:#08111f;
+
+}::-webkit-scrollbar-thumb{
+
+    background:#5B5FFB;
+
+    border-radius:20px;
+
+}::-webkit-scrollbar-thumb:hover{
+
+    background:#00D4FF;
+
+}
+
+
+/*=========================================
+        FADE ANIMATION
+=========================================*/.summary-card,.filter-card,.job-card,.insight-card,.readiness-card{
+
+    animation:fadeUp.8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*=========================================
+        BUTTON ICONS
+=========================================*/.ai-match-btn i,.clear-filter-btn i,.details-btn i,.apply-btn i,.refresh-btn i,.download-btn i,.dashboard-btn i{
+
+    margin-right:8px;
+
+}
+
+
+/*=========================================
+        INPUT PLACEHOLDER
+=========================================*/
+
+input::placeholder{
+
+    color:#94A3B8;
+
+}
+
+
+/*=========================================
+        TEXT SELECTION
+=========================================*/::selection{
+
+    background:#5B5FFB;
+
+    color:#ffffff;
+
+}
+
+
+/*=========================================
+        CARD TRANSITIONS
+=========================================*/.summary-card,.filter-card,.job-card,.insight-card,.readiness-card{
+
+    transition:all.3s ease;
+
+}.summary-card:hover,.filter-card:hover,.job-card:hover,.insight-card:hover,.readiness-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+/*=========================================
+        GLOW EFFECTS
+=========================================*/.company-logo{
+
+    box-shadow:0 0 25px rgba(91,95,251,.35);
+
+}.readiness-score h1{
+
+    text-shadow:0 0 20px rgba(0,212,255,.45);
+
+}.ai-match-btn:hover{
+
+    box-shadow:0 0 25px rgba(0,212,255,.35);
+
+}
+
+
+/*=========================================
+        PROGRESS BAR SMOOTH
+=========================================*/
+
+progress{
+
+    border:none;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+
+/*=========================================
+        END OF FILE
+=========================================*/
