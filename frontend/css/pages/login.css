@@ -1,0 +1,2100 @@
+/*==================================================
+        XTRAGRAD AI LOGIN PAGE
+        login.css - Part 1
+==================================================*/
+
+
+/*==========================
+GOOGLE FONTS
+===========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+/*==========================
+RESET
+===========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:#050816;
+
+    color:#fff;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+    min-height:100vh;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    outline:none;
+
+}
+
+input{
+
+    border:none;
+
+    outline:none;
+
+}
+
+img{
+
+    max-width:100%;
+
+}.container{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+
+/*==========================
+BACKGROUND
+===========================*/
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:650px;
+
+    height:650px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,#5B5FFB40,transparent);
+
+    top:-220px;
+
+    left:-180px;
+
+    z-index:-3;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:600px;
+
+    height:600px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,#00D4FF30,transparent);
+
+    bottom:-250px;
+
+    right:-180px;
+
+    z-index:-3;
+
+}
+
+
+/*==========================
+GRID BACKGROUND
+===========================*/.grid-bg{
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+
+    background-size:45px 45px;
+
+    z-index:-4;
+
+}
+
+
+/*==========================
+FLOATING CIRCLES
+===========================*/.bg-circle{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    filter:blur(100px);
+
+    opacity:.45;
+
+    animation:floatBlob 15s infinite ease-in-out;
+
+    z-index:-2;
+
+}.circle1{
+
+    width:300px;
+
+    height:300px;
+
+    background:#5B5FFB;
+
+    left:10%;
+
+    top:20%;
+
+}.circle2{
+
+    width:250px;
+
+    height:250px;
+
+    background:#00D4FF;
+
+    right:8%;
+
+    top:15%;
+
+    animation-delay:3s;
+
+}.circle3{
+
+    width:280px;
+
+    height:280px;
+
+    background:#7B61FF;
+
+    bottom:5%;
+
+    left:45%;
+
+    animation-delay:6s;
+
+}
+
+@keyframes floatBlob{
+
+    0%{
+
+        transform:translate(0,0);
+
+    }
+
+    25%{
+
+        transform:translate(80px,-60px);
+
+    }
+
+    50%{
+
+        transform:translate(-50px,60px);
+
+    }
+
+    75%{
+
+        transform:translate(70px,30px);
+
+    }
+
+    100%{
+
+        transform:translate(0,0);
+
+    }
+
+}
+
+
+/*==========================
+LOGIN PAGE
+===========================*/.login-page{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px 0;
+
+}.login-wrapper{
+
+    width:92%;
+
+    max-width:1450px;
+
+    display:grid;
+
+    grid-template-columns:1.1fr.9fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+
+/*==========================
+LEFT SIDE
+===========================*/.login-left{
+
+    animation:fadeLeft 1s ease;
+
+}.brand h1{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:56px;
+
+    font-weight:800;
+
+    margin-bottom:15px;
+
+}.brand span{
+
+    color:#00D4FF;
+
+}.brand p{
+
+    color:#b6c2dd;
+
+    font-size:18px;
+
+    margin-bottom:45px;
+
+}.login-left h2{
+
+    font-size:48px;
+
+    font-family:'Poppins',sans-serif;
+
+    margin-bottom:20px;
+
+}.subtitle{
+
+    color:#aeb9d5;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:45px;
+
+}
+
+
+/*==========================
+FEATURE LIST
+===========================*/.features{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}.feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:20px;
+
+    border-radius:18px;
+
+    transition:.4s;
+
+}.feature:hover{
+
+    transform:translateX(12px);
+
+    border-color:#5B5FFB;
+
+}.feature.icon{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#5B5FFB,#7B61FF);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}.feature.icon i{
+
+    font-size:28px;
+
+    color:#fff;
+
+}.feature h3{
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+}.feature p{
+
+    color:#b8c3dd;
+
+    line-height:1.6;
+
+}
+
+
+/*==========================
+STATS
+===========================*/.stats{
+
+    display:flex;
+
+    gap:25px;
+
+    margin-top:45px;
+
+}.stats div{
+
+    flex:1;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    text-align:center;
+
+}.stats h2{
+
+    font-size:34px;
+
+    color:#00D4FF;
+
+    margin-bottom:8px;
+
+    font-family:'Poppins',sans-serif;
+
+}.stats p{
+
+    color:#aeb9d5;
+
+}
+
+
+/*==========================
+ANIMATION
+===========================*/
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/*==================================================
+        LOGIN CARD
+==================================================*/.login-right{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    animation:fadeRight 1s ease;
+
+}.login-card{
+
+    width:100%;
+
+    max-width:520px;
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(25px);
+
+    -webkit-backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.45),
+    0 0 40px rgba(91,95,251,.15);
+
+}.login-header{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}.login-header h2{
+
+    font-size:38px;
+
+    font-family:'Poppins',sans-serif;
+
+    margin-bottom:12px;
+
+}.login-header p{
+
+    color:#aab6d4;
+
+}
+
+
+/*==================================================
+INPUTS
+==================================================*/.input-group{
+
+    margin-bottom:25px;
+
+}.input-group label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+}.input-box{
+
+    position:relative;
+
+}.input-box i{
+
+    position:absolute;
+
+    left:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#00D4FF;
+
+    font-size:18px;
+
+}.input-box input{
+
+    width:100%;
+
+    height:60px;
+
+    background:#111827;
+
+    color:#fff;
+
+    border:1px solid transparent;
+
+    border-radius:15px;
+
+    padding-left:55px;
+
+    padding-right:60px;
+
+    font-size:16px;
+
+    transition:.35s;
+
+}.input-box input:focus{
+
+    border-color:#5B5FFB;
+
+    box-shadow:0 0 25px rgba(91,95,251,.25);
+
+}.input-box input::placeholder{
+
+    color:#8793b2;
+
+}
+
+
+/*==================================================
+PASSWORD BUTTON
+==================================================*/.toggle-password{
+
+    position:absolute;
+
+    right:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:transparent;
+
+    color:#cfd6e8;
+
+    transition:.3s;
+
+}.toggle-password:hover{
+
+    background:#1f2937;
+
+    color:#00D4FF;
+
+}
+
+
+/*==================================================
+REMEMBER & FORGOT
+==================================================*/.login-options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:12px 0 30px;
+
+    font-size:15px;
+
+}.login-options label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#c7d1e9;
+
+}.login-options input{
+
+    accent-color:#5B5FFB;
+
+}.login-options a{
+
+    color:#00D4FF;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}.login-options a:hover{
+
+    color:#7B61FF;
+
+}
+
+
+/*==================================================
+LOGIN BUTTON
+==================================================*/.login-btn{
+
+    width:100%;
+
+    height:60px;
+
+    border-radius:15px;
+
+    background:linear-gradient(
+    135deg,
+    #5B5FFB,
+    #7B61FF);
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    overflow:hidden;
+
+    position:relative;
+
+}.login-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 35px rgba(91,95,251,.35);
+
+}.login-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-100%;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.15);
+
+    transition:.5s;
+
+}.login-btn:hover::before{
+
+    left:100%;
+
+}
+
+
+/*==================================================
+DIVIDER
+==================================================*/.divider{
+
+    display:flex;
+
+    align-items:center;
+
+    margin:35px 0;
+
+}.divider::before,.divider::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:rgba(255,255,255,.08);
+
+}.divider span{
+
+    margin:0 18px;
+
+    color:#98a6c8;
+
+    font-size:14px;
+
+}
+
+
+/*==================================================
+SOCIAL LOGIN
+==================================================*/.social-login{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}.google-btn,.linkedin-btn{
+
+    width:100%;
+
+    height:58px;
+
+    border-radius:15px;
+
+    background:#111827;
+
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    transition:.35s;
+
+}.google-btn:hover,.linkedin-btn:hover{
+
+    background:#1b2334;
+
+    border-color:#5B5FFB;
+
+    transform:translateY(-4px);
+
+}.google-btn img,.linkedin-btn img{
+
+    width:24px;
+
+    height:24px;
+
+}
+
+
+/*==================================================
+SIGNUP LINK
+==================================================*/.signup-link{
+
+    text-align:center;
+
+    margin-top:35px;
+
+}.signup-link p{
+
+    color:#aab6d4;
+
+}.signup-link a{
+
+    color:#00D4FF;
+
+    font-weight:700;
+
+    margin-left:6px;
+
+}.signup-link a:hover{
+
+    color:#7B61FF;
+
+}
+
+
+/*==================================================
+RIGHT SIDE ANIMATION
+==================================================*/
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+/*==================================================
+            AI SECTION
+==================================================*/.ai-section{
+
+    padding:120px 0;
+
+    position:relative;
+
+}.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}.section-title h2{
+
+    font-size:48px;
+
+    font-family:'Poppins',sans-serif;
+
+    margin-bottom:15px;
+
+}.section-title p{
+
+    color:#aeb9d5;
+
+    font-size:18px;
+
+}.ai-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}.ai-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}.ai-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    background:radial-gradient(circle,
+    rgba(91,95,251,.35),transparent);
+
+    right:-120px;
+
+    top:-120px;
+
+    transition:.5s;
+
+}.ai-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#5B5FFB;
+
+    box-shadow:
+    0 25px 60px rgba(91,95,251,.20);
+
+}.ai-card:hover::before{
+
+    transform:scale(1.4);
+
+}.card-icon{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+    135deg,
+    #5B5FFB,
+    #00D4FF);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}.card-icon i{
+
+    font-size:30px;
+
+    color:white;
+
+}.ai-card h3{
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}.ai-card p{
+
+    color:#b7c2dd;
+
+    line-height:1.8;
+
+}
+
+
+/*==================================================
+FOOTER
+==================================================*/
+
+footer{
+
+    padding:80px 0 30px;
+
+    background:#03050f;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}.footer-content{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    gap:40px;
+
+    align-items:center;
+
+}.footer-logo h2{
+
+    font-size:36px;
+
+    margin-bottom:15px;
+
+    font-family:'Poppins',sans-serif;
+
+}.footer-logo span{
+
+    color:#00D4FF;
+
+}.footer-logo p{
+
+    color:#aeb9d5;
+
+    line-height:1.8;
+
+}.footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}.footer-links a{
+
+    color:#cbd4e8;
+
+    transition:.3s;
+
+}.footer-links a:hover{
+
+    color:#00D4FF;
+
+    transform:translateX(10px);
+
+}.footer-social{
+
+    display:flex;
+
+    gap:18px;
+
+}.footer-social a{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    background:#101827;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    transition:.35s;
+
+}.footer-social a:hover{
+
+    background:#5B5FFB;
+
+    transform:translateY(-8px) rotate(360deg);
+
+}
+
+footer hr{
+
+    width:90%;
+
+    margin:45px auto 25px;
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}.copyright{
+
+    text-align:center;
+
+}.copyright p{
+
+    color:#95a2c5;
+
+}
+
+
+/*==================================================
+LOADER
+==================================================*/.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#050816;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    transition:.5s;
+
+}.loader-logo{
+
+    text-align:center;
+
+}.loader-logo h2{
+
+    font-size:48px;
+
+    margin-bottom:25px;
+
+    font-family:'Poppins',sans-serif;
+
+}.loader-logo span{
+
+    color:#00D4FF;
+
+}.loader-spinner{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    border:6px solid rgba(255,255,255,.15);
+
+    border-top:6px solid #00D4FF;
+
+    animation:spin 1s linear infinite;
+
+}.loader-logo p{
+
+    margin-top:25px;
+
+    color:#b5c0d8;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/*==================================================
+TOAST
+==================================================*/.toast{
+
+    position:fixed;
+
+    right:30px;
+
+    top:30px;
+
+    background:#16a34a;
+
+    color:white;
+
+    padding:18px 25px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    opacity:0;
+
+    transform:translateY(-30px);
+
+    transition:.35s;
+
+    z-index:9999;
+
+}.toast.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}.toast i{
+
+    font-size:20px;
+
+}
+
+
+/*==================================================
+FLOATING ICONS
+==================================================*/.floating-icons{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}.floating-icons i{
+
+    position:absolute;
+
+    color:rgba(255,255,255,.06);
+
+    font-size:40px;
+
+    animation:floatIcons 16s linear infinite;
+
+}.floating-icons i:nth-child(1){
+
+    top:10%;
+
+    left:8%;
+
+}.floating-icons i:nth-child(2){
+
+    top:25%;
+
+    right:12%;
+
+}.floating-icons i:nth-child(3){
+
+    bottom:18%;
+
+    left:12%;
+
+}.floating-icons i:nth-child(4){
+
+    bottom:12%;
+
+    right:10%;
+
+}.floating-icons i:nth-child(5){
+
+    top:55%;
+
+    left:45%;
+
+}.floating-icons i:nth-child(6){
+
+    top:75%;
+
+    right:35%;
+
+}
+
+@keyframes floatIcons{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-30px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+        XTRAGRAD AI LOGIN
+        PART 4 - PREMIUM EFFECTS
+==================================================*/
+
+
+/*==========================
+PARTICLES
+===========================*/.particles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-2;
+
+}.particles span{
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    background:#00D4FF;
+
+    border-radius:50%;
+
+    opacity:.35;
+
+    animation:particleFloat 18s linear infinite;
+
+}.particles span:nth-child(1){
+
+    top:10%;
+    left:10%;
+
+}.particles span:nth-child(2){
+
+    top:18%;
+    right:18%;
+
+    animation-delay:2s;
+
+}.particles span:nth-child(3){
+
+    top:40%;
+    left:20%;
+
+    animation-delay:5s;
+
+}.particles span:nth-child(4){
+
+    top:65%;
+    right:15%;
+
+    animation-delay:3s;
+
+}.particles span:nth-child(5){
+
+    bottom:18%;
+    left:30%;
+
+    animation-delay:7s;
+
+}.particles span:nth-child(6){
+
+    bottom:10%;
+    right:22%;
+
+    animation-delay:9s;
+
+}.particles span:nth-child(7){
+
+    top:35%;
+    right:40%;
+
+    animation-delay:11s;
+
+}.particles span:nth-child(8){
+
+    bottom:40%;
+    left:60%;
+
+    animation-delay:6s;
+
+}.particles span:nth-child(9){
+
+    top:78%;
+    left:75%;
+
+    animation-delay:13s;
+
+}.particles span:nth-child(10){
+
+    top:55%;
+    left:8%;
+
+    animation-delay:15s;
+
+}
+
+
+@keyframes particleFloat{
+
+    0%{
+
+        transform:translateY(0) scale(1);
+
+        opacity:.2;
+
+    }
+
+    50%{
+
+        transform:translateY(-120px) scale(1.6);
+
+        opacity:.8;
+
+    }
+
+    100%{
+
+        transform:translateY(-240px) scale(.8);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/*==========================
+CARD GLOW
+===========================*/.login-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(91,95,251,.35),transparent);
+
+    top:-120px;
+
+    right:-120px;
+
+    transition:.5s;
+
+}.login-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:200px;
+
+    height:200px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(0,212,255,.20),transparent);
+
+    bottom:-120px;
+
+    left:-120px;
+
+}.login-card:hover::before{
+
+    transform:scale(1.5);
+
+}
+
+
+/*==========================
+INPUT HOVER
+===========================*/.input-box:hover input{
+
+    border-color:#00D4FF;
+
+}.input-box:hover i{
+
+    color:#7B61FF;
+
+}
+
+
+/*==========================
+FEATURE HOVER
+===========================*/.feature{
+
+    cursor:pointer;
+
+}.feature:hover{
+
+    box-shadow:
+
+    0 18px 35px rgba(91,95,251,.18);
+
+}
+
+
+/*==========================
+STATS EFFECT
+===========================*/.stats div{
+
+    transition:.35s;
+
+}.stats div:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#5B5FFB;
+
+    box-shadow:
+
+    0 15px 35px rgba(91,95,251,.25);
+
+}
+
+
+/*==========================
+AI CARD EFFECT
+===========================*/.ai-card{
+
+    cursor:pointer;
+
+}.ai-card:hover.card-icon{
+
+    transform:rotate(12deg) scale(1.1);
+
+}.card-icon{
+
+    transition:.4s;
+
+}
+
+
+/*==========================
+BUTTON RIPPLE
+===========================*/.login-btn{
+
+    overflow:hidden;
+
+}.login-btn.ripple{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.35);
+
+    transform:scale(0);
+
+    animation:ripple.7s linear;
+
+}
+
+@keyframes ripple{
+
+    to{
+
+        transform:scale(4);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/*==========================
+SOCIAL BUTTON EFFECT
+===========================*/.google-btn,.linkedin-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}.google-btn::before,.linkedin-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-100%;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.08);
+
+    transition:.5s;
+
+}.google-btn:hover::before,.linkedin-btn:hover::before{
+
+    left:100%;
+
+}
+
+
+/*==========================
+GRADIENT TEXT
+===========================*/.gradient-text{
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #00D4FF,
+    #5B5FFB,
+    #7B61FF);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+
+/*==========================
+SELECTION
+===========================*/::selection{
+
+    background:#5B5FFB;
+
+    color:white;
+
+}
+
+
+/*==========================
+SCROLLBAR
+===========================*/::-webkit-scrollbar{
+
+    width:10px;
+
+}::-webkit-scrollbar-track{
+
+    background:#070b18;
+
+}::-webkit-scrollbar-thumb{
+
+    background:#5B5FFB;
+
+    border-radius:20px;
+
+}::-webkit-scrollbar-thumb:hover{
+
+    background:#00D4FF;
+
+}
+
+
+/*==========================
+SMOOTH TRANSITIONS
+===========================*/
+
+*{
+
+    transition:
+
+    background.35s,
+
+    color.35s,
+
+    border.35s,
+
+    transform.35s,
+
+    box-shadow.35s;
+
+}
+
+
+/*==========================
+UTILITY
+===========================*/.text-center{
+
+    text-align:center;
+
+}.mt-2{
+
+    margin-top:20px;
+
+}.mt-3{
+
+    margin-top:30px;
+
+}.mb-2{
+
+    margin-bottom:20px;
+
+}.mb-3{
+
+    margin-bottom:30px;
+
+}
+
+/*==================================================
+        LOGIN.CSS PART 5
+        RESPONSIVE DESIGN
+==================================================*/
+
+
+/*==========================
+1400px
+===========================*/
+
+@media(max-width:1400px){.login-wrapper{
+
+    width:95%;
+
+}.brand h1{
+
+    font-size:48px;
+
+}.login-left h2{
+
+    font-size:42px;
+
+}
+
+}
+
+
+/*==========================
+1200px
+===========================*/
+
+@media(max-width:1200px){.login-wrapper{
+
+    grid-template-columns:1fr;
+
+    gap:60px;
+
+}.login-left{
+
+    text-align:center;
+
+}.features{
+
+    max-width:700px;
+
+    margin:auto;
+
+}.stats{
+
+    justify-content:center;
+
+}.login-card{
+
+    max-width:650px;
+
+    margin:auto;
+
+}.footer-content{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}.footer-links{
+
+    flex-direction:row;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}.footer-social{
+
+    justify-content:center;
+
+}.ai-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+/*==========================
+992px
+===========================*/
+
+@media(max-width:992px){.login-page{
+
+    padding:80px 0;
+
+}.brand h1{
+
+    font-size:42px;
+
+}.login-left h2{
+
+    font-size:36px;
+
+}.subtitle{
+
+    font-size:16px;
+
+}.ai-grid{
+
+    grid-template-columns:1fr;
+
+}.section-title h2{
+
+    font-size:38px;
+
+}.stats{
+
+    flex-wrap:wrap;
+
+}.stats div{
+
+    min-width:180px;
+
+}
+
+}
+
+
+/*==========================
+768px
+===========================*/
+
+@media(max-width:768px){.login-wrapper{
+
+    width:92%;
+
+}.login-card{
+
+    padding:35px;
+
+}.brand h1{
+
+    font-size:36px;
+
+}.login-left h2{
+
+    font-size:30px;
+
+}.feature{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}.feature.icon{
+
+    margin-bottom:15px;
+
+}.stats{
+
+    flex-direction:column;
+
+}.login-options{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+}.section-title h2{
+
+    font-size:32px;
+
+}.section-title p{
+
+    font-size:15px;
+
+}.footer-logo h2{
+
+    font-size:30px;
+
+}.loader-logo h2{
+
+    font-size:38px;
+
+}
+
+}
+
+
+/*==========================
+576px
+===========================*/
+
+@media(max-width:576px){.login-card{
+
+    padding:25px;
+
+    border-radius:20px;
+
+}.login-header h2{
+
+    font-size:30px;
+
+}.brand h1{
+
+    font-size:32px;
+
+}.login-left h2{
+
+    font-size:28px;
+
+}.subtitle{
+
+    font-size:15px;
+
+}.input-box input{
+
+    height:55px;
+
+    font-size:15px;
+
+}.login-btn{
+
+    height:55px;
+
+    font-size:16px;
+
+}.google-btn,.linkedin-btn{
+
+    height:55px;
+
+    font-size:15px;
+
+}.ai-card{
+
+    padding:25px;
+
+}.card-icon{
+
+    width:65px;
+
+    height:65px;
+
+}.card-icon i{
+
+    font-size:24px;
+
+}.ai-card h3{
+
+    font-size:21px;
+
+}.footer-links{
+
+    gap:18px;
+
+}.footer-links a{
+
+    font-size:15px;
+
+}.toast{
+
+    right:15px;
+
+    left:15px;
+
+    top:20px;
+
+}
+
+}
+
+
+/*==========================
+400px
+===========================*/
+
+@media(max-width:400px){.login-wrapper{
+
+    width:95%;
+
+}.login-card{
+
+    padding:20px;
+
+}.brand h1{
+
+    font-size:28px;
+
+}.login-left h2{
+
+    font-size:24px;
+
+}.login-header h2{
+
+    font-size:26px;
+
+}.feature{
+
+    padding:18px;
+
+}.stats h2{
+
+    font-size:28px;
+
+}.section-title h2{
+
+    font-size:28px;
+
+}.footer-logo h2{
+
+    font-size:26px;
+
+}.footer-social a{
+
+    width:45px;
+
+    height:45px;
+
+}
+
+}
+
+
+/*==========================
+LARGE SCREENS
+===========================*/
+
+@media(min-width:1600px){.login-wrapper{
+
+    max-width:1650px;
+
+}.brand h1{
+
+    font-size:72px;
+
+}.login-left h2{
+
+    font-size:60px;
+
+}.login-card{
+
+    max-width:600px;
+
+}.ai-grid{
+
+    gap:40px;
+
+}
+
+}
+
+
+/*==========================
+LANDSCAPE PHONES
+===========================*/
+
+@media(max-height:500px) and (orientation:landscape){.login-page{
+
+    padding:60px 0;
+
+}.login-wrapper{
+
+    gap:40px;
+
+}
+
+}
+
+
+/*==========================
+END OF FILE
+===========================*/
