@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"content="width=device-width, initial-scale=1.0">
+
+  <title>XTRAGRAD AI | Analytics</title>
+
+  <!-- Google Font -->
+
+  <link rel="preconnect"href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"href="https://fonts.gstatic.com"crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- CSS -->
+
+
+
+
+  <link rel="stylesheet" href="./css/components/sidebar.css">
+
+  <link rel="stylesheet" href="./css/pages/ai-analytics.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Chart.js -->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+  <!-- ======================================
+                SIDEBAR
+    ======================================= -->
+
+  <aside class="sidebar">
+
+      <div class="logo">
+
+          <h1>XTRAGRAD <span>AI</span></h1>
+
+      </div>
+
+      <ul>
+
+          <li><a href="./student-dashboard.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+
+          <li><a href="./resume_builder.html"><i class="fa-solid fa-file-lines"></i><span>Resume Builder</span></a></li>
+
+          <li><a href="./learning-roadmap.html"><i class="fa-solid fa-road"></i><span>Learning Roadmap</span></a></li>
+
+          <li><a href="./project-generator.html"><i class="fa-solid fa-diagram-project"></i><span>Project Generator</span></a></li>
+
+          <li><a href="./coding-practice.html"><i class="fa-solid fa-code"></i><span>Coding Practice</span></a></li>
+
+          <li><a href="./mock-interview.html"><i class="fa-solid fa-microphone"></i><span>Mock Interview</span></a></li>
+
+          <li><a href="./job.html"><i class="fa-solid fa-briefcase"></i><span>Job Recommendations</span></a></li>
+
+          <li><a href="assistant.html"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a></li>
+
+          <li>
+
+              <a class="active" href="ai-analytics.html">
+
+                  <i class="fa-solid fa-chart-line"></i>
+
+                  <span>AI Analytics</span>
+
+              </a>
+
+          </li>
+
+          <li><a href="settings.html"><i class="fa-solid fa-gear"></i><span>Settings</span></a></li>
+
+          <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></li>
+
+      </ul>
+
+  </aside>
+
+  <!-- ======================================
+                MAIN CONTENT
+    ======================================= -->
+
+  <main class="main-content">
+
+      <!-- Header -->
+
+      <header class="top-navbar">
+
+          <div>
+
+              <h1>
+
+                   AI Analytics Dashboard
+
+                </h1>
+
+              <p>
+
+                  Monitor your learning, coding, interview, and placement progress.
+
+                </p>
+
+          </div>
+
+          <button class="report-btn">
+
+              <i class="fa-solid fa-download"></i>
+
+              Download Report
+
+            </button>
+
+      </header>
+
+      <!-- ======================================
+                KPI CARDS
+        ======================================= -->
+
+      <section class="analytics-cards">
+
+          <div class="analytics-card">
+
+              <i class="fa-solid fa-file-lines"></i>
+
+              <h2 id="resumeScore">92%</h2>
+
+              <p>Resume Score</p>
+
+          </div>
+
+          <div class="analytics-card">
+
+              <i class="fa-solid fa-code"></i>
+
+              <h2 id="codingScore">84%</h2>
+
+              <p>Coding Score</p>
+
+          </div>
+
+          <div class="analytics-card">
+
+              <i class="fa-solid fa-microphone"></i>
+
+              <h2 id="interviewScore">88%</h2>
+
+              <p>Interview Score</p>
+
+          </div>
+
+          <div class="analytics-card">
+
+              <i class="fa-solid fa-briefcase"></i>
+
+              <h2 id="jobMatch">96%</h2>
+
+              <p>Job Match</p>
+
+          </div>
+
+      </section>
+              <!-- ======================================
+                ANALYTICS CHARTS
+        ======================================= -->
+
+      <section class="analytics-grid">
+
+          <!-- Weekly Progress -->
+
+          <div class="chart-card">
+
+              <div class="card-header">
+
+                  <h3>
+
+                      <i class="fa-solid fa-chart-line"></i>
+
+                      Weekly Learning Progress
+
+                    </h3>
+
+              </div>
+
+              <canvas id="progressChart"></canvas>
+
+          </div>
+
+          <!-- Coding Activity -->
+
+          <div class="chart-card">
+
+              <div class="card-header">
+
+                  <h3>
+
+                      <i class="fa-solid fa-laptop-code"></i>
+
+                      Coding Activity
+
+                    </h3>
+
+              </div>
+
+              <canvas id="codingChart"></canvas>
+
+          </div>
+
+      </section>
+
+
+      <!-- ======================================
+                PERFORMANCE OVERVIEW
+        ======================================= -->
+
+      <section class="performance-overview">
+
+          <div class="performance-card">
+
+              <div class="performance-icon">
+
+                  <i class="fa-solid fa-bullseye"></i>
+
+              </div>
+
+              <h3>Career Readiness</h3>
+
+              <h2>82%</h2>
+
+              <div class="progress-bar">
+
+                  <div class="progress-fill career-fill"></div>
+
+              </div>
+
+              <p>You are on track for placement preparation.</p>
+
+          </div>
+
+          <div class="performance-card">
+
+              <div class="performance-icon">
+
+                  <i class="fa-solid fa-file-circle-check"></i>
+
+              </div>
+
+              <h3>ATS Resume Score</h3>
+
+              <h2>91%</h2>
+
+              <div class="progress-bar">
+
+                  <div class="progress-fill ats-fill"></div>
+
+              </div>
+
+              <p>Your resume is optimized for recruiters.</p>
+
+          </div>
+
+          <div class="performance-card">
+
+              <div class="performance-icon">
+
+                  <i class="fa-solid fa-brain"></i>
+
+              </div>
+
+              <h3>AI Skill Score</h3>
+
+              <h2>89%</h2>
+
+              <div class="progress-bar">
+
+                  <div class="progress-fill ai-fill"></div>
+
+              </div>
+
+              <p>Your AI & ML skills are improving steadily.</p>
+
+          </div>
+
+      </section>
+
+
+      <!-- ======================================
+                AI INSIGHTS
+        ======================================= -->
+
+      <section class="insights-section">
+
+          <div class="insight-card strengths">
+
+              <h3>
+
+                  <i class="fa-solid fa-circle-check"></i>
+
+                  Strengths
+
+                </h3>
+
+              <ul>
+
+                  <li>Python Programming</li>
+
+                  <li>Generative AI</li>
+
+                  <li>FastAPI</li>
+
+                  <li>Frontend Development</li>
+
+                  <li>Problem Solving</li>
+
+              </ul>
+
+          </div>
+
+          <div class="insight-card improvements">
+
+              <h3>
+
+                  <i class="fa-solid fa-circle-exclamation"></i>
+
+                  Areas to Improve
+
+                </h3>
+
+              <ul>
+
+                  <li>Advanced DSA</li>
+
+                  <li>System Design</li>
+
+                  <li>SQL Optimization</li>
+
+                  <li>Cloud Deployment</li>
+
+                  <li>Competitive Programming</li>
+
+              </ul>
+
+          </div>
+
+      </section>
+              <!-- ======================================
+                ADVANCED ANALYTICS
+        ======================================= -->
+
+      <section class="advanced-analytics">
+
+          <!-- Skill Radar -->
+
+          <div class="chart-card">
+
+              <div class="card-header">
+
+                  <h3>
+
+                      <i class="fa-solid fa-crosshairs"></i>
+
+                      Skill Analysis
+
+                    </h3>
+
+              </div>
+
+              <canvas id="skillRadarChart"></canvas>
+
+          </div>
+
+          <!-- Technology Distribution -->
+
+          <div class="chart-card">
+
+              <div class="card-header">
+
+                  <h3>
+
+                      <i class="fa-solid fa-chart-pie"></i>
+
+                      Technology Distribution
+
+                    </h3>
+
+              </div>
+
+              <canvas id="technologyChart"></canvas>
+
+          </div>
+
+      </section>
+
+      <!-- ======================================
+                JOB APPLICATION ANALYTICS
+        ======================================= -->
+
+      <section class="job-analytics">
+
+          <div class="table-card">
+
+              <div class="card-header">
+
+                  <h3>
+
+                      <i class="fa-solid fa-briefcase"></i>
+
+                      Job Application Statistics
+
+                    </h3>
+
+              </div>
+
+              <table>
+
+                  <thead>
+
+                      <tr>
+
+                          <th>Metric</th>
+
+                          <th>Value</th>
+
+                      </tr>
+
+                  </thead>
+
+                  <tbody>
+
+                      <tr>
+
+                          <td>Jobs Applied</td>
+
+                          <td>28</td>
+
+                      </tr>
+
+                      <tr>
+
+                          <td>Shortlisted</td>
+
+                          <td>12</td>
+
+                      </tr>
+
+                      <tr>
+
+                          <td>Interviews Scheduled</td>
+
+                          <td>8</td>
+
+                      </tr>
+
+                      <tr>
+
+                          <td>Offers Received</td>
+
+                          <td>2</td>
+
+                      </tr>
+
+                      <tr>
+
+                          <td>Application Success Rate</td>
+
+                          <td>43%</td>
+
+                      </tr>
+
+                  </tbody>
+
+              </table>
+
+          </div>
+
+          <div class="table-card">
+
+              <div class="card-header">
+
+                  <h3>
+
+                      <i class="fa-solid fa-microphone"></i>
+
+                      Interview Performance
+
+                    </h3>
+
+              </div>
+
+              <table>
+
+                  <thead>
+
+                      <tr>
+
+                          <th>Round</th>
+
+                          <th>Score</th>
+
+                      </tr>
+
+                  </thead>
+
+                  <tbody>
+
+                      <tr>
+
+                          <td>HR Interview</td>
+
+                          <td>91%</td>
+
+                      </tr>
+
+                      <tr>
+
+                          <td>Technical Interview</td>
+
+                          <td>86%</td>
+
+                      </tr>
+
+                      <tr>
+
+                          <td>Communication</td>
+
+                          <td>90%</td>
+
+                      </tr>
+
+                      <tr>
+
+                          <td>Problem Solving</td>
+
+                          <td>84%</td>
+
+                      </tr>
+
+                      <tr>
+
+                          <td>Confidence</td>
+
+                          <td>89%</td>
+
+                      </tr>
+
+                  </tbody>
+
+              </table>
+
+          </div>
+
+      </section>
+
+      <!-- ======================================
+                LEARNING TIMELINE
+        ======================================= -->
+
+      <section class="timeline-section">
+
+          <div class="timeline-card">
+
+              <h3>
+
+                  <i class="fa-solid fa-graduation-cap"></i>
+
+                  Learning Timeline
+
+                </h3>
+
+              <div class="timeline">
+
+                  <div class="timeline-item">
+
+                      <span class="timeline-date">Jan</span>
+
+                      <p>Completed Python Fundamentals</p>
+
+                  </div>
+
+                  <div class="timeline-item">
+
+                      <span class="timeline-date">Feb</span>
+
+                      <p>Completed Machine Learning</p>
+
+                  </div>
+
+                  <div class="timeline-item">
+
+                      <span class="timeline-date">Mar</span>
+
+                      <p>Completed Deep Learning</p>
+
+                  </div>
+
+                  <div class="timeline-item">
+
+                      <span class="timeline-date">Apr</span>
+
+                      <p>Built AI Resume Builder</p>
+
+                  </div>
+
+                  <div class="timeline-item">
+
+                      <span class="timeline-date">May</span>
+
+                      <p>Completed LangGraph & Agentic AI</p>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+      </section>
+              <!-- ======================================
+                AI RECOMMENDATIONS
+        ======================================= -->
+
+      <section class="recommendations-section">
+
+          <div class="recommendation-card">
+
+              <h3>
+
+                  <i class="fa-solid fa-lightbulb"></i>
+
+                  AI Recommendations
+
+                </h3>
+
+              <div class="recommendation-list">
+
+                  <div class="recommendation-item">
+
+                      <i class="fa-solid fa-circle-check"></i>
+
+                      <p>Practice 15 more DSA problems this week to improve coding performance.</p>
+
+                  </div>
+
+                  <div class="recommendation-item">
+
+                      <i class="fa-solid fa-circle-check"></i>
+
+                      <p>Add Docker and Kubernetes projects to strengthen your resume.</p>
+
+                  </div>
+
+                  <div class="recommendation-item">
+
+                      <i class="fa-solid fa-circle-check"></i>
+
+                      <p>Complete two additional mock interviews before placement season.</p>
+
+                  </div>
+
+                  <div class="recommendation-item">
+
+                      <i class="fa-solid fa-circle-check"></i>
+
+                      <p>Focus on System Design to increase your job readiness score.</p>
+
+                  </div>
+
+                  <div class="recommendation-item">
+
+                      <i class="fa-solid fa-circle-check"></i>
+
+                      <p>Build one more full-stack AI project using FastAPI and LangGraph.</p>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+      </section>
+
+
+      <!-- ======================================
+                ACHIEVEMENTS
+        ======================================= -->
+
+      <section class="achievement-section">
+
+          <h2>
+
+               Achievements & Badges
+
+            </h2>
+
+          <div class="achievement-grid">
+
+              <div class="achievement-card">
+
+                  <i class="fa-solid fa-medal"></i>
+
+                  <h4>Python Expert</h4>
+
+                  <p>Completed Python Learning Path</p>
+
+              </div>
+
+              <div class="achievement-card">
+
+                  <i class="fa-solid fa-robot"></i>
+
+                  <h4>GenAI Builder</h4>
+
+                  <p>Built AI Applications</p>
+
+              </div>
+
+              <div class="achievement-card">
+
+                  <i class="fa-solid fa-code"></i>
+
+                  <h4>Coding Streak</h4>
+
+                  <p>30 Days Continuous Practice</p>
+
+              </div>
+
+              <div class="achievement-card">
+
+                  <i class="fa-solid fa-briefcase"></i>
+
+                  <h4>Placement Ready</h4>
+
+                  <p>Career Readiness Above 80%</p>
+
+              </div>
+
+          </div>
+
+      </section>
+
+
+      <!-- ======================================
+                REPORT DOWNLOAD
+        ======================================= -->
+
+      <section class="report-section">
+
+          <div class="report-card">
+
+              <i class="fa-solid fa-file-pdf"></i>
+
+              <h2>
+
+                  Export Analytics Report
+
+                </h2>
+
+              <p>
+
+                  Download a complete report of your learning progress,
+                    coding performance, interview analytics, and AI insights.
+
+                </p>
+
+              <button id="downloadReport">
+
+                  <i class="fa-solid fa-download"></i>
+
+                  Download PDF Report
+
+                </button>
+
+          </div>
+
+      </section>
+
+  </main>
+
+</div>
+
+<!-- ======================================
+            JAVASCRIPT
+====================================== -->
+
+<script src="./js/dashboard/charts.js"></script>
+
+</body>
+
+</html>

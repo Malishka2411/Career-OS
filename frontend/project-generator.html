@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"content="width=device-width, initial-scale=1.0">
+
+  <title>XTRAGRAD AI | Project Generator</title>
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"rel="stylesheet">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- Global CSS -->
+
+
+
+
+<link rel="stylesheet" href="./css/components/sidebar.css">
+
+<link rel="stylesheet" href="./css/pages/project.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+  <!-- ================= Sidebar ================= -->
+
+  <aside class="sidebar">
+
+      <div class="logo">
+
+          <h2>XTRAGRAD <span>AI</span></h2>
+
+      </div>
+
+      <ul>
+
+          <li>
+              <a href="./student-dashboard.html">
+                  <i class="fa-solid fa-house"></i>
+                  <span>Dashboard</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="./resume_builder.html">
+                  <i class="fa-solid fa-file-lines"></i>
+                  <span>Resume Builder</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="./learning-roadmap.html">
+                  <i class="fa-solid fa-road"></i>
+                  <span>Learning Roadmap</span>
+              </a>
+          </li>
+
+          <li class="active">
+              <a href="project-generator.html">
+                  <i class="fa-solid fa-diagram-project"></i>
+                  <span>AI Project Generator</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="coding-practice.html">
+                  <i class="fa-solid fa-code"></i>
+                  <span>Coding Practice</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="mock-interview.html">
+                  <i class="fa-solid fa-microphone"></i>
+                  <span>Mock Interview</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="#">
+                  <i class="fa-solid fa-briefcase"></i>
+                  <span>Job Recommendations</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="#">
+                  <i class="fa-solid fa-robot"></i>
+                  <span>AI Assistant</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="#">
+                  <i class="fa-solid fa-chart-line"></i>
+                  <span>Analytics</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="settings.html">
+                  <i class="fa-solid fa-gear"></i>
+                  <span>Settings</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="login.html">
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                  <span>Logout</span>
+              </a>
+          </li>
+
+      </ul>
+
+  </aside>
+
+  <!-- ================= Main Content ================= -->
+
+  <main class="main-content">
+
+      <header class="top-navbar">
+
+          <div>
+
+              <h1>AI Project Generator</h1>
+
+              <p>
+                  Generate complete real-world AI & Software projects instantly.
+                </p>
+
+          </div>
+
+          <button class="generate-btn">
+
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+              Generate Project
+
+            </button>
+
+      </header>
+
+      <!-- ==========================================
+        AI PROJECT GENERATOR FORM
+========================================== -->
+
+<section class="generator-section">
+
+  <div class="generator-card">
+
+      <h2>
+
+          <i class="fa-solid fa-robot"></i>
+
+          Generate Your Dream Project
+
+        </h2>
+
+      <p>
+
+          Select your preferences and let AI generate a complete project architecture.
+
+        </p>
+
+      <form id="projectGeneratorForm">
+
+          <!-- Project Title -->
+
+          <div class="form-group">
+
+              <label>Project Title</label>
+
+              <input
+                    type="text"id="projectTitle"placeholder="e.g. AI Career Platform">
+
+          </div>
+
+          <!-- Domain -->
+
+          <div class="form-group">
+
+              <label>Project Domain</label>
+
+              <select id="domain">
+
+                  <option value="">Select Domain</option>
+
+                  <option>Artificial Intelligence</option>
+
+                  <option>Web Development</option>
+
+                  <option>Cyber Security</option>
+
+                  <option>Healthcare</option>
+
+                  <option>Education</option>
+
+                  <option>Finance</option>
+
+                  <option>E-Commerce</option>
+
+                  <option>Agriculture</option>
+
+                  <option>Travel & Tourism</option>
+
+                  <option>IoT</option>
+
+              </select>
+
+          </div>
+
+          <!-- AI Technology -->
+
+          <div class="form-group">
+
+              <label>AI Technology</label>
+
+              <select id="aiTechnology">
+
+                  <option>Generative AI</option>
+
+                  <option>Machine Learning</option>
+
+                  <option>Deep Learning</option>
+
+                  <option>Computer Vision</option>
+
+                  <option>Natural Language Processing</option>
+
+                  <option>Multi-Agent AI</option>
+
+                  <option>RAG</option>
+
+                  <option>LangGraph</option>
+
+                  <option>MCP</option>
+
+              </select>
+
+          </div>
+
+          <!-- Programming Language -->
+
+          <div class="form-group">
+
+              <label>Programming Language</label>
+
+              <select id="language">
+
+                  <option>Python</option>
+
+                  <option>Java</option>
+
+                  <option>C++</option>
+
+                  <option>JavaScript</option>
+
+                  <option>TypeScript</option>
+
+              </select>
+
+          </div>
+
+          <!-- Framework -->
+
+          <div class="form-group">
+
+              <label>Framework</label>
+
+              <select id="framework">
+
+                  <option>FastAPI</option>
+
+                  <option>Django</option>
+
+                  <option>Flask</option>
+
+                  <option>React</option>
+
+                  <option>Next.js</option>
+
+                  <option>Node.js</option>
+
+              </select>
+
+          </div>
+
+          <!-- Database -->
+
+          <div class="form-group">
+
+              <label>Database</label>
+
+              <select id="database">
+
+                  <option>MySQL</option>
+
+                  <option>PostgreSQL</option>
+
+                  <option>MongoDB</option>
+
+                  <option>SQLite</option>
+
+                  <option>Firebase</option>
+
+              </select>
+
+          </div>
+
+          <!-- Difficulty -->
+
+          <div class="form-group">
+
+              <label>Difficulty Level</label>
+
+              <select id="difficulty">
+
+                  <option>Beginner</option>
+
+                  <option>Intermediate</option>
+
+                  <option>Advanced</option>
+
+              </select>
+
+          </div>
+
+          <!-- Duration -->
+
+          <div class="form-group">
+
+              <label>Project Duration</label>
+
+              <select id="duration">
+
+                  <option>1 Month</option>
+
+                  <option>2 Months</option>
+
+                  <option>3 Months</option>
+
+                  <option>6 Months</option>
+
+              </select>
+
+          </div>
+
+          <!-- Description -->
+
+          <div class="form-group full-width">
+
+              <label>Project Description</label>
+
+              <textarea
+                    id="description"rows="5"placeholder="Describe the project you want AI to generate..."></textarea>
+
+          </div>
+
+          <!-- Features -->
+
+          <div class="form-group full-width">
+
+              <label>Required Features</label>
+
+              <textarea
+                    id="features"rows="4"placeholder="Authentication, Dashboard, AI Chatbot, Payment, Analytics..."></textarea>
+
+          </div>
+
+          <!-- Button -->
+
+          <div class="form-actions">
+
+              <button
+                    type="button"class="generate-btn"id="generateProject">
+
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                  Generate AI Project
+
+                </button>
+
+          </div>
+
+      </form>
+
+  </div>
+
+</section>
+<!-- ==========================================
+        AI GENERATED PROJECT OUTPUT
+========================================== -->
+
+<section class="project-output">
+
+  <div class="section-title">
+
+      <h2>
+
+          <i class="fa-solid fa-microchip"></i>
+
+          AI Generated Project
+
+        </h2>
+
+      <p>
+
+          Your complete project blueprint generated by AI.
+
+        </p>
+
+  </div>
+
+  <!-- Project Overview -->
+
+  <div class="output-card">
+
+      <h3>
+
+          <i class="fa-solid fa-lightbulb"></i>
+
+          Project Overview
+
+        </h3>
+
+      <div id="projectOverview">
+
+          <p>
+
+              Click <strong>Generate AI Project</strong> to create a complete project idea.
+
+            </p>
+
+      </div>
+
+  </div>
+
+
+  <!-- Recommended Tech Stack -->
+
+  <div class="output-card">
+
+      <h3>
+
+          <i class="fa-solid fa-layer-group"></i>
+
+          Recommended Tech Stack
+
+        </h3>
+
+      <div id="techStack">
+
+          <div class="tech-badge">Python</div>
+
+          <div class="tech-badge">FastAPI</div>
+
+          <div class="tech-badge">React</div>
+
+          <div class="tech-badge">PostgreSQL</div>
+
+          <div class="tech-badge">LangGraph</div>
+
+          <div class="tech-badge">Docker</div>
+
+      </div>
+
+  </div>
+
+
+  <!-- Folder Structure -->
+
+  <div class="output-card">
+
+      <h3>
+
+          <i class="fa-solid fa-folder-tree"></i>
+
+          Folder Structure
+
+        </h3>
+
+<pre id="folderStructure">
+project/
+
+├── frontend/
+├── backend/
+├── ai/
+├── database/
+├── api/
+├── models/
+├── docs/
+└── README.md
+</pre>
+
+  </div>
+
+
+  <!-- Database Schema -->
+
+  <div class="output-card">
+
+      <h3>
+
+          <i class="fa-solid fa-database"></i>
+
+          Database Schema
+
+        </h3>
+
+      <div id="databaseSchema">
+
+          <ul>
+
+              <li>Users</li>
+
+              <li>Projects</li>
+
+              <li>Tasks</li>
+
+              <li>Notifications</li>
+
+              <li>Analytics</li>
+
+          </ul>
+
+      </div>
+
+  </div>
+
+
+  <!-- REST APIs -->
+
+  <div class="output-card">
+
+      <h3>
+
+          <i class="fa-solid fa-server"></i>
+
+          API Endpoints
+
+        </h3>
+
+<pre id="apiEndpoints">
+POST   /api/auth/login
+POST   /api/auth/register
+
+GET    /api/projects
+
+POST   /api/projects
+
+PUT    /api/projects/{id}
+
+DELETE /api/projects/{id}
+</pre>
+
+  </div>
+
+
+  <!-- AI Features -->
+
+  <div class="output-card">
+
+      <h3>
+
+          <i class="fa-solid fa-robot"></i>
+
+          AI Features
+
+        </h3>
+
+      <ul id="aiFeatures">
+
+          <li>AI Chatbot</li>
+
+          <li>Resume Analysis</li>
+
+          <li>Career Recommendation</li>
+
+          <li>Project Generator</li>
+
+          <li>Interview Assistant</li>
+
+          <li>Learning Roadmap</li>
+
+      </ul>
+
+  </div>
+
+
+  <!-- Development Timeline -->
+
+  <div class="output-card">
+
+      <h3>
+
+          <i class="fa-solid fa-calendar-days"></i>
+
+          Development Timeline
+
+        </h3>
+
+      <div class="timeline">
+
+          <div class="timeline-item">
+
+              <span>Week 1</span>
+
+              <p>Requirement Analysis & UI Design</p>
+
+          </div>
+
+          <div class="timeline-item">
+
+              <span>Week 2</span>
+
+              <p>Frontend Development</p>
+
+          </div>
+
+          <div class="timeline-item">
+
+              <span>Week 3</span>
+
+              <p>Backend API Development</p>
+
+          </div>
+
+          <div class="timeline-item">
+
+              <span>Week 4</span>
+
+              <p>AI Integration & Testing</p>
+
+          </div>
+
+      </div>
+
+  </div>
+
+
+  <!-- Action Buttons -->
+
+  <div class="project-actions">
+
+      <button class="download-btn">
+
+          <i class="fa-solid fa-download"></i>
+
+          Download Report
+
+        </button>
+
+      <button class="copy-btn">
+
+          <i class="fa-solid fa-copy"></i>
+
+          Copy Details
+
+        </button>
+
+  </div>
+
+</section>
+
+</main>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="./js/ai/projects.js"></script>
+
+</body>
+
+</html>

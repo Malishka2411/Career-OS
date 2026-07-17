@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"content="width=device-width, initial-scale=1.0">
+
+  <title>XTRAGRAD AI | Admin Dashboard</title>
+
+  <!-- Google Font -->
+
+  <link rel="preconnect"href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"href="https://fonts.gstatic.com"crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- CSS -->
+
+
+
+
+  <link rel="stylesheet" href="./css/pages/admin.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+  <!--====================================
+                SIDEBAR
+    =====================================-->
+
+  <aside class="sidebar">
+
+      <div class="logo">
+
+          <h2>XTRAGRAD <span>AI</span></h2>
+
+      </div>
+
+      <ul>
+
+          <li>
+
+              <a href="./admin-dashboard.html" class="active">
+
+                  <i class="fa-solid fa-table-columns"></i>
+
+                  <span>Dashboard</span>
+
+              </a>
+
+          </li>
+
+          <li>
+
+              <a href="./student-management.html">
+
+                  <i class="fa-solid fa-user-graduate"></i>
+
+                  <span>Students</span>
+
+              </a>
+
+          </li>
+
+          <li>
+
+              <a href="./companies.html">
+
+                  <i class="fa-solid fa-building"></i>
+
+                  <span>Companies</span>
+
+              </a>
+
+          </li>
+
+           
+
+          <li>
+
+              <a href="./ai-monitor.html">
+
+                  <i class="fa-solid fa-robot"></i>
+
+                  <span>AI Monitoring</span>
+
+              </a>
+
+          </li>
+
+          <li>
+
+              <a href="./report.html">
+
+                  <i class="fa-solid fa-file-lines"></i>
+
+                  <span>Reports</span>
+
+              </a>
+
+          </li>
+
+          <li>
+
+              <a href="./admin-settings.html">
+
+                  <i class="fa-solid fa-gear"></i>
+
+                  <span>Settings</span>
+
+              </a>
+
+          </li>
+
+      </ul>
+
+  </aside>
+
+  <!--====================================
+                MAIN CONTENT
+    =====================================-->
+
+  <main class="main-content">
+
+      <header class="topbar">
+
+          <div>
+
+              <h1>Admin Dashboard</h1>
+
+              <p>
+
+                  Welcome back, Administrator 
+
+                </p>
+
+          </div>
+
+          <div class="topbar-right">
+
+              <button class="notification-btn">
+
+                  <i class="fa-solid fa-bell"></i>
+
+              </button>
+
+              <img src="https://ui-avatars.com/api/?name=Admin"alt="Admin">
+
+          </div>
+
+      </header>
+
+      <!--====================================
+                KPI CARDS
+        =====================================-->
+
+      <section class="stats-grid">
+
+          <div class="stat-card">
+
+              <i class="fa-solid fa-users"></i>
+
+              <h3 id="studentsCount">
+
+                  12,548
+
+                </h3>
+
+              <p>
+
+                  Total Students
+
+                </p>
+
+          </div>
+
+          <div class="stat-card">
+
+              <i class="fa-solid fa-user-check"></i>
+
+              <h3 id="activeUsers">
+
+                  8,920
+
+                </h3>
+
+              <p>
+
+                  Active Users
+
+                </p>
+
+          </div>
+
+          <div class="stat-card">
+
+              <i class="fa-solid fa-robot"></i>
+
+              <h3 id="aiRequests">
+
+                  215K
+
+                </h3>
+
+              <p>
+
+                  AI Requests
+
+                </p>
+
+          </div>
+
+          <div class="stat-card">
+
+              <i class="fa-solid fa-file-lines"></i>
+
+              <h3 id="resumesCreated">
+
+                  4,875
+
+                </h3>
+
+              <p>
+
+                  Resumes Generated
+
+                </p>
+
+          </div>
+
+      </section>
+              <!--====================================
+                ANALYTICS SECTION
+        =====================================-->
+
+      <section class="analytics-grid">
+
+          <!-- User Growth Chart -->
+
+          <div class="chart-card">
+
+              <div class="card-header">
+
+                  <h2>
+
+                       User Growth
+
+                    </h2>
+
+                  <button class="view-btn">
+
+                      View Report
+
+                    </button>
+
+              </div>
+
+              <canvas id="userGrowthChart"></canvas>
+
+          </div>
+
+          <!-- AI Usage Chart -->
+
+          <div class="chart-card">
+
+              <div class="card-header">
+
+                  <h2>
+
+                       AI Usage
+
+                    </h2>
+
+                  <button class="view-btn">
+
+                      Details
+
+                    </button>
+
+              </div>
+
+              <canvas id="aiUsageChart"></canvas>
+
+          </div>
+
+      </section>
+
+
+      <!--====================================
+                SYSTEM STATUS
+        =====================================-->
+
+      <section class="status-grid">
+
+          <div class="status-card">
+
+              <div class="status-icon">
+
+                  <i class="fa-solid fa-server"></i>
+
+              </div>
+
+              <div>
+
+                  <h3>
+
+                      Backend API
+
+                    </h3>
+
+                  <span class="status online">
+
+                      ● Online
+
+                    </span>
+
+              </div>
+
+          </div>
+
+          <div class="status-card">
+
+              <div class="status-icon">
+
+                  <i class="fa-solid fa-database"></i>
+
+              </div>
+
+              <div>
+
+                  <h3>
+
+                      PostgreSQL
+
+                    </h3>
+
+                  <span class="status online">
+
+                      ● Connected
+
+                    </span>
+
+              </div>
+
+          </div>
+
+          <div class="status-card">
+
+              <div class="status-icon">
+
+                  <i class="fa-solid fa-robot"></i>
+
+              </div>
+
+              <div>
+
+                  <h3>
+
+                      AI Services
+
+                    </h3>
+
+                  <span class="status warning">
+
+                      ● High Usage
+
+                    </span>
+
+              </div>
+
+          </div>
+
+          <div class="status-card">
+
+              <div class="status-icon">
+
+                  <i class="fa-solid fa-cloud"></i>
+
+              </div>
+
+              <div>
+
+                  <h3>
+
+                      Cloud Storage
+
+                    </h3>
+
+                  <span class="status online">
+
+                      ● Healthy
+
+                    </span>
+
+              </div>
+
+          </div>
+
+      </section>
+
+
+      <!--====================================
+                RECENT ACTIVITIES
+        =====================================-->
+
+      <section class="activity-card">
+
+          <div class="card-header">
+
+              <h2>
+
+                   Recent Activities
+
+                </h2>
+
+              <button class="view-btn">
+
+                  View All
+
+                </button>
+
+          </div>
+
+          <div class="activity-list">
+
+              <div class="activity-item">
+
+                  <i class="fa-solid fa-user-plus"></i>
+
+                  <div>
+
+                      <h4>
+
+                          New Student Registered
+
+                        </h4>
+
+                      <p>
+
+                          Sai Swaroop joined the platform.
+
+                        </p>
+
+                  </div>
+
+                  <span>
+
+                      2 min ago
+
+                    </span>
+
+              </div>
+
+              <div class="activity-item">
+
+                  <i class="fa-solid fa-file-lines"></i>
+
+                  <div>
+
+                      <h4>
+
+                          Resume Generated
+
+                        </h4>
+
+                      <p>
+
+                          ATS Resume created successfully.
+
+                        </p>
+
+                  </div>
+
+                  <span>
+
+                      8 min ago
+
+                    </span>
+
+              </div>
+
+              <div class="activity-item">
+
+                  <i class="fa-solid fa-robot"></i>
+
+                  <div>
+
+                      <h4>
+
+                          AI Interview Completed
+
+                        </h4>
+
+                      <p>
+
+                          Mock Interview finished.
+
+                        </p>
+
+                  </div>
+
+                  <span>
+
+                      15 min ago
+
+                    </span>
+
+              </div>
+
+              <div class="activity-item">
+
+                  <i class="fa-solid fa-briefcase"></i>
+
+                  <div>
+
+                      <h4>
+
+                          New Job Posted
+
+                        </h4>
+
+                      <p>
+
+                          Google Software Engineer role added.
+
+                        </p>
+
+                  </div>
+
+                  <span>
+
+                      30 min ago
+
+                    </span>
+
+              </div>
+
+          </div>
+
+      </section>
+              <!--====================================
+                STUDENT MANAGEMENT
+        =====================================-->
+
+      <section class="table-card">
+
+          <div class="card-header">
+
+              <h2>
+
+                   Recent Students
+
+                </h2>
+
+              <button class="view-btn">
+
+                  View All
+
+                </button>
+
+          </div>
+
+          <table>
+
+              <thead>
+
+                  <tr>
+
+                      <th>Name</th>
+
+                      <th>College</th>
+
+                      <th>Branch</th>
+
+                      <th>Progress</th>
+
+                      <th>Status</th>
+
+                  </tr>
+
+              </thead>
+
+              <tbody>
+
+                  <tr>
+
+                      <td>Sai Swaroop</td>
+
+                      <td>NSRIT</td>
+
+                      <td>CSE (AI & ML)</td>
+
+                      <td>92%</td>
+
+                      <td>
+
+                          <span class="badge success">
+
+                              Active
+
+                            </span>
+
+                      </td>
+
+                  </tr>
+
+                  <tr>
+
+                      <td>Rahul Kumar</td>
+
+                      <td>GVP College</td>
+
+                      <td>CSE</td>
+
+                      <td>87%</td>
+
+                      <td>
+
+                          <span class="badge success">
+
+                              Active
+
+                            </span>
+
+                      </td>
+
+                  </tr>
+
+                  <tr>
+
+                      <td>Ananya Reddy</td>
+
+                      <td>JNTUK</td>
+
+                      <td>IT</td>
+
+                      <td>81%</td>
+
+                      <td>
+
+                          <span class="badge pending">
+
+                              Learning
+
+                            </span>
+
+                      </td>
+
+                  </tr>
+
+                  <tr>
+
+                      <td>Arjun Rao</td>
+
+                      <td>VIT AP</td>
+
+                      <td>AIML</td>
+
+                      <td>95%</td>
+
+                      <td>
+
+                          <span class="badge success">
+
+                              Active
+
+                            </span>
+
+                      </td>
+
+                  </tr>
+
+              </tbody>
+
+          </table>
+
+      </section>
+
+
+      <!--====================================
+                PLATFORM INSIGHTS
+        =====================================-->
+
+      <section class="insights-grid">
+
+          <div class="insight-card">
+
+              <i class="fa-solid fa-school"></i>
+
+              <h3>
+
+                  Top College
+
+                </h3>
+
+              <p>
+
+                  NSRIT
+
+                </p>
+
+          </div>
+
+          <div class="insight-card">
+
+              <i class="fa-solid fa-laptop-code"></i>
+
+              <h3>
+
+                  Most Used Module
+
+                </h3>
+
+              <p>
+
+                  AI Assistant
+
+                </p>
+
+          </div>
+
+          <div class="insight-card">
+
+              <i class="fa-solid fa-trophy"></i>
+
+              <h3>
+
+                  Avg ATS Score
+
+                </h3>
+
+              <p>
+
+                  91%
+
+                </p>
+
+          </div>
+
+          <div class="insight-card">
+
+              <i class="fa-solid fa-chart-simple"></i>
+
+              <h3>
+
+                  Placement Rate
+
+                </h3>
+
+              <p>
+
+                  86%
+
+                </p>
+
+          </div>
+
+      </section>
+
+
+      <!--====================================
+                AI MODEL PERFORMANCE
+        =====================================-->
+
+      <section class="performance-card">
+
+          <div class="card-header">
+
+              <h2>
+
+                   AI Model Performance
+
+                </h2>
+
+          </div>
+
+          <div class="performance-list">
+
+              <div class="performance-item">
+
+                  <span>Resume Analyzer</span>
+
+                  <div class="progress">
+
+                      <div class="progress-fill"style="width:96%;">
+
+                      </div>
+
+                  </div>
+
+                  <strong>96%</strong>
+
+              </div>
+
+              <div class="performance-item">
+
+                  <span>Interview Agent</span>
+
+                  <div class="progress">
+
+                      <div class="progress-fill"style="width:92%;">
+
+                      </div>
+
+                  </div>
+
+                  <strong>92%</strong>
+
+              </div>
+
+              <div class="performance-item">
+
+                  <span>Career Advisor</span>
+
+                  <div class="progress">
+
+                      <div class="progress-fill"style="width:94%;">
+
+                      </div>
+
+                  </div>
+
+                  <strong>94%</strong>
+
+              </div>
+
+              <div class="performance-item">
+
+                  <span>Project Generator</span>
+
+                  <div class="progress">
+
+                      <div class="progress-fill"style="width:90%;">
+
+                      </div>
+
+                  </div>
+
+                  <strong>90%</strong>
+
+              </div>
+
+          </div>
+
+      </section>
+              <!--====================================
+                COMPANY MANAGEMENT
+        =====================================-->
+
+      <section class="companies-card">
+
+          <div class="card-header">
+
+              <h2>
+
+                   Latest Companies
+
+                </h2>
+
+              <button class="view-btn">
+
+                  Manage Companies
+
+                </button>
+
+          </div>
+
+          <div class="company-list">
+
+              <div class="company-item">
+
+                  <div>
+
+                      <h3>Google</h3>
+
+                      <p>Software Engineer • Hyderabad</p>
+
+                  </div>
+
+                  <span class="badge success">
+
+                      Hiring
+
+                    </span>
+
+              </div>
+
+              <div class="company-item">
+
+                  <div>
+
+                      <h3>Microsoft</h3>
+
+                      <p>AI Engineer • Bangalore</p>
+
+                  </div>
+
+                  <span class="badge success">
+
+                      Hiring
+
+                    </span>
+
+              </div>
+
+              <div class="company-item">
+
+                  <div>
+
+                      <h3>Amazon</h3>
+
+                      <p>SDE-1 • Chennai</p>
+
+                  </div>
+
+                  <span class="badge pending">
+
+                      Review
+
+                    </span>
+
+              </div>
+
+          </div>
+
+      </section>
+
+
+      <!--====================================
+                QUICK ACTIONS
+        =====================================-->
+
+      <section class="quick-actions">
+
+          <h2>
+
+               Quick Actions
+
+            </h2>
+
+          <div class="action-grid">
+
+              <button class="quick-btn">
+
+                  <i class="fa-solid fa-user-plus"></i>
+
+                  Add Student
+
+                </button>
+
+              <button class="quick-btn">
+
+                  <i class="fa-solid fa-building"></i>
+
+                  Add Company
+
+                </button>
+
+              <button class="quick-btn">
+
+                  <i class="fa-solid fa-book-open"></i>
+
+                  Add Course
+
+                </button>
+
+              <button class="quick-btn">
+
+                  <i class="fa-solid fa-bullhorn"></i>
+
+                  Send Notification
+
+                </button>
+
+              <button class="quick-btn">
+
+                  <i class="fa-solid fa-file-export"></i>
+
+                  Export Report
+
+                </button>
+
+              <button class="quick-btn">
+
+                  <i class="fa-solid fa-database"></i>
+
+                  Backup Database
+
+                </button>
+
+          </div>
+
+      </section>
+
+
+      <!--====================================
+                ANNOUNCEMENTS
+        =====================================-->
+
+      <section class="announcement-card">
+
+          <div class="card-header">
+
+              <h2>
+
+                   Announcements
+
+                </h2>
+
+          </div>
+
+          <ul>
+
+              <li>
+
+                   New AI Resume Analyzer v2.0 Released
+
+                </li>
+
+              <li>
+
+                   Campus Placement Drive starts next week
+
+                </li>
+
+              <li>
+
+                   GPT-based Career Mentor Updated
+
+                </li>
+
+              <li>
+
+                   Monthly Analytics Report Generated
+
+                </li>
+
+          </ul>
+
+      </section>
+
+
+      <!--====================================
+                FOOTER
+        =====================================-->
+
+      <footer class="admin-footer">
+
+          <p>
+
+              © 2026 XTRAGRAD AI Admin Dashboard | Built with  using HTML, CSS & JavaScript
+
+            </p>
+
+      </footer>
+
+  </main>
+
+</div>
+
+<!--====================================
+            CHART.JS
+=====================================-->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!--====================================
+            JAVASCRIPT
+=====================================-->
+
+<script src="./js/api/admin.js"></script>
+
+
+</body>
+
+</html>

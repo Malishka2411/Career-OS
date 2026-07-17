@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"content="width=device-width, initial-scale=1.0">
+
+  <title>XTRAGRAD AI | Settings</title>
+
+  <!-- Google Font -->
+
+  <link rel="preconnect"href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"href="https://fonts.gstatic.com"crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- CSS -->
+
+
+
+
+  <link rel="stylesheet" href="./css/components/sidebar.css">
+
+  <link rel="stylesheet" href="./css/pages/settings.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+  <!-- =====================================
+                LEFT SIDEBAR
+    ====================================== -->
+
+  <aside class="sidebar">
+
+      <div class="logo">
+
+          <h1>XTRAGRAD <span>AI</span></h1>
+
+      </div>
+
+      <ul>
+
+          <li><a href="./student-dashboard.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+
+          <li><a href="./resume_builder.html"><i class="fa-solid fa-file-lines"></i><span>Resume Builder</span></a></li>
+
+          <li><a href="./learning-roadmap.html"><i class="fa-solid fa-road"></i><span>Learning Roadmap</span></a></li>
+
+          <li><a href="./project-generator.html"><i class="fa-solid fa-diagram-project"></i><span>Project Generator</span></a></li>
+
+          <li><a href="./coding-practice.html"><i class="fa-solid fa-code"></i><span>Coding Practice</span></a></li>
+
+          <li><a href="./mock-interview.html"><i class="fa-solid fa-microphone"></i><span>Mock Interview</span></a></li>
+
+          <li><a href="./job.html"><i class="fa-solid fa-briefcase"></i><span>Job Recommendations</span></a></li>
+
+          <li><a href="./assistant.html"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a></li>
+
+          <li><a href="./ai-analytics.html"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a></li>
+
+          <li>
+
+              <a class="active"href="settings.html">
+
+                  <i class="fa-solid fa-gear"></i>
+
+                  <span>Settings</span>
+
+              </a>
+
+          </li>
+
+       <li><a href="./role-login.html"><i class="fa-solid fa-chart-line"></i><span>Logout</span></a></li>   
+
+      </ul>
+
+  </aside>
+
+  <!-- =====================================
+                MAIN CONTENT
+    ====================================== -->
+
+  <main class="main-content">
+
+      <header class="settings-header">
+
+          <div>
+
+              <h1>
+
+                   Settings
+
+                </h1>
+
+              <p>
+
+                  Manage your account, preferences and AI configuration.
+
+                </p>
+
+          </div>
+
+      </header>
+
+      <!-- =====================================
+                SETTINGS LAYOUT
+        ====================================== -->
+
+      <section class="settings-layout">
+
+          <!-- LEFT MENU -->
+
+          <div class="settings-menu">
+
+              <button class="menu-item active">
+
+                  <i class="fa-solid fa-user"></i>
+
+                  Profile
+
+                </button>
+
+              <button class="menu-item">
+
+                  <i class="fa-solid fa-lock"></i>
+
+                  Security
+
+                </button>
+
+              <button class="menu-item">
+
+                  <i class="fa-solid fa-palette"></i>
+
+                  Appearance
+
+                </button>
+
+              <button class="menu-item">
+
+                  <i class="fa-solid fa-bell"></i>
+
+                  Notifications
+
+                </button>
+
+              <button class="menu-item">
+
+                  <i class="fa-solid fa-robot"></i>
+
+                  AI Preferences
+
+                </button>
+
+              <button class="menu-item">
+
+                  <i class="fa-solid fa-plug"></i>
+
+                  Integrations
+
+                </button>
+
+              <button class="menu-item">
+
+                  <i class="fa-solid fa-database"></i>
+
+                  Data & Storage
+
+                </button>
+
+              <button class="menu-item">
+
+                  <i class="fa-solid fa-circle-info"></i>
+
+                  About
+
+                </button>
+
+          </div>
+
+          <!-- RIGHT CONTENT -->
+
+          <div class="settings-content">
+
+              <!-- PROFILE -->
+
+              <div class="settings-card">
+
+                  <h2>
+
+                       Profile Settings
+
+                    </h2>
+
+                  <div class="profile-section">
+
+                      <img src="https://ui-avatars.com/api/?name=Student"alt="Profile">
+
+                      <button>
+
+                          Change Photo
+
+                        </button>
+
+                  </div>
+
+                  <div class="form-grid">
+
+                      <div class="input-group">
+
+                          <label>Full Name</label>
+
+                          <input type="text"value="Sai Swaroop">
+
+                      </div>
+
+                      <div class="input-group">
+
+                          <label>Email</label>
+
+                          <input type="email"value="student@gmail.com">
+
+                      </div>
+
+                      <div class="input-group">
+
+                          <label>College</label>
+
+                          <input type="text"value="NSRIT">
+
+                      </div>
+
+                      <div class="input-group">
+
+                          <label>Branch</label>
+
+                          <input type="text"value="CSE (AI & ML)">
+
+                      </div>
+
+                  </div>
+
+                  <button class="save-btn">
+
+                      Save Changes
+
+                    </button>
+
+              </div>
+                              <!-- =====================================
+                        SECURITY SETTINGS
+                ====================================== -->
+
+              <div class="settings-card">
+
+                  <h2>
+
+                       Security
+
+                    </h2>
+
+                  <div class="form-grid">
+
+                      <div class="input-group">
+
+                          <label>
+
+                              Current Password
+
+                            </label>
+
+                          <input type="password"placeholder="••••••••">
+
+                      </div>
+
+                      <div class="input-group">
+
+                          <label>
+
+                              New Password
+
+                            </label>
+
+                          <input type="password"placeholder="Enter new password">
+
+                      </div>
+
+                      <div class="input-group">
+
+                          <label>
+
+                              Confirm Password
+
+                            </label>
+
+                          <input type="password"placeholder="Confirm password">
+
+                      </div>
+
+                  </div>
+
+                  <button class="save-btn">
+
+                      Change Password
+
+                    </button>
+
+              </div>
+
+
+              <!-- =====================================
+                        APPEARANCE
+                ====================================== -->
+
+              <div class="settings-card">
+
+                  <h2>
+
+                       Appearance
+
+                    </h2>
+
+                  <div class="setting-row">
+
+                      <div>
+
+                          <h4>
+
+                              Theme
+
+                            </h4>
+
+                          <p>
+
+                              Choose your preferred theme.
+
+                            </p>
+
+                      </div>
+
+                      <select>
+
+                          <option selected>
+
+                              Dark
+
+                            </option>
+
+                          <option>
+
+                              Light
+
+                            </option>
+
+                          <option>
+
+                              System
+
+                            </option>
+
+                      </select>
+
+                  </div>
+
+                  <div class="setting-row">
+
+                      <div>
+
+                          <h4>
+
+                              Accent Color
+
+                            </h4>
+
+                          <p>
+
+                              Personalize your dashboard color.
+
+                            </p>
+
+                      </div>
+
+                      <input type="color"value="#5B5FFB">
+
+                  </div>
+
+                  <div class="setting-row">
+
+                      <div>
+
+                          <h4>
+
+                              Font Size
+
+                            </h4>
+
+                          <p>
+
+                              Adjust interface text size.
+
+                            </p>
+
+                      </div>
+
+                      <select>
+
+                          <option>
+
+                              Small
+
+                            </option>
+
+                          <option selected>
+
+                              Medium
+
+                            </option>
+
+                          <option>
+
+                              Large
+
+                            </option>
+
+                      </select>
+
+                  </div>
+
+              </div>
+
+
+              <!-- =====================================
+                        NOTIFICATIONS
+                ====================================== -->
+
+              <div class="settings-card">
+
+                  <h2>
+
+                       Notifications
+
+                    </h2>
+
+                  <div class="toggle-item">
+
+                      <span>
+
+                          Email Notifications
+
+                        </span>
+
+                      <label class="switch">
+
+                          <input type="checkbox" checked>
+
+                          <span class="slider"></span>
+
+                      </label>
+
+                  </div>
+
+                  <div class="toggle-item">
+
+                      <span>
+
+                          Placement Alerts
+
+                        </span>
+
+                      <label class="switch">
+
+                          <input type="checkbox" checked>
+
+                          <span class="slider"></span>
+
+                      </label>
+
+                  </div>
+
+                  <div class="toggle-item">
+
+                      <span>
+
+                          Coding Reminders
+
+                        </span>
+
+                      <label class="switch">
+
+                          <input type="checkbox" checked>
+
+                          <span class="slider"></span>
+
+                      </label>
+
+                  </div>
+
+                  <div class="toggle-item">
+
+                      <span>
+
+                          AI Tips
+
+                        </span>
+
+                      <label class="switch">
+
+                          <input type="checkbox">
+
+                          <span class="slider"></span>
+
+                      </label>
+
+                  </div>
+
+              </div>
+                              <!-- =====================================
+                        AI PREFERENCES
+                ====================================== -->
+
+              <div class="settings-card">
+
+                  <h2>
+
+                       AI Preferences
+
+                    </h2>
+
+                  <div class="setting-row">
+
+                      <div>
+
+                          <h4>AI Model</h4>
+
+                          <p>Select your preferred AI model.</p>
+
+                      </div>
+
+                      <select>
+
+                          <option selected>GPT-5.5</option>
+
+                          <option>Claude</option>
+
+                          <option>Gemini</option>
+
+                          <option>Llama 3</option>
+
+                      </select>
+
+                  </div>
+
+                  <div class="setting-row">
+
+                      <div>
+
+                          <h4>Response Length</h4>
+
+                          <p>Choose how detailed AI responses should be.</p>
+
+                      </div>
+
+                      <select>
+
+                          <option>Short</option>
+
+                          <option selected>Medium</option>
+
+                          <option>Detailed</option>
+
+                      </select>
+
+                  </div>
+
+                  <div class="setting-row">
+
+                      <div>
+
+                          <h4>Voice Responses</h4>
+
+                          <p>Enable AI voice responses.</p>
+
+                      </div>
+
+                      <label class="switch">
+
+                          <input type="checkbox">
+
+                          <span class="slider"></span>
+
+                      </label>
+
+                  </div>
+
+                  <div class="setting-row">
+
+                      <div>
+
+                          <h4>Auto Save Chats</h4>
+
+                          <p>Automatically save AI conversations.</p>
+
+                      </div>
+
+                      <label class="switch">
+
+                          <input type="checkbox" checked>
+
+                          <span class="slider"></span>
+
+                      </label>
+
+                  </div>
+
+              </div>
+
+
+              <!-- =====================================
+                        CONNECTED ACCOUNTS
+                ====================================== -->
+
+              <div class="settings-card">
+
+                  <h2>
+
+                       Connected Accounts
+
+                    </h2>
+
+                  <div class="integration-item">
+
+                      <div>
+
+                          <i class="fa-brands fa-github"></i>
+
+                          <span>GitHub</span>
+
+                      </div>
+
+                      <button class="connect-btn">
+
+                          Connect
+
+                        </button>
+
+                  </div>
+
+                  <div class="integration-item">
+
+                      <div>
+
+                          <i class="fa-brands fa-linkedin"></i>
+
+                          <span>LinkedIn</span>
+
+                      </div>
+
+                      <button class="connect-btn">
+
+                          Connect
+
+                        </button>
+
+                  </div>
+
+                  <div class="integration-item">
+
+                      <div>
+
+                          <i class="fa-brands fa-google"></i>
+
+                          <span>Google</span>
+
+                      </div>
+
+                      <button class="connect-btn">
+
+                          Connected
+
+                        </button>
+
+                  </div>
+
+                  <div class="integration-item">
+
+                      <div>
+
+                          <i class="fa-solid fa-code"></i>
+
+                          <span>LeetCode</span>
+
+                      </div>
+
+                      <button class="connect-btn">
+
+                          Connect
+
+                        </button>
+
+                  </div>
+
+              </div>
+
+
+              <!-- =====================================
+                        DATA & STORAGE
+                ====================================== -->
+
+              <div class="settings-card">
+
+                  <h2>
+
+                       Data & Storage
+
+                    </h2>
+
+                  <div class="data-actions">
+
+                      <button class="action-btn">
+
+                          <i class="fa-solid fa-download"></i>
+
+                          Export My Data
+
+                        </button>
+
+                      <button class="action-btn">
+
+                          <i class="fa-solid fa-file-pdf"></i>
+
+                          Download Resume
+
+                        </button>
+
+                      <button class="action-btn">
+
+                          <i class="fa-solid fa-chart-line"></i>
+
+                          Download Analytics
+
+                        </button>
+
+                      <button class="action-btn danger">
+
+                          <i class="fa-solid fa-trash"></i>
+
+                          Delete Account
+
+                        </button>
+
+                  </div>
+
+              </div>
+                              <!-- =====================================
+                        ABOUT XTRAGRAD AI
+                ====================================== -->
+
+              <div class="settings-card">
+
+                  <h2>
+
+                       About XTRAGRAD AI
+
+                    </h2>
+
+                  <div class="about-item">
+
+                      <span>Application Version</span>
+
+                      <strong>Version 1.0.0</strong>
+
+                  </div>
+
+                  <div class="about-item">
+
+                      <span>Frontend</span>
+
+                      <strong>HTML • CSS • JavaScript</strong>
+
+                  </div>
+
+                  <div class="about-item">
+
+                      <span>Backend</span>
+
+                      <strong>FastAPI (Coming Soon)</strong>
+
+                  </div>
+
+                  <div class="about-item">
+
+                      <span>AI Framework</span>
+
+                      <strong>LangGraph + LangChain</strong>
+
+                  </div>
+
+                  <div class="about-item">
+
+                      <span>Database</span>
+
+                      <strong>PostgreSQL (Coming Soon)</strong>
+
+                  </div>
+
+              </div>
+
+
+              <!-- =====================================
+                        HELP & SUPPORT
+                ====================================== -->
+
+              <div class="settings-card">
+
+                  <h2>
+
+                       Help & Support
+
+                    </h2>
+
+                  <div class="support-buttons">
+
+                      <button class="action-btn">
+
+                          <i class="fa-solid fa-book"></i>
+
+                          Documentation
+
+                        </button>
+
+                      <button class="action-btn">
+
+                          <i class="fa-solid fa-headset"></i>
+
+                          Contact Support
+
+                        </button>
+
+                      <button class="action-btn">
+
+                          <i class="fa-solid fa-bug"></i>
+
+                          Report Bug
+
+                        </button>
+
+                  </div>
+
+              </div>
+
+
+              <!-- =====================================
+                        LEGAL
+                ====================================== -->
+
+              <div class="settings-card">
+
+                  <h2>
+
+                       Legal
+
+                    </h2>
+
+                  <div class="legal-links">
+
+                      <a href="#">
+
+                          <i class="fa-solid fa-shield-halved"></i>
+
+                          Privacy Policy
+
+                        </a>
+
+                      <a href="#">
+
+                          <i class="fa-solid fa-file-contract"></i>
+
+                          Terms & Conditions
+
+                        </a>
+
+                      <a href="#">
+
+                          <i class="fa-solid fa-cookie-bite"></i>
+
+                          Cookie Policy
+
+                        </a>
+
+                      <a href="#">
+
+                          <i class="fa-solid fa-circle-question"></i>
+
+                          FAQs
+
+                        </a>
+
+                  </div>
+
+              </div>
+
+
+              <!-- =====================================
+                        LOGOUT
+                ====================================== -->
+
+              <div class="settings-card danger-card">
+
+                  <h2>
+
+                       Account
+
+                    </h2>
+
+                  <p>
+
+                      Sign out of your XTRAGRAD AI account securely.
+
+                    </p>
+
+                  <button class="logout-btn">
+
+                      <i class="fa-solid fa-right-from-bracket"></i>
+
+                      Logout
+
+                    </button>
+
+              </div>
+
+          </div>
+
+      </section>
+
+  </main>
+
+</div>
+
+<!-- =====================================
+            JAVASCRIPT
+===================================== -->
+
+<script src="./js/ai/settings.js"></script>
+
+</body>
+
+</html>

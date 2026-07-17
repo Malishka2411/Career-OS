@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"content="width=device-width, initial-scale=1.0">
+
+  <title>XTRAGRAD AI | Learning Roadmap</title>
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"rel="stylesheet">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="css/components/sidebar.css">
+  <link rel="stylesheet" href="./css/pages/learning.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+  <!-- ===========================
+            SIDEBAR
+    ============================ -->
+
+  <aside class="sidebar">
+
+      <div class="logo">
+
+          <h2>XTRAGRAD <span>AI</span></h2>
+
+      </div>
+
+      <ul>
+
+          <li>
+              <a href="./student-dashboard.html">
+                  <i class="fa-solid fa-house"></i>
+                  <span>Dashboard</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="./resume_builder.html">
+                  <i class="fa-solid fa-file"></i>
+                  <span>Resume Builder</span>
+              </a>
+          </li>
+
+          <li class="active">
+              <a href="learning-roadmap.html">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span>Learning Roadmap</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="./project-generator.html">
+                  <i class="fa-solid fa-diagram-project"></i>
+                  <span>Project Generator</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="./coding-practice.html">
+                  <i class="fa-solid fa-code"></i>
+                  <span>Coding Practice</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="./mock-interview.html">
+                  <i class="fa-solid fa-user-tie"></i>
+                  <span>Interview Prep</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="./job.html">
+                  <i class="fa-solid fa-user-tie"></i>
+                  job Recommendation
+                </a>
+          </li>
+
+          <li>
+              <a href="./assistant.html">
+                  <i class="fa-solid fa-user-tie"></i>
+                  Ai Assistant
+                </a>
+          </li>
+
+          <li>
+              <a href="./ai-analytics.html">
+                  <i class="fa-solid fa-user-tie"></i>
+                  Analytics
+                </a>
+          </li>
+
+          <li>
+              <a href="./settings.html">
+                  <i class="fa-solid fa-user"></i>
+                  <span>Settings</span>
+              </a>
+          </li>
+
+      </ul>
+
+  </aside>
+
+  <!-- ===========================
+            MAIN CONTENT
+    ============================ -->
+
+  <main class="main-content">
+
+      <div class="top-navbar">
+
+          <div>
+
+              <h1>AI Learning Roadmap</h1>
+
+              <p>Create your personalized career roadmap using AI.</p>
+
+          </div>
+
+          <button class="generate-btn">
+
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+              Generate AI Roadmap
+
+            </button>
+
+      </div>
+      <!-- ==========================================
+        ROADMAP GENERATOR
+========================================== -->
+
+<section class="roadmap-generator">
+
+  <div class="roadmap-card">
+
+      <h2>
+
+          <i class="fa-solid fa-robot"></i>
+
+          Generate Your Personalized AI Roadmap
+
+        </h2>
+
+      <p>
+
+          Tell us your career goal and current skills.
+            Our AI will create a personalized learning roadmap.
+
+        </p>
+
+      <form id="roadmapForm">
+
+          <!-- Career Goal -->
+
+          <div class="form-group">
+
+              <label>Career Goal</label>
+
+              <select id="careerGoal">
+
+                  <option value="">Select Career Goal</option>
+
+                  <option>Generative AI Engineer</option>
+
+                  <option>Machine Learning Engineer</option>
+
+                  <option>Data Scientist</option>
+
+                  <option>Full Stack Developer</option>
+
+                  <option>Backend Developer</option>
+
+                  <option>Frontend Developer</option>
+
+                  <option>Cloud Engineer</option>
+
+                  <option>DevOps Engineer</option>
+
+                  <option>Cyber Security Engineer</option>
+
+                  <option>Mobile App Developer</option>
+
+              </select>
+
+          </div>
+
+
+          <!-- Current Level -->
+
+          <div class="form-group">
+
+              <label>Current Skill Level</label>
+
+              <select id="currentLevel">
+
+                  <option>Beginner</option>
+
+                  <option>Intermediate</option>
+
+                  <option>Advanced</option>
+
+              </select>
+
+          </div>
+
+
+          <!-- Target Duration -->
+
+          <div class="form-group">
+
+              <label>Target Completion</label>
+
+              <select id="duration">
+
+                  <option>3 Months</option>
+
+                  <option>6 Months</option>
+
+                  <option>9 Months</option>
+
+                  <option>12 Months</option>
+
+                  <option>18 Months</option>
+
+              </select>
+
+          </div>
+
+
+          <!-- Weekly Hours -->
+
+          <div class="form-group">
+
+              <label>Study Hours Per Week</label>
+
+              <input
+                    type="number"id="studyHours"placeholder="Example: 20">
+
+          </div>
+
+
+          <!-- Skills -->
+
+          <div class="form-group">
+
+              <label>Current Skills</label>
+
+              <textarea
+                    id="skills"rows="5"placeholder="Python, C++, HTML, CSS, JavaScript, SQL..."></textarea>
+
+          </div>
+
+
+          <!-- Interests -->
+
+          <div class="form-group">
+
+              <label>Areas of Interest</label>
+
+              <div class="interest-grid">
+
+                  <label><input type="checkbox"> Artificial Intelligence</label>
+
+                  <label><input type="checkbox"> Web Development</label>
+
+                  <label><input type="checkbox"> Data Science</label>
+
+                  <label><input type="checkbox"> Cloud Computing</label>
+
+                  <label><input type="checkbox"> Cyber Security</label>
+
+                  <label><input type="checkbox"> Open Source</label>
+
+              </div>
+
+          </div>
+
+      </form>
+
+  </div>
+</section>
+<!-- ==========================================
+        AI GENERATED ROADMAP
+========================================== -->
+
+<section class="roadmap-result">
+
+  <div class="section-header">
+
+      <h2>
+
+          <i class="fa-solid fa-map-location-dot"></i>
+
+          Your AI Learning Roadmap
+
+        </h2>
+
+      <p>
+
+          A personalized roadmap generated based on your goals.
+
+        </p>
+
+  </div>
+
+  <div class="timeline">
+
+      <!-- Phase 1 -->
+
+      <div class="timeline-card">
+
+          <div class="timeline-icon">
+
+              <i class="fa-solid fa-seedling"></i>
+
+          </div>
+
+          <div class="timeline-content">
+
+              <h3>Phase 1 - Foundation</h3>
+
+              <span>Weeks 1 - 4</span>
+
+              <ul>
+
+                  <li> Programming Fundamentals</li>
+
+                  <li> Data Structures & Algorithms</li>
+
+                  <li> Git & GitHub</li>
+
+                  <li> SQL Basics</li>
+
+                  <li> Linux Commands</li>
+
+              </ul>
+
+          </div>
+
+      </div>
+
+      <!-- Phase 2 -->
+
+      <div class="timeline-card">
+
+          <div class="timeline-icon">
+
+              <i class="fa-solid fa-laptop-code"></i>
+
+          </div>
+
+          <div class="timeline-content">
+
+              <h3>Phase 2 - Core Skills</h3>
+
+              <span>Weeks 5 - 8</span>
+
+              <ul>
+
+                  <li> Python Advanced</li>
+
+                  <li> Object Oriented Programming</li>
+
+                  <li> APIs & JSON</li>
+
+                  <li> Database Design</li>
+
+                  <li> Mini Projects</li>
+
+              </ul>
+
+          </div>
+
+      </div>
+
+      <!-- Phase 3 -->
+
+      <div class="timeline-card">
+
+          <div class="timeline-icon">
+
+              <i class="fa-solid fa-brain"></i>
+
+          </div>
+
+          <div class="timeline-content">
+
+              <h3>Phase 3 - AI Specialization</h3>
+
+              <span>Weeks 9 - 12</span>
+
+              <ul>
+
+                  <li> Machine Learning</li>
+
+                  <li> Deep Learning</li>
+
+                  <li> Transformers</li>
+
+                  <li> LangChain & LangGraph</li>
+
+                  <li> Build AI Projects</li>
+
+              </ul>
+
+          </div>
+
+      </div>
+
+      <!-- Phase 4 -->
+
+      <div class="timeline-card">
+
+          <div class="timeline-icon">
+
+              <i class="fa-solid fa-rocket"></i>
+
+          </div>
+
+          <div class="timeline-content">
+
+              <h3>Phase 4 - Placement Ready</h3>
+
+              <span>Weeks 13 - 16</span>
+
+              <ul>
+
+                  <li> System Design Basics</li>
+
+                  <li> Mock Interviews</li>
+
+                  <li> Resume Optimization</li>
+
+                  <li> Portfolio Development</li>
+
+                  <li> Product-Based Company Preparation</li>
+
+              </ul>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+<!-- ==========================================
+        LEARNING ANALYTICS
+========================================== -->
+
+<section class="analytics-section">
+
+  <!-- Progress Card -->
+
+  <div class="analytics-card">
+
+      <h3>
+
+          <i class="fa-solid fa-chart-line"></i>
+
+          Learning Progress
+
+        </h3>
+
+      <div class="progress-circle">
+
+          <div class="progress-value">
+
+              68%
+
+            </div>
+
+      </div>
+
+      <div class="progress-info">
+
+          <p>Overall Completion</p>
+
+          <small>You're ahead of your weekly target.</small>
+
+      </div>
+
+  </div>
+
+
+  <!-- Weekly Target -->
+
+  <div class="analytics-card">
+
+      <h3>
+
+          <i class="fa-solid fa-calendar-check"></i>
+
+          Weekly Goal
+
+        </h3>
+
+      <div class="goal-details">
+
+          <p>
+
+              <strong>Study Hours:</strong>
+
+              18 / 20 Hours
+
+            </p>
+
+          <progress value="18" max="20"></progress>
+
+      </div>
+
+  </div>
+
+
+  <!-- AI Recommendation -->
+
+  <div class="analytics-card">
+
+      <h3>
+
+          <i class="fa-solid fa-robot"></i>
+
+          AI Recommendation
+
+        </h3>
+
+      <ul class="recommendation-list">
+
+          <li>
+
+               Complete LangGraph this week.
+
+            </li>
+
+          <li>
+
+               Build one RAG project.
+
+            </li>
+
+          <li>
+
+               Practice 15 LeetCode problems.
+
+            </li>
+
+          <li>
+
+               Improve resume ATS score above 90%.
+
+            </li>
+
+      </ul>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==========================================
+        RECOMMENDED RESOURCES
+========================================== -->
+
+<section class="resources-section">
+
+  <div class="section-header">
+
+      <h2>
+
+          <i class="fa-solid fa-book-open"></i>
+
+          Recommended Learning Resources
+
+        </h2>
+
+  </div>
+
+  <div class="resource-grid">
+
+      <div class="resource-card">
+
+          <i class="fa-brands fa-youtube"></i>
+
+          <h3>YouTube</h3>
+
+          <p>
+
+              Watch curated AI & Full Stack playlists.
+
+            </p>
+
+      </div>
+
+      <div class="resource-card">
+
+          <i class="fa-solid fa-book"></i>
+
+          <h3>Documentation</h3>
+
+          <p>
+
+              Learn from official Python, FastAPI and LangGraph docs.
+
+            </p>
+
+      </div>
+
+      <div class="resource-card">
+
+          <i class="fa-solid fa-laptop-code"></i>
+
+          <h3>Practice</h3>
+
+          <p>
+
+              Solve problems on LeetCode, HackerRank and Codeforces.
+
+            </p>
+
+      </div>
+
+      <div class="resource-card">
+
+          <i class="fa-solid fa-certificate"></i>
+
+          <h3>Certifications</h3>
+
+          <p>
+
+              IBM, Google, Microsoft and AWS certifications.
+
+            </p>
+
+      </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==========================================
+        MILESTONES
+========================================== -->
+
+<section class="milestones">
+
+  <div class="section-header">
+
+      <h2>
+
+          <i class="fa-solid fa-trophy"></i>
+
+          Career Milestones
+
+        </h2>
+
+  </div>
+
+  <div class="milestone-grid">
+
+      <div class="milestone-card completed">
+
+          <i class="fa-solid fa-circle-check"></i>
+
+          <h4>Python</h4>
+
+          <p>Completed</p>
+
+      </div>
+
+      <div class="milestone-card completed">
+
+          <i class="fa-solid fa-circle-check"></i>
+
+          <h4>Machine Learning</h4>
+
+          <p>Completed</p>
+
+      </div>
+
+      <div class="milestone-card">
+
+          <i class="fa-solid fa-spinner"></i>
+
+          <h4>GenAI Projects</h4>
+
+          <p>In Progress</p>
+
+      </div>
+
+      <div class="milestone-card">
+
+          <i class="fa-solid fa-hourglass-half"></i>
+
+          <h4>Placement Ready</h4>
+
+          <p>Upcoming</p>
+
+      </div>
+
+  </div>
+
+</section>
+<!-- ==========================================
+        SKILL GAP ANALYSIS
+========================================== -->
+
+<section class="skill-gap-section">
+
+  <div class="section-header">
+
+      <h2>
+
+          <i class="fa-solid fa-chart-simple"></i>
+
+          AI Skill Gap Analysis
+
+        </h2>
+
+      <p>
+
+          Skills recommended to achieve your career goal.
+
+        </p>
+
+  </div>
+
+  <div class="skill-gap-grid">
+
+      <div class="skill-card completed">
+
+          <i class="fa-solid fa-circle-check"></i>
+
+          <h4>Python</h4>
+
+          <span>Completed</span>
+
+      </div>
+
+      <div class="skill-card completed">
+
+          <i class="fa-solid fa-circle-check"></i>
+
+          <h4>Machine Learning</h4>
+
+          <span>Completed</span>
+
+      </div>
+
+      <div class="skill-card progress">
+
+          <i class="fa-solid fa-spinner"></i>
+
+          <h4>LangGraph</h4>
+
+          <span>In Progress</span>
+
+      </div>
+
+      <div class="skill-card pending">
+
+          <i class="fa-solid fa-clock"></i>
+
+          <h4>MCP Servers</h4>
+
+          <span>Recommended</span>
+
+      </div>
+
+      <div class="skill-card pending">
+
+          <i class="fa-solid fa-clock"></i>
+
+          <h4>System Design</h4>
+
+          <span>Upcoming</span>
+
+      </div>
+
+      <div class="skill-card pending">
+
+          <i class="fa-solid fa-clock"></i>
+
+          <h4>Docker & Kubernetes</h4>
+
+          <span>Upcoming</span>
+
+      </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==========================================
+        WEEKLY STUDY PLAN
+========================================== -->
+
+<section class="study-plan">
+
+  <div class="section-header">
+
+      <h2>
+
+          <i class="fa-solid fa-calendar-days"></i>
+
+          Weekly Study Planner
+
+        </h2>
+
+  </div>
+
+  <div class="study-grid">
+
+      <div class="day-card">
+
+          <h3>Monday</h3>
+
+          <p>Python + DSA</p>
+
+      </div>
+
+      <div class="day-card">
+
+          <h3>Tuesday</h3>
+
+          <p>Machine Learning</p>
+
+      </div>
+
+      <div class="day-card">
+
+          <h3>Wednesday</h3>
+
+          <p>LangGraph</p>
+
+      </div>
+
+      <div class="day-card">
+
+          <h3>Thursday</h3>
+
+          <p>Project Building</p>
+
+      </div>
+
+      <div class="day-card">
+
+          <h3>Friday</h3>
+
+          <p>LeetCode Practice</p>
+
+      </div>
+
+      <div class="day-card">
+
+          <h3>Saturday</h3>
+
+          <p>Mock Interview</p>
+
+      </div>
+
+      <div class="day-card">
+
+          <h3>Sunday</h3>
+
+          <p>Revision & Portfolio</p>
+
+      </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==========================================
+        AI CAREER TIPS
+========================================== -->
+
+<section class="career-tips">
+
+  <div class="tips-card">
+
+      <h2>
+
+          <i class="fa-solid fa-lightbulb"></i>
+
+          AI Career Tips
+
+        </h2>
+
+      <ul>
+
+          <li> Build at least 5 real-world AI projects.</li>
+
+          <li> Keep your ATS Resume score above 90%.</li>
+
+          <li> Solve coding problems every day.</li>
+
+          <li> Maintain an active GitHub portfolio.</li>
+
+          <li> Practice mock interviews every week.</li>
+
+          <li> Learn one new technology every month.</li>
+
+      </ul>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==========================================
+        ACTION BUTTONS
+========================================== -->
+
+<section class="roadmap-actions">
+
+  <button class="secondary-btn">
+
+      <i class="fa-solid fa-download"></i>
+
+      Export PDF
+
+    </button>
+
+  <button class="secondary-btn">
+
+      <i class="fa-solid fa-share-nodes"></i>
+
+      Share Roadmap
+
+    </button>
+
+  <button class="primary-btn">
+
+      <i class="fa-solid fa-arrows-rotate"></i>
+
+      Generate New AI Roadmap
+
+    </button>
+
+</section>
+
+</main>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="./js/ai/learning.js"></script>
+
+</body>
+
+</html>

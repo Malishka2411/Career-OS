@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>XTRAGRAD AI | Register</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/pages/register.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+
+</head>
+
+<body>
+
+  <!-- Background Animation -->
+  <div class="animated-bg">
+
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+
+  </div>
+
+  <!-- Register Container -->
+  <section class="register-section">
+
+      <div class="register-container">
+
+          <!-- Left Side -->
+          <div class="register-left">
+
+              <div class="logo">
+
+                  <h1>XTRAGRAD <span>AI</span></h1>
+
+              </div>
+
+              <h2>Create Your Account</h2>
+
+              <p>
+                  Join India's next-generation AI Career Platform and
+                    unlock Resume Analysis, AI Roadmaps,
+                    Mock Interviews, Placement Prediction,
+                    Project Generator and much more.
+                </p>
+
+              <div class="feature-list">
+
+                  <div class="feature">
+                      <i class="fa-solid fa-circle-check"></i>
+                      <span>AI Resume Analyzer</span>
+                  </div>
+
+                  <div class="feature">
+                      <i class="fa-solid fa-circle-check"></i>
+                      <span>Placement Score Prediction</span>
+                  </div>
+
+                  <div class="feature">
+                      <i class="fa-solid fa-circle-check"></i>
+                      <span>Interview Preparation</span>
+                  </div>
+
+                  <div class="feature">
+                      <i class="fa-solid fa-circle-check"></i>
+                      <span>AI Career Roadmap</span>
+                  </div>
+
+              </div>
+
+          </div>
+
+          <!-- Right Side -->
+          <div class="register-right">
+
+              <div class="register-card">
+
+                  <h2>Create Account</h2>
+
+                  <p>Start your AI career journey today </p>
+
+                  <form id="registerForm">
+
+                                              <!-- Full Name -->
+
+                      <div class="input-group">
+
+                          <label>Full Name</label>
+
+                          <div class="input-box">
+
+                              <i class="fa-solid fa-user"></i>
+
+                              <input
+                                    type="text"id="fullname"placeholder="Enter your full name"required>
+
+                          </div>
+
+                      </div>
+
+                      <!-- Email -->
+
+                      <div class="input-group">
+
+                          <label>Email Address</label>
+
+                          <div class="input-box">
+
+                              <i class="fa-solid fa-envelope"></i>
+
+                              <input
+                                    type="email"id="email"placeholder="Enter your email"required>
+
+                          </div>
+
+                      </div>
+
+                      <!-- Phone -->
+
+                      <div class="input-group">
+
+                          <label>Phone Number</label>
+
+                          <div class="input-box">
+
+                              <i class="fa-solid fa-phone"></i>
+
+                              <input
+                                    type="tel"id="phone"placeholder="+91 9876543210"required>
+
+                          </div>
+
+                      </div>
+
+                      <!-- College -->
+
+                      <div class="input-group">
+
+                          <label>College Name</label>
+
+                          <div class="input-box">
+
+                              <i class="fa-solid fa-building-columns"></i>
+
+                              <input
+                                    type="text"id="college"placeholder="Enter your college"required>
+
+                          </div>
+
+                      </div>
+
+                      <!-- Branch -->
+
+                      <div class="input-group">
+
+                          <label>Branch</label>
+
+                          <div class="input-box">
+
+                              <i class="fa-solid fa-graduation-cap"></i>
+
+                              <select id="branch" required>
+
+                                  <option value="">Select Branch</option>
+
+                                  <option>CSE</option>
+
+                                  <option>CSE (AI & ML)</option>
+
+                                  <option>CSE (DS)</option>
+
+                                  <option>IT</option>
+
+                                  <option>ECE</option>
+
+                                  <option>EEE</option>
+
+                                  <option>Mechanical</option>
+
+                                  <option>Civil</option>
+
+                              </select>
+
+                          </div>
+
+                      </div>
+
+                      <!-- Year -->
+
+                      <div class="input-group">
+
+                          <label>Year of Study</label>
+
+                          <div class="input-box">
+
+                              <i class="fa-solid fa-calendar-days"></i>
+
+                              <select id="year" required>
+
+                                  <option value="">Select Year</option>
+
+                                  <option>1st Year</option>
+
+                                  <option>2nd Year</option>
+
+                                  <option>3rd Year</option>
+
+                                  <option>4th Year</option>
+
+                              </select>
+
+                          </div>
+
+                      </div>
+                                              <!-- Password -->
+
+                      <div class="input-group">
+
+                          <label>Password</label>
+
+                          <div class="input-box">
+
+                              <i class="fa-solid fa-lock"></i>
+
+                              <input
+                                    type="password"id="password"placeholder="Create a strong password"required>
+
+                              <i class="fa-solid fa-eye toggle-password"data-target="password"></i>
+
+                          </div>
+
+                      </div>
+
+                      <!-- Confirm Password -->
+
+                      <div class="input-group">
+
+                          <label>Confirm Password</label>
+
+                          <div class="input-box">
+
+                              <i class="fa-solid fa-lock"></i>
+
+                              <input
+                                    type="password"id="confirmPassword"placeholder="Confirm your password"required>
+
+                              <i class="fa-solid fa-eye toggle-password"data-target="confirmPassword"></i>
+
+                          </div>
+
+                      </div>
+
+                      <!-- Terms -->
+
+                      <div class="terms">
+
+                          <label>
+
+                              <input
+                                    type="checkbox"id="terms"required>
+
+                              I agree to the
+
+                                <a href="#">Terms & Conditions</a>
+
+                              and
+
+                                <a href="#">Privacy Policy</a>
+
+                          </label>
+
+                      </div>
+
+                      <!-- Register Button -->
+
+                      <button
+                            type="submit"class="register-btn">
+
+                          <i class="fa-solid fa-user-plus"></i>
+
+                          Create Account
+
+                        </button>
+
+                      <!-- Divider -->
+
+                      <div class="divider">
+
+                          <span>OR</span>
+
+                      </div>
+
+                      <!-- Google Register -->
+
+                      <button
+                            type="button"class="google-btn">
+
+                          <img
+                                src="assets/images/icons/google.png"alt="Google">
+
+                          Continue with Google
+
+                        </button>
+
+                      <!-- Login -->
+
+                      <div class="login-link">
+
+                          Already have an account?
+
+                            <a href="login.html">
+
+                              Login Here
+
+                            </a>
+
+                      </div>
+
+                  </form>
+
+              </div>
+
+          </div>
+
+      </div>
+
+  </section>
+
+  <!-- JavaScript -->
+
+  <script src="js/auth/register.js"></script>
+
+</body>
+
+</html>

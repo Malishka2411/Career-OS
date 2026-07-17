@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"content="width=device-width, initial-scale=1.0">
+
+  <title>XTRAGRAD AI | Resume Builder</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- CSS -->
+
+
+
+  <link rel="stylesheet" href="css/components/sidebar.css">
+
+
+  <link rel="stylesheet" href="./css/pages/resume.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<!-- ===========================
+SIDEBAR
+============================ -->
+
+<aside class="sidebar">
+
+  <div class="logo">
+
+      <h2>XTRAGRAD <span>AI</span></h2>
+
+  </div>
+
+  <ul>
+
+      <li>
+          <a href="./student-dashboard.html">
+              <i class="fa-solid fa-house"></i>
+              Dashboard
+            </a>
+      </li>
+
+      <li class="active">
+          <a href="./resume_builder.html">
+              <i class="fa-solid fa-file"></i>
+              Resume Builder
+            </a>
+      </li>
+
+      <li>
+          <a href="./learning-roadmap.html">
+              <i class="fa-solid fa-road"></i>
+              Learning Roadmap
+            </a>
+      </li>
+
+      <li>
+          <a href="./mock-interview.html">
+              <i class="fa-solid fa-code"></i>
+              Mock interview
+            </a>
+      </li>
+
+      <li>
+          <a href="coding-practice.html">
+              <i class="fa-solid fa-laptop-code"></i>
+              Coding Practice
+            </a>
+      </li>
+
+      <li>
+          <a href="./job.html">
+              <i class="fa-solid fa-user-tie"></i>
+              Job Recommendations
+            </a>
+      </li>
+
+      <li>
+          <a href="./assistant.html">
+              <i class="fa-solid fa-chart-line"></i>
+              Ai Assistant
+            </a>
+      </li>
+
+      <li>
+          <a href="./ai-analytics.html">
+              <i class="fa-solid fa-user"></i>
+              Analytics
+            </a>
+      </li>
+
+      <li>
+          <a href="./settings.html">
+              <i class="fa-solid fa-user"></i>
+              Settings
+            </a>
+      </li>
+
+      <li>
+          <a href="./role-login.html">
+              <i class="fa-solid fa-user"></i>
+              Logout
+            </a>
+      </li>
+
+  </ul>
+
+</aside>
+
+<!-- ===========================
+MAIN CONTENT
+============================ -->
+
+<div class="main-content">
+
+  <!-- Top Navbar -->
+
+  <header class="top-navbar">
+
+      <div>
+
+          <h1>AI Resume Builder</h1>
+
+          <p>Create ATS Friendly Resume using AI</p>
+
+      </div>
+
+      <button class="ai-btn">
+
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+          Generate With AI
+
+        </button>
+
+  </header>
+
+  <!-- Resume Builder Section -->
+
+  <section class="resume-builder">
+
+      <div class="builder-left">
+
+          <div class="card">
+
+              <h2>
+
+                  Personal Information
+
+                </h2>
+
+              <form id="resumeForm">
+                                      <!-- Full Name -->
+
+                  <div class="form-group">
+
+                      <label>Full Name</label>
+
+                      <input
+                            type="text"id="fullname"placeholder="Enter your full name">
+
+                  </div>
+
+                  <!-- Email -->
+
+                  <div class="form-group">
+
+                      <label>Email Address</label>
+
+                      <input
+                            type="email"id="email"placeholder="Enter your email">
+
+                  </div>
+
+                  <!-- Phone -->
+
+                  <div class="form-group">
+
+                      <label>Phone Number</label>
+
+                      <input
+                            type="tel"id="phone"placeholder="+91 9876543210">
+
+                  </div>
+
+                  <!-- Address -->
+
+                  <div class="form-group">
+
+                      <label>Address</label>
+
+                      <input
+                            type="text"id="address"placeholder="City, State, Country">
+
+                  </div>
+
+                  <!-- LinkedIn -->
+
+                  <div class="form-group">
+
+                      <label>LinkedIn Profile</label>
+
+                      <input
+                            type="url"id="linkedin"placeholder="https://linkedin.com/in/username">
+
+                  </div>
+
+                  <!-- GitHub -->
+
+                  <div class="form-group">
+
+                      <label>GitHub Profile</label>
+
+                      <input
+                            type="url"id="github"placeholder="https://github.com/username">
+
+                  </div>
+
+                  <!-- Portfolio -->
+
+                  <div class="form-group">
+
+                      <label>Portfolio Website</label>
+
+                      <input
+                            type="url"id="portfolio"placeholder="https://yourportfolio.com">
+
+                  </div>
+
+                  <!-- Professional Summary -->
+
+                  <div class="form-group">
+
+                      <label>Professional Summary</label>
+
+                      <textarea
+                            id="summary"rows="6"placeholder="Write a short professional summary about yourself..."></textarea>
+
+                  </div>
+
+                  <!-- AI Suggestion -->
+
+                  <div class="ai-suggestion">
+
+                      <i class="fa-solid fa-robot"></i>
+
+                      <div>
+
+                          <h4>AI Suggestion</h4>
+
+                          <p>
+                              Click <strong>"Generate With AI"</strong>
+                              to automatically create a professional
+                                ATS-friendly summary based on your skills
+                                and career goals.
+                            </p>
+
+                      </div>
+
+                  </div>
+                                      <!-- ==========================================
+                            EDUCATION
+                    =========================================== -->
+
+                  <div class="card">
+
+                      <h2>
+
+                          Education
+
+                        </h2>
+
+                      <!-- Degree -->
+
+                      <div class="form-group">
+
+                          <label>Degree</label>
+
+                          <input
+                                type="text"id="degree"placeholder="B.Tech in Computer Science">
+
+                      </div>
+
+                      <!-- College -->
+
+                      <div class="form-group">
+
+                          <label>College / University</label>
+
+                          <input
+                                type="text"id="college"placeholder="Enter your college name">
+
+                      </div>
+
+                      <!-- Branch -->
+
+                      <div class="form-group">
+
+                          <label>Branch</label>
+
+                          <input
+                                type="text"id="branch"placeholder="CSE (AI & ML)">
+
+                      </div>
+
+                      <!-- Graduation Year -->
+
+                      <div class="form-group">
+
+                          <label>Graduation Year</label>
+
+                          <input
+                                type="number"id="graduationYear"placeholder="2028">
+
+                      </div>
+
+                      <!-- CGPA -->
+
+                      <div class="form-group">
+
+                          <label>CGPA</label>
+
+                          <input
+                                type="number"step="0.01"id="cgpa"placeholder="8.75">
+
+                      </div>
+
+                      <!-- 12th Percentage -->
+
+                      <div class="form-group">
+
+                          <label>Intermediate / 12th (%)</label>
+
+                          <input
+                                type="number"step="0.01"id="intermediate"placeholder="92">
+
+                      </div>
+
+                      <!-- 10th Percentage -->
+
+                      <div class="form-group">
+
+                          <label>10th Percentage</label>
+
+                          <input
+                                type="number"step="0.01"id="tenth"placeholder="95">
+
+                      </div>
+
+                      <!-- Add Education -->
+
+                      <button
+                            type="button"class="secondary-btn">
+
+                          <i class="fa-solid fa-plus"></i>
+
+                          Add Another Education
+
+                        </button>
+
+                  </div>
+
+
+
+                  <!-- ==========================================
+                            SKILLS
+                    =========================================== -->
+
+                  <div class="card">
+
+                      <h2>
+
+                          Skills
+
+                        </h2>
+
+                      <div class="skills-box">
+
+                          <input
+                                type="text"id="skillInput"placeholder="Example: Python, FastAPI, React">
+
+                          <button
+                                type="button"class="secondary-btn">
+
+                              Add Skill
+
+                            </button>
+
+                      </div>
+
+                      <div class="skill-tags">
+
+                          <span>Python</span>
+
+                          <span>C++</span>
+
+                          <span>Machine Learning</span>
+
+                          <span>Deep Learning</span>
+
+                          <span>FastAPI</span>
+
+                          <span>LangGraph</span>
+
+                      </div>
+
+                  </div>
+                                      <!-- ==========================================
+                            WORK EXPERIENCE
+                    =========================================== -->
+
+                  <div class="card">
+
+                      <h2>
+
+                          Work Experience
+
+                        </h2>
+
+                      <div class="form-group">
+
+                          <label>Company Name</label>
+
+                          <input
+                                type="text"id="company"placeholder="Google">
+
+                      </div>
+
+                      <div class="form-group">
+
+                          <label>Job Role</label>
+
+                          <input
+                                type="text"id="role"placeholder="AI Engineer Intern">
+
+                      </div>
+
+                      <div class="form-group">
+
+                          <label>Duration</label>
+
+                          <input
+                                type="text"id="duration"placeholder="Jan 2026 - Jun 2026">
+
+                      </div>
+
+                      <div class="form-group">
+
+                          <label>Responsibilities</label>
+
+                          <textarea
+                                rows="5"id="responsibilities"placeholder="Describe your work experience..."></textarea>
+
+                      </div>
+
+                      <button
+                            type="button"class="secondary-btn">
+
+                          <i class="fa-solid fa-plus"></i>
+
+                          Add Experience
+
+                        </button>
+
+                  </div>
+
+
+
+                  <!-- ==========================================
+                            PROJECTS
+                    =========================================== -->
+
+                  <div class="card">
+
+                      <h2>
+
+                          Projects
+
+                        </h2>
+
+                      <div class="form-group">
+
+                          <label>Project Title</label>
+
+                          <input
+                                type="text"id="projectTitle"placeholder="XTRAGRAD AI Platform">
+
+                      </div>
+
+                      <div class="form-group">
+
+                          <label>Technologies Used</label>
+
+                          <input
+                                type="text"id="technologies"placeholder="FastAPI, LangGraph, PostgreSQL, HTML, CSS, JavaScript">
+
+                      </div>
+
+                      <div class="form-group">
+
+                          <label>GitHub Repository</label>
+
+                          <input
+                                type="url"id="githubProject"placeholder="https://github.com/username/project">
+
+                      </div>
+
+                      <div class="form-group">
+
+                          <label>Project Description</label>
+
+                          <textarea
+                                rows="6"id="projectDescription"placeholder="Explain your project..."></textarea>
+
+                      </div>
+
+                      <button
+                            type="button"class="secondary-btn">
+
+                          <i class="fa-solid fa-plus"></i>
+
+                          Add Project
+
+                        </button>
+
+                  </div>
+
+
+
+                  <!-- ==========================================
+                            CERTIFICATIONS
+                    =========================================== -->
+
+                  <div class="card">
+
+                      <h2>
+
+                          Certifications
+
+                        </h2>
+
+                      <div class="form-group">
+
+                          <label>Certification Name</label>
+
+                          <input
+                                type="text"id="certificate"placeholder="IBM Generative AI">
+
+                      </div>
+
+                      <div class="form-group">
+
+                          <label>Organization</label>
+
+                          <input
+                                type="text"id="organization"placeholder="IBM">
+
+                      </div>
+
+                      <div class="form-group">
+
+                          <label>Completion Date</label>
+
+                          <input
+                                type="date"id="certificateDate">
+
+                      </div>
+
+                      <button
+                            type="button"class="secondary-btn">
+
+                          <i class="fa-solid fa-plus"></i>
+
+                          Add Certification
+
+                        </button>
+
+                  </div>
+
+
+
+                  <!-- ==========================================
+                            ACHIEVEMENTS
+                    =========================================== -->
+
+                  <div class="card">
+
+                      <h2>
+
+                          Achievements
+
+                        </h2>
+
+                      <textarea
+                            rows="5"placeholder="Hackathons, Coding Contests, Awards, Research Papers..."></textarea>
+
+                  </div>
+                                      <!-- ==========================================
+                            LANGUAGES
+                    =========================================== -->
+
+                  <div class="card">
+
+                      <h2>Languages</h2>
+
+                      <div class="form-group">
+
+                          <label>Languages Known</label>
+
+                          <input
+                                type="text"id="languages"placeholder="English, Telugu, Hindi">
+
+                      </div>
+
+                  </div>
+
+
+                  <!-- ==========================================
+                            CAREER OBJECTIVE
+                    =========================================== -->
+
+                  <div class="card">
+
+                      <h2>Career Objective</h2>
+
+                      <textarea
+                            id="careerObjective"rows="5"placeholder="Write your career objective..."></textarea>
+
+                  </div>
+
+
+                  <!-- ==========================================
+                            AI RESUME SUGGESTIONS
+                    =========================================== -->
+
+                  <div class="card ai-card">
+
+                      <h2>
+
+                          <i class="fa-solid fa-robot"></i>
+
+                          AI Resume Suggestions
+
+                        </h2>
+
+                      <div class="ai-suggestions">
+
+                          <div class="suggestion">
+
+                              <i class="fa-solid fa-circle-check"></i>
+
+                              Add measurable achievements.
+
+                            </div>
+
+                          <div class="suggestion">
+
+                              <i class="fa-solid fa-circle-check"></i>
+
+                              Include GitHub and Portfolio links.
+
+                            </div>
+
+                          <div class="suggestion">
+
+                              <i class="fa-solid fa-circle-check"></i>
+
+                              Highlight AI & Full Stack projects.
+
+                            </div>
+
+                          <div class="suggestion">
+
+                              <i class="fa-solid fa-circle-check"></i>
+
+                              Keep resume within one page.
+
+                            </div>
+
+                      </div>
+
+                  </div>
+
+
+                  <!-- ==========================================
+                            ACTION BUTTONS
+                    =========================================== -->
+
+                  <div class="action-buttons">
+
+                      <button
+                            type="button"class="secondary-btn">
+
+                          <i class="fa-solid fa-floppy-disk"></i>
+
+                          Save Resume
+
+                        </button>
+
+                      <button
+                            type="button"class="secondary-btn">
+
+                          <i class="fa-solid fa-eye"></i>
+
+                          Preview Resume
+
+                        </button>
+
+                      <button
+                            type="button"class="secondary-btn">
+
+                          <i class="fa-solid fa-download"></i>
+
+                          Download PDF
+
+                        </button>
+
+                      <button
+                            type="button"class="primary-btn">
+
+                          <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                          Generate AI Resume
+
+                        </button>
+
+                  </div>
+
+              </form>
+
+          </div>
+
+      </div>
+
+
+      <!-- ==========================================
+                LIVE RESUME PREVIEW
+        =========================================== -->
+
+      <div class="builder-right">
+
+          <div class="resume-preview">
+
+              <h2>
+
+                  Live Resume Preview
+
+                </h2>
+
+              <div class="preview-paper">
+
+                  <div class="preview-header">
+
+                      <h1>Your Name</h1>
+
+                      <p>AI / ML Engineer</p>
+
+                  </div>
+
+                  <hr>
+
+                  <div class="preview-content">
+
+                      <p>
+
+                          Your resume preview will appear here as you
+                            fill the form. Later, JavaScript will update
+                            this section in real time.
+
+                        </p>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+      </div>
+
+  </section>
+
+</div>
+
+
+<!-- ===========================
+        JAVASCRIPT
+=========================== -->
+
+<script src="./js/ai/resume.js"></script>
+
+</body>
+
+</html>

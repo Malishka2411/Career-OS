@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"content="width=device-width, initial-scale=1.0">
+
+  <title>XTRAGRAD AI | Student Management</title>
+
+  <link rel="stylesheet"href="./css/pages/student-management.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+
+       
+
+  <link rel="preconnect"href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"href="https://fonts.gstatic.com"crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"rel="stylesheet">
+
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+  <!--==========================
+            SIDEBAR
+    ===========================-->
+
+  <aside class="sidebar">
+
+      <div class="logo">
+
+          <i class="fa-solid fa-graduation-cap"></i>
+
+          <h2>XTRAGRAD AI</h2>
+
+      </div>
+
+      <ul>
+
+          <li>
+              <a href="admin-dashboard.html">
+
+                  <i class="fa-solid fa-house"></i>
+
+                  Dashboard
+
+                </a>
+          </li>
+
+          <li class="active">
+
+              <a href="#">
+
+                  <i class="fa-solid fa-user-graduate"></i>
+
+                  Students
+
+                </a>
+
+          </li>
+
+          <li>
+
+              <a href="companies.html">
+
+                  <i class="fa-solid fa-building"></i>
+
+                  Companies
+
+                </a>
+
+          </li>
+
+              <a href="./report.html">
+
+                  <i class="fa-solid fa-file-lines"></i>
+
+                  Reports
+
+                </a>
+
+          </li>
+
+          <li>
+
+              <a href="./admin-settings.html">
+
+                  <i class="fa-solid fa-gear"></i>
+
+                  Settings
+
+                </a>
+
+          </li>
+
+          <li>
+
+              <a href="./index.html">
+
+                  <i class="fa-solid fa-right-from-bracket"></i>
+
+                  Logout
+
+                </a>
+
+          </li>
+
+      </ul>
+
+  </aside>
+
+  <!--==========================
+            MAIN CONTENT
+    ===========================-->
+
+  <main class="main-content">
+
+      <!--==========================
+                TOP HEADER
+        ===========================-->
+
+      <header class="top-header">
+
+          <div>
+
+              <h1>
+
+                  Student Management
+
+                </h1>
+
+              <p>
+
+                  Search, manage and monitor all registered students.
+
+                </p>
+
+          </div>
+
+          <div class="header-right">
+
+              <button class="notification-btn">
+
+                  <i class="fa-solid fa-bell"></i>
+
+              </button>
+
+              <button class="notification-btn">
+
+                  <i class="fa-solid fa-moon"></i>
+
+              </button>
+
+              <div class="admin-profile">
+
+                  <img src="https://i.pravatar.cc/150?img=12"alt="Admin">
+
+                  <div>
+
+                      <h4>Super Admin</h4>
+
+                      <span>Administrator</span>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+      </header>
+
+      <!--==========================
+                SEARCH BAR
+        ===========================-->
+
+      <section class="search-section">
+
+          <div class="search-box">
+
+              <i class="fa-solid fa-magnifying-glass"></i>
+
+              <input
+                    type="text"id="studentSearch"placeholder="Search by Name, Email, College, Branch...">
+
+          </div>
+
+          <div class="top-buttons">
+
+              <button class="add-btn">
+
+                  <i class="fa-solid fa-user-plus"></i>
+
+                  Add Student
+
+                </button>
+
+              <button class="export-btn">
+
+                  <i class="fa-solid fa-download"></i>
+
+                  Export
+
+                </button>
+
+              <button class="refresh-btn">
+
+                  <i class="fa-solid fa-rotate"></i>
+
+                  Refresh
+
+                </button>
+
+          </div>
+
+      </section>
+              <!--==========================
+            STATISTICS CARDS
+        ===========================-->
+
+      <section class="stats-section">
+
+          <div class="stat-card">
+
+              <div class="stat-icon blue">
+
+                  <i class="fa-solid fa-users"></i>
+
+              </div>
+
+              <div class="stat-content">
+
+                  <h2 id="totalStudents">150</h2>
+
+                  <p>Total Students</p>
+
+              </div>
+
+          </div>
+
+          <div class="stat-card">
+
+              <div class="stat-icon green">
+
+                  <i class="fa-solid fa-user-check"></i>
+
+              </div>
+
+              <div class="stat-content">
+
+                  <h2 id="activeStudents">132</h2>
+
+                  <p>Active Students</p>
+
+              </div>
+
+          </div>
+
+          <div class="stat-card">
+
+              <div class="stat-icon orange">
+
+                  <i class="fa-solid fa-briefcase"></i>
+
+              </div>
+
+              <div class="stat-content">
+
+                  <h2 id="placedStudents">48</h2>
+
+                  <p>Placed Students</p>
+
+              </div>
+
+          </div>
+
+          <div class="stat-card">
+
+              <div class="stat-icon red">
+
+                  <i class="fa-solid fa-user-clock"></i>
+
+              </div>
+
+              <div class="stat-content">
+
+                  <h2 id="pendingStudents">18</h2>
+
+                  <p>Pending Review</p>
+
+              </div>
+
+          </div>
+
+      </section>
+
+
+      <!--==========================
+            FILTER SECTION
+        ===========================-->
+
+      <section class="filter-section">
+
+          <div class="filter-header">
+
+              <h2>
+
+                  Student Filters
+
+                </h2>
+
+              <button id="clearFilters">
+
+                  <i class="fa-solid fa-filter-circle-xmark"></i>
+
+                  Clear Filters
+
+                </button>
+
+          </div>
+
+          <div class="filter-grid">
+
+              <div class="filter-box">
+
+                  <label>College</label>
+
+                  <select id="collegeFilter">
+
+                      <option value="">All Colleges</option>
+
+                      <option>NSRIT</option>
+
+                      <option>ANITS</option>
+
+                      <option>GVP</option>
+
+                      <option>MVGR</option>
+
+                      <option>JNTUK</option>
+
+                  </select>
+
+              </div>
+
+              <div class="filter-box">
+
+                  <label>Branch</label>
+
+                  <select id="branchFilter">
+
+                      <option value="">All Branches</option>
+
+                      <option>CSE</option>
+
+                      <option>CSE (AI & ML)</option>
+
+                      <option>IT</option>
+
+                      <option>ECE</option>
+
+                      <option>EEE</option>
+
+                  </select>
+
+              </div>
+
+              <div class="filter-box">
+
+                  <label>Year</label>
+
+                  <select id="yearFilter">
+
+                      <option value="">All Years</option>
+
+                      <option>1st Year</option>
+
+                      <option>2nd Year</option>
+
+                      <option>3rd Year</option>
+
+                      <option>4th Year</option>
+
+                  </select>
+
+              </div>
+
+              <div class="filter-box">
+
+                  <label>Status</label>
+
+                  <select id="statusFilter">
+
+                      <option value="">All Status</option>
+
+                      <option>Active</option>
+
+                      <option>Placed</option>
+
+                      <option>Inactive</option>
+
+                  </select>
+
+              </div>
+
+          </div>
+
+      </section>
+              <!--==========================
+            STUDENT MANAGEMENT TABLE
+        ===========================-->
+
+      <section class="student-table-section">
+
+          <div class="table-header">
+
+              <div>
+
+                  <h2>Registered Students</h2>
+
+                  <p>Manage all students from one place.</p>
+
+              </div>
+
+              <button class="table-btn">
+
+                  <i class="fa-solid fa-file-csv"></i>
+
+                  Export CSV
+
+                </button>
+
+          </div>
+
+          <div class="table-container">
+
+              <table id="studentTable">
+
+                  <thead>
+
+                      <tr>
+
+                          <th>Photo</th>
+
+                          <th>ID</th>
+
+                          <th>Name</th>
+
+                          <th>Email</th>
+
+                          <th>College</th>
+
+                          <th>Branch</th>
+
+                          <th>Year</th>
+
+                          <th>Resume</th>
+
+                          <th>Interview</th>
+
+                          <th>Status</th>
+
+                          <th>Actions</th>
+
+                      </tr>
+
+                  </thead>
+
+                  <tbody>
+
+<!--================== STUDENT 1 ==================-->
+
+<tr>
+
+<td>
+
+<img src="https://i.pravatar.cc/60?img=11"
+class="student-img">
+
+</td>
+
+<td>STU001</td>
+
+<td>Sai Swaroop</td>
+
+<td>sai@gmail.com</td>
+
+<td>NSRIT</td>
+
+<td>CSE (AI & ML)</td>
+
+<td>3rd Year</td>
+
+<td>
+
+<span class="resume-score">94%
+
+</span>
+
+</td>
+
+<td>
+
+<span class="interview-score">91%
+
+</span>
+
+</td>
+
+<td>
+
+<span class="status active">Active
+
+</span>
+
+</td>
+
+<td>
+
+<div class="action-buttons">
+
+<button class="view-btn">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="edit-btn">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+</td>
+
+</tr>
+
+<!--================== STUDENT 2 ==================-->
+
+<tr>
+
+<td>
+
+<img src="https://i.pravatar.cc/60?img=32"
+class="student-img">
+
+</td>
+
+<td>STU002</td>
+
+<td>Rahul Kumar</td>
+
+<td>rahul@gmail.com</td>
+
+<td>ANITS</td>
+
+<td>CSE</td>
+
+<td>4th Year</td>
+
+<td>
+
+<span class="resume-score">88%
+
+</span>
+
+</td>
+
+<td>
+
+<span class="interview-score">85%
+
+</span>
+
+</td>
+
+<td>
+
+<span class="status placed">Placed
+
+</span>
+
+</td>
+
+<td>
+
+<div class="action-buttons">
+
+<button class="view-btn">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="edit-btn">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+</td>
+
+</tr>
+
+<!--================== STUDENT 3 ==================-->
+
+<tr>
+
+<td>
+
+<img src="https://i.pravatar.cc/60?img=47"
+class="student-img">
+
+</td>
+
+<td>STU003</td>
+
+<td>Priya Sharma</td>
+
+<td>priya@gmail.com</td>
+
+<td>GVP</td>
+
+<td>IT</td>
+
+<td>3rd Year</td>
+
+<td>
+
+<span class="resume-score">96%
+
+</span>
+
+</td>
+
+<td>
+
+<span class="interview-score">95%
+
+</span>
+
+</td>
+
+<td>
+
+<span class="status active">Active
+
+</span>
+
+</td>
+
+<td>
+
+<div class="action-buttons">
+
+<button class="view-btn">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="edit-btn">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+</td>
+
+</tr>
+
+<!--================== STUDENT 4 ==================-->
+
+<tr>
+
+<td>
+
+<img src="https://i.pravatar.cc/60?img=15"
+class="student-img">
+
+</td>
+
+<td>STU004</td>
+
+<td>Ananya Reddy</td>
+
+<td>ananya@gmail.com</td>
+
+<td>MVGR</td>
+
+<td>ECE</td>
+
+<td>2nd Year</td>
+
+<td>
+
+<span class="resume-score">82%
+
+</span>
+
+</td>
+
+<td>
+
+<span class="interview-score">84%
+
+</span>
+
+</td>
+
+<td>
+
+<span class="status inactive">Inactive
+
+</span>
+
+</td>
+
+<td>
+
+<div class="action-buttons">
+
+<button class="view-btn">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="edit-btn">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+</td>
+
+</tr>
+
+                  </tbody>
+
+              </table>
+
+          </div>
+
+      </section>
+              <!--====================================
+                PAGINATION
+        =====================================-->
+
+      <section class="pagination-section">
+
+          <button class="pagination-btn" id="prevPage">
+
+              <i class="fa-solid fa-angle-left"></i>
+
+              Previous
+
+            </button>
+
+          <div class="page-numbers">
+
+              <button class="active">1</button>
+
+              <button>2</button>
+
+              <button>3</button>
+
+              <button>4</button>
+
+              <button>5</button>
+
+          </div>
+
+          <button class="pagination-btn" id="nextPage">
+
+              Next
+
+                <i class="fa-solid fa-angle-right"></i>
+
+          </button>
+
+      </section>
+
+
+
+
+      <!--====================================
+                STUDENT DETAILS MODAL
+        =====================================-->
+
+      <div class="modal" id="studentModal">
+
+          <div class="modal-content">
+
+              <span class="close-modal">&times;</span>
+
+              <div class="student-profile">
+
+                  <img
+                    id="modalImage"src="https://i.pravatar.cc/150?img=11">
+
+                  <h2 id="modalName">
+
+                      Sai Swaroop
+
+                    </h2>
+
+                  <p id="modalCollege">
+
+                      NSRIT • CSE (AI & ML)
+
+                    </p>
+
+              </div>
+
+
+              <div class="profile-grid">
+
+                  <div class="profile-card">
+
+                      <h3>Personal Information</h3>
+
+                      <p>
+
+                          <strong>ID:</strong>
+
+                          <span id="modalId">STU001</span>
+
+                      </p>
+
+                      <p>
+
+                          <strong>Email:</strong>
+
+                          <span id="modalEmail">
+
+                              sai@gmail.com
+
+                            </span>
+
+                      </p>
+
+                      <p>
+
+                          <strong>Phone:</strong>
+
+                          9876543210
+
+                        </p>
+
+                      <p>
+
+                          <strong>Year:</strong>
+
+                          3rd Year
+
+                        </p>
+
+                      <p>
+
+                          <strong>Status:</strong>
+
+                          Active
+
+                        </p>
+
+                  </div>
+
+
+
+                  <div class="profile-card">
+
+                      <h3>Performance</h3>
+
+                      <p>
+
+                          Resume Score:
+                            <strong>94%</strong>
+
+                      </p>
+
+                      <p>
+
+                          ATS Score:
+                            <strong>91%</strong>
+
+                      </p>
+
+                      <p>
+
+                          Interview:
+                            <strong>89%</strong>
+
+                      </p>
+
+                      <p>
+
+                          Coding:
+                            <strong>93%</strong>
+
+                      </p>
+
+                      <p>
+
+                          AI Learning:
+                            <strong>82%</strong>
+
+                      </p>
+
+                  </div>
+
+
+
+                  <div class="profile-card">
+
+                      <h3>Skills</h3>
+
+                      <div class="skills">
+
+                          <span>Python</span>
+
+                          <span>FastAPI</span>
+
+                          <span>LangChain</span>
+
+                          <span>React</span>
+
+                          <span>SQL</span>
+
+                          <span>Machine Learning</span>
+
+                      </div>
+
+                  </div>
+
+
+
+                  <div class="profile-card">
+
+                      <h3>Recent Activities</h3>
+
+                      <ul>
+
+                          <li> Resume Uploaded</li>
+
+                          <li> Completed AI Course</li>
+
+                          <li> Applied to Google</li>
+
+                          <li> Mock Interview Completed</li>
+
+                          <li> Updated Profile</li>
+
+                      </ul>
+
+                  </div>
+
+              </div>
+
+
+
+              <div class="modal-buttons">
+
+                  <button class="edit-btn">
+
+                      <i class="fa-solid fa-pen"></i>
+
+                      Edit Student
+
+                    </button>
+
+                  <button class="delete-btn">
+
+                      <i class="fa-solid fa-trash"></i>
+
+                      Delete
+
+                    </button>
+
+                  <button class="email-btn">
+
+                      <i class="fa-solid fa-envelope"></i>
+
+                      Send Email
+
+                    </button>
+
+              </div>
+
+          </div>
+
+      </div>
+
+
+
+
+      <!--====================================
+                    FOOTER
+        =====================================-->
+
+      <footer class="footer">
+
+          <p>
+
+              © 2026 XTRAGRAD AI | Admin Dashboard
+
+            </p>
+
+      </footer>
+
+  </main>
+
+  <script src="./js/ai/student-management.js"></script>
+
+</body>
+
+</html>

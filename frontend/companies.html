@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>XTRAGRAD AI | Companies</title>
+
+  <link rel="stylesheet" href="./css/pages/companies.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--==========================
+        SIDEBAR
+===========================-->
+
+<aside class="sidebar">
+
+  <div class="logo">
+
+      <i class="fa-solid fa-graduation-cap"></i>
+
+      <h2>XTRAGRAD AI</h2>
+
+  </div>
+
+  <ul>
+
+      <li>
+
+          <a href="admin-dashboard.html">
+
+              <i class="fa-solid fa-house"></i>
+
+              Dashboard
+
+            </a>
+
+      </li>
+
+      <li>
+
+          <a href="./student-management.html">
+
+              <i class="fa-solid fa-user-graduate"></i>
+
+              Students
+
+            </a>
+
+      </li>
+
+      <li class="active">
+
+          <a href="./companies.html">
+
+              <i class="fa-solid fa-building"></i>
+
+              Companies
+
+            </a>
+
+      </li>
+
+      <li class="active">
+
+          <a href="./ai-monitor.html">
+
+              <i class="fa-solid fa-building"></i>
+
+              Ai-Monitoring
+
+            </a>
+
+      </li>
+
+
+      <li>
+
+          <a href="./report.html">
+
+              <i class="fa-solid fa-file-lines"></i>
+
+              Reports
+
+            </a>
+
+      </li>
+
+      <li>
+
+          <a href="./admin-settings.html">
+
+              <i class="fa-solid fa-gear"></i>
+
+              Settings
+
+            </a>
+
+      </li>
+
+      <li>
+
+          <a href="index.html">
+
+              <i class="fa-solid fa-right-from-bracket"></i>
+
+              Logout
+
+            </a>
+
+      </li>
+
+  </ul>
+
+</aside>
+
+<!--==========================
+        MAIN CONTENT
+===========================-->
+
+<main class="main-content">
+
+<!--==========================
+        HEADER
+===========================-->
+
+<header class="top-header">
+
+  <div>
+
+      <h1>Companies Management</h1>
+
+      <p>Manage hiring companies, recruiters and job openings.</p>
+
+  </div>
+
+  <div class="header-right">
+
+      <button class="icon-btn">
+
+          <i class="fa-solid fa-bell"></i>
+
+      </button>
+
+      <button class="icon-btn">
+
+          <i class="fa-solid fa-moon"></i>
+
+      </button>
+
+      <div class="admin-profile">
+
+          <img src="https://i.pravatar.cc/150?img=12">
+
+          <div>
+
+              <h4>Super Admin</h4>
+
+              <span>Administrator</span>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</header>
+
+<!--==========================
+        SEARCH SECTION
+===========================-->
+
+<section class="search-section">
+
+  <div class="search-box">
+
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+      <input
+
+        type="text"id="companySearch"placeholder="Search Company, HR Name, Job Role...">
+
+  </div>
+
+  <div class="top-buttons">
+
+      <button class="add-btn">
+
+          <i class="fa-solid fa-plus"></i>
+
+          Add Company
+
+        </button>
+
+      <button class="export-btn">
+
+          <i class="fa-solid fa-file-export"></i>
+
+          Export
+
+        </button>
+
+      <button class="refresh-btn">
+
+          <i class="fa-solid fa-rotate"></i>
+
+          Refresh
+
+        </button>
+
+  </div>
+
+</section>
+<!--====================================
+            STATISTICS SECTION
+=====================================-->
+
+<section class="stats-section">
+
+  <div class="stat-card">
+
+      <div class="stat-icon blue">
+
+          <i class="fa-solid fa-building"></i>
+
+      </div>
+
+      <div class="stat-content">
+
+          <h2 id="totalCompanies">85</h2>
+
+          <p>Total Companies</p>
+
+      </div>
+
+  </div>
+
+  <div class="stat-card">
+
+      <div class="stat-icon green">
+
+          <i class="fa-solid fa-briefcase"></i>
+
+      </div>
+
+      <div class="stat-content">
+
+          <h2 id="activeCompanies">52</h2>
+
+          <p>Active Hiring</p>
+
+      </div>
+
+  </div>
+
+  <div class="stat-card">
+
+      <div class="stat-icon orange">
+
+          <i class="fa-solid fa-file-circle-plus"></i>
+
+      </div>
+
+      <div class="stat-content">
+
+          <h2 id="jobOpenings">318</h2>
+
+          <p>Job Openings</p>
+
+      </div>
+
+  </div>
+
+  <div class="stat-card">
+
+      <div class="stat-icon red">
+
+          <i class="fa-solid fa-user-check"></i>
+
+      </div>
+
+      <div class="stat-content">
+
+          <h2 id="placedStudents">127</h2>
+
+          <p>Students Placed</p>
+
+      </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<!--====================================
+            FILTER SECTION
+=====================================-->
+
+<section class="filter-section">
+
+  <div class="filter-header">
+
+      <h2>
+
+          Company Filters
+
+        </h2>
+
+      <button id="clearFilters">
+
+          <i class="fa-solid fa-filter-circle-xmark"></i>
+
+          Clear Filters
+
+        </button>
+
+  </div>
+
+
+
+  <div class="filter-grid">
+
+      <!-- Company Type -->
+
+      <div class="filter-box">
+
+          <label>Company Type</label>
+
+          <select id="companyTypeFilter">
+
+              <option value="">All Types</option>
+
+              <option>Product Based</option>
+
+              <option>Service Based</option>
+
+              <option>Startup</option>
+
+              <option>MNC</option>
+
+          </select>
+
+      </div>
+
+
+
+      <!-- Job Type -->
+
+      <div class="filter-box">
+
+          <label>Job Type</label>
+
+          <select id="jobTypeFilter">
+
+              <option value="">All Jobs</option>
+
+              <option>Full Time</option>
+
+              <option>Internship</option>
+
+              <option>Hybrid</option>
+
+              <option>Remote</option>
+
+          </select>
+
+      </div>
+
+
+
+      <!-- Location -->
+
+      <div class="filter-box">
+
+          <label>Location</label>
+
+          <select id="locationFilter">
+
+              <option value="">All Locations</option>
+
+              <option>Bangalore</option>
+
+              <option>Hyderabad</option>
+
+              <option>Chennai</option>
+
+              <option>Pune</option>
+
+              <option>Noida</option>
+
+              <option>Remote</option>
+
+          </select>
+
+      </div>
+
+
+
+      <!-- Hiring Status -->
+
+      <div class="filter-box">
+
+          <label>Hiring Status</label>
+
+          <select id="statusFilter">
+
+              <option value="">All Status</option>
+
+              <option>Open</option>
+
+              <option>Closed</option>
+
+              <option>Upcoming</option>
+
+          </select>
+
+      </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<!--====================================
+        QUICK ACTION CARDS
+=====================================-->
+
+<section class="quick-actions">
+
+  <div class="action-card">
+
+      <i class="fa-solid fa-user-plus"></i>
+
+      <h3>Add Company</h3>
+
+      <p>Register a new hiring company.</p>
+
+  </div>
+
+  <div class="action-card">
+
+      <i class="fa-solid fa-envelope"></i>
+
+      <h3>Email HR</h3>
+
+      <p>Send hiring updates to recruiters.</p>
+
+  </div>
+
+  <div class="action-card">
+
+      <i class="fa-solid fa-chart-column"></i>
+
+      <h3>Hiring Analytics</h3>
+
+      <p>View recruitment statistics.</p>
+
+  </div>
+
+  <div class="action-card">
+
+      <i class="fa-solid fa-file-export"></i>
+
+      <h3>Export Report</h3>
+
+      <p>Download company reports.</p>
+
+  </div>
+
+</section>
+<!--====================================
+            COMPANIES TABLE
+=====================================-->
+
+<section class="company-table-section">
+
+  <div class="table-header">
+
+      <div>
+
+          <h2>Registered Companies</h2>
+
+          <p>Manage all hiring companies and recruiters.</p>
+
+      </div>
+
+      <button class="table-btn">
+
+          <i class="fa-solid fa-file-csv"></i>
+
+          Export CSV
+
+        </button>
+
+  </div>
+
+  <div class="table-container">
+
+      <table id="companyTable">
+
+          <thead>
+
+              <tr>
+
+                  <th>Logo</th>
+                  <th>Company</th>
+                  <th>HR Name</th>
+                  <th>Job Role</th>
+                  <th>Package</th>
+                  <th>Openings</th>
+                  <th>Location</th>
+                  <th>Deadline</th>
+                  <th>Status</th>
+                  <th>Rating</th>
+                  <th>Actions</th>
+
+              </tr>
+
+          </thead>
+
+          <tbody>
+
+<!--================ COMPANY 1 ================-->
+
+<tr>
+
+<td>
+
+<img src="https://logo.clearbit.com/google.com"class="company-logo">
+
+</td>
+
+<td>Google</td>
+
+<td>Priya Sharma</td>
+
+<td>Software Engineer</td>
+
+<td>₹32 LPA</td>
+
+<td>25</td>
+
+<td>Bangalore</td>
+
+<td>15 Aug 2026</td>
+
+<td>
+
+<span class="status open">Open
+
+</span>
+
+</td>
+
+<td>⭐ 4.9
+
+</td>
+
+<td>
+
+<div class="action-buttons">
+
+<button class="view-btn">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="edit-btn">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+<button class="email-btn">
+
+<i class="fa-solid fa-envelope"></i>
+
+</button>
+
+</div>
+
+</td>
+
+</tr>
+
+<!--================ COMPANY 2 ================-->
+
+<tr>
+
+<td>
+
+<img src="https://logo.clearbit.com/microsoft.com"class="company-logo">
+
+</td>
+
+<td>Microsoft</td>
+
+<td>Rahul Verma</td>
+
+<td>AI Engineer</td>
+
+<td>₹28 LPA</td>
+
+<td>18</td>
+
+<td>Hyderabad</td>
+
+<td>25 Aug 2026</td>
+
+<td>
+
+<span class="status open">Open
+
+</span>
+
+</td>
+
+<td>⭐ 4.8
+
+</td>
+
+<td>
+
+<div class="action-buttons">
+
+<button class="view-btn">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="edit-btn">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+<button class="email-btn">
+
+<i class="fa-solid fa-envelope"></i>
+
+</button>
+
+</div>
+
+</td>
+
+</tr>
+
+<!--================ COMPANY 3 ================-->
+
+<tr>
+
+<td>
+
+<img src="https://logo.clearbit.com/amazon.com"class="company-logo">
+
+</td>
+
+<td>Amazon</td>
+
+<td>Neha Singh</td>
+
+<td>Cloud Engineer</td>
+
+<td>₹24 LPA</td>
+
+<td>40</td>
+
+<td>Chennai</td>
+
+<td>05 Sep 2026</td>
+
+<td>
+
+<span class="status upcoming">Upcoming
+
+</span>
+
+</td>
+
+<td>⭐ 4.7
+
+</td>
+
+<td>
+
+<div class="action-buttons">
+
+<button class="view-btn">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="edit-btn">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+<button class="email-btn">
+
+<i class="fa-solid fa-envelope"></i>
+
+</button>
+
+</div>
+
+</td>
+
+</tr>
+
+<!--================ COMPANY 4 ================-->
+
+<tr>
+
+<td>
+
+<img src="https://logo.clearbit.com/tcs.com"class="company-logo">
+
+</td>
+
+<td>TCS</td>
+
+<td>Anjali Reddy</td>
+
+<td>Graduate Trainee</td>
+
+<td>₹7 LPA</td>
+
+<td>120</td>
+
+<td>Hyderabad</td>
+
+<td>12 Aug 2026</td>
+
+<td>
+
+<span class="status closed">Closed
+
+</span>
+
+</td>
+
+<td>⭐ 4.3
+
+</td>
+
+<td>
+
+<div class="action-buttons">
+
+<button class="view-btn">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="edit-btn">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+<button class="email-btn">
+
+<i class="fa-solid fa-envelope"></i>
+
+</button>
+
+</div>
+
+</td>
+
+</tr>
+
+<!--================ COMPANY 5 ================-->
+
+<tr>
+
+<td>
+
+<img src="https://logo.clearbit.com/infosys.com"class="company-logo">
+
+</td>
+
+<td>Infosys</td>
+
+<td>Vikram Rao</td>
+
+<td>Systems Engineer</td>
+
+<td>₹6.5 LPA</td>
+
+<td>90</td>
+
+<td>Pune</td>
+
+<td>20 Aug 2026</td>
+
+<td>
+
+<span class="status open">Open
+
+</span>
+
+</td>
+
+<td>⭐ 4.2
+
+</td>
+
+<td>
+
+<div class="action-buttons">
+
+<button class="view-btn">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<button class="edit-btn">
+
+<i class="fa-solid fa-pen"></i>
+
+</button>
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+<button class="email-btn">
+
+<i class="fa-solid fa-envelope"></i>
+
+</button>
+
+</div>
+
+</td>
+
+</tr>
+
+          </tbody>
+
+      </table>
+
+  </div>
+
+</section>
+<!--====================================
+            PAGINATION
+=====================================-->
+
+<section class="pagination-section">
+
+  <button class="pagination-btn" id="prevPage">
+
+      <i class="fa-solid fa-angle-left"></i>
+
+      Previous
+
+    </button>
+
+  <div class="page-numbers">
+
+      <button class="active">1</button>
+
+      <button>2</button>
+
+      <button>3</button>
+
+      <button>4</button>
+
+      <button>5</button>
+
+  </div>
+
+  <button class="pagination-btn" id="nextPage">
+
+      Next
+
+        <i class="fa-solid fa-angle-right"></i>
+
+  </button>
+
+</section>
+
+
+
+
+
+<!--====================================
+        COMPANY DETAILS MODAL
+=====================================-->
+
+<div class="modal" id="companyModal">
+
+  <div class="modal-content">
+
+      <span class="close-modal">&times;</span>
+
+      <!-- Company Header -->
+
+      <div class="company-profile">
+
+          <img
+                id="modalLogo"src="https://logo.clearbit.com/google.com"alt="Company Logo">
+
+          <h2 id="modalCompany">
+
+              Google
+
+            </h2>
+
+          <p id="modalLocation">
+
+              Bangalore, India
+
+            </p>
+
+      </div>
+
+      <!-- Company Information -->
+
+      <div class="profile-grid">
+
+          <!-- Basic Information -->
+
+          <div class="profile-card">
+
+              <h3>Company Information</h3>
+
+              <p>
+
+                  <strong>Company:</strong>
+
+                  <span id="modalCompanyName">
+
+                      Google
+
+                    </span>
+
+              </p>
+
+              <p>
+
+                  <strong>HR Name:</strong>
+
+                  <span id="modalHR">
+
+                      Priya Sharma
+
+                    </span>
+
+              </p>
+
+              <p>
+
+                  <strong>Email:</strong>
+
+                  <span id="modalEmail">
+
+                      hr@google.com
+
+                    </span>
+
+              </p>
+
+              <p>
+
+                  <strong>Website:</strong>
+
+                  <span>
+
+                      www.google.com
+
+                    </span>
+
+              </p>
+
+          </div>
+
+          <!-- Hiring Details -->
+
+          <div class="profile-card">
+
+              <h3>Hiring Details</h3>
+
+              <p>
+
+                  <strong>Role:</strong>
+
+                  <span id="modalRole">
+
+                      Software Engineer
+
+                    </span>
+
+              </p>
+
+              <p>
+
+                  <strong>Package:</strong>
+
+                  <span id="modalPackage">
+
+                      ₹32 LPA
+
+                    </span>
+
+              </p>
+
+              <p>
+
+                  <strong>Openings:</strong>
+
+                  <span id="modalOpenings">
+
+                      25
+
+                    </span>
+
+              </p>
+
+              <p>
+
+                  <strong>Deadline:</strong>
+
+                  <span id="modalDeadline">
+
+                      15 Aug 2026
+
+                    </span>
+
+              </p>
+
+          </div>
+
+          <!-- Required Skills -->
+
+          <div class="profile-card">
+
+              <h3>Required Skills</h3>
+
+              <div class="skills">
+
+                  <span>Python</span>
+
+                  <span>Java</span>
+
+                  <span>React</span>
+
+                  <span>SQL</span>
+
+                  <span>Git</span>
+
+                  <span>DSA</span>
+
+              </div>
+
+          </div>
+
+          <!-- Eligibility -->
+
+          <div class="profile-card">
+
+              <h3>Eligibility</h3>
+
+              <ul>
+
+                  <li>CGPA 7.5+</li>
+
+                  <li>No Active Backlogs</li>
+
+                  <li>Good Communication Skills</li>
+
+                  <li>Strong Problem Solving</li>
+
+                  <li>Eligible Branches: CSE, IT, AI & ML</li>
+
+              </ul>
+
+          </div>
+
+      </div>
+
+      <!-- Modal Buttons -->
+
+      <div class="modal-buttons">
+
+          <button class="edit-btn">
+
+              <i class="fa-solid fa-pen"></i>
+
+              Edit Company
+
+            </button>
+
+          <button class="delete-btn">
+
+              <i class="fa-solid fa-trash"></i>
+
+              Delete
+
+            </button>
+
+          <button class="email-btn">
+
+              <i class="fa-solid fa-envelope"></i>
+
+              Contact HR
+
+            </button>
+
+      </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+<!--====================================
+                FOOTER
+=====================================-->
+
+<footer class="footer">
+
+  <p>
+
+      © 2026 XTRAGRAD AI | Companies Management System
+
+    </p>
+
+</footer>
+
+</main>
+
+<script src="./js/ai/companies.js"></script>
+
+</body>
+
+</html>

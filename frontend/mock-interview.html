@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"content="width=device-width, initial-scale=1.0">
+
+  <title>XTRAGRAD AI | Mock Interview</title>
+
+  <!-- Google Font -->
+
+  <link rel="preconnect"href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"href="https://fonts.gstatic.com"crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- CSS -->
+
+
+
+
+  <link rel="stylesheet" href="./css/components/sidebar.css">
+
+  <link rel="stylesheet" href="./css/pages/interview.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+  <!-- Sidebar -->
+
+  <aside class="sidebar">
+
+      <div class="logo">
+
+          <h1>XTRAGRAD <span>AI</span></h1>
+
+      </div>
+
+      <ul>
+
+          <li><a href="./student-dashboard.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+
+          <li><a href="./resume_builder.html"><i class="fa-solid fa-file-lines"></i><span>Resume Builder</span></a></li>
+
+          <li><a href="./learning-roadmap.html"><i class="fa-solid fa-road"></i><span>Learning Roadmap</span></a></li>
+
+          <li><a href="./project-generator.html"><i class="fa-solid fa-diagram-project"></i><span> Ai Project Generator</span></a></li>
+
+          <li><a href="./coding-practice.html"><i class="fa-solid fa-code"></i><span>Coding Practice</span></a></li>
+
+          <li><a class="active" href="mock-interview.html"><i class="fa-solid fa-microphone"></i><span>Mock Interview</span></a></li>
+
+          <li><a href="./job.html"><i class="fa-solid fa-briefcase"></i><span>Jobs</span></a></li>
+
+          <li><a href="./assistant.html"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a></li>
+
+          <li><a href="./ai-analytics.html"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a></li>
+
+          <li><a href="./settings.html"><i class="fa-solid fa-gear"></i><span>Settings</span></a></li>
+
+          <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></li>
+
+      </ul>
+
+  </aside>
+
+  <!-- Main Content -->
+
+  <main class="main-content">
+
+      <header class="top-navbar">
+
+          <div>
+
+              <h1>AI Mock Interview</h1>
+
+              <p>
+
+                  Practice technical and HR interviews with an AI interviewer.
+
+                </p>
+
+          </div>
+
+      </header>
+      <!-- ==========================================
+            INTERVIEW SETUP
+========================================== -->
+
+<section class="interview-setup">
+
+  <div class="setup-card">
+
+      <h2>
+
+          <i class="fa-solid fa-sliders"></i>
+
+          Interview Configuration
+
+        </h2>
+
+      <div class="setup-grid">
+
+          <!-- Company -->
+
+          <div class="form-group">
+
+              <label>
+
+                  <i class="fa-solid fa-building"></i>
+
+                  Company
+
+                </label>
+
+              <select id="company">
+
+                  <option>Google</option>
+
+                  <option>Microsoft</option>
+
+                  <option>Amazon</option>
+
+                  <option>Meta</option>
+
+                  <option>Apple</option>
+
+                  <option>Netflix</option>
+
+                  <option>Adobe</option>
+
+                  <option>TCS</option>
+
+                  <option>Infosys</option>
+
+                  <option>Wipro</option>
+
+                  <option>Accenture</option>
+
+              </select>
+
+          </div>
+
+          <!-- Interview Type -->
+
+          <div class="form-group">
+
+              <label>
+
+                  <i class="fa-solid fa-user-tie"></i>
+
+                  Interview Type
+
+                </label>
+
+              <select id="interviewType">
+
+                  <option>HR Interview</option>
+
+                  <option>Technical Interview</option>
+
+                  <option>DSA Interview</option>
+
+                  <option>System Design</option>
+
+                  <option>Behavioral Interview</option>
+
+              </select>
+
+          </div>
+
+          <!-- Difficulty -->
+
+          <div class="form-group">
+
+              <label>
+
+                  <i class="fa-solid fa-chart-simple"></i>
+
+                  Difficulty
+
+                </label>
+
+              <select id="difficulty">
+
+                  <option>Easy</option>
+
+                  <option>Medium</option>
+
+                  <option>Hard</option>
+
+              </select>
+
+          </div>
+
+          <!-- Duration -->
+
+          <div class="form-group">
+
+              <label>
+
+                  <i class="fa-solid fa-clock"></i>
+
+                  Duration
+
+                </label>
+
+              <select id="duration">
+
+                  <option>15 Minutes</option>
+
+                  <option>30 Minutes</option>
+
+                  <option>45 Minutes</option>
+
+                  <option>60 Minutes</option>
+
+              </select>
+
+          </div>
+
+          <!-- Programming Language -->
+
+          <div class="form-group">
+
+              <label>
+
+                  <i class="fa-solid fa-code"></i>
+
+                  Programming Language
+
+                </label>
+
+              <select id="language">
+
+                  <option>Python</option>
+
+                  <option>C++</option>
+
+                  <option>Java</option>
+
+                  <option>JavaScript</option>
+
+                  <option>Go</option>
+
+              </select>
+
+          </div>
+
+          <!-- Experience -->
+
+          <div class="form-group">
+
+              <label>
+
+                  <i class="fa-solid fa-graduation-cap"></i>
+
+                  Experience Level
+
+                </label>
+
+              <select id="experience">
+
+                  <option>Student</option>
+
+                  <option>Fresher</option>
+
+                  <option>1-2 Years</option>
+
+                  <option>3-5 Years</option>
+
+              </select>
+
+          </div>
+
+      </div>
+
+      <!-- Interview Options -->
+
+      <div class="interview-options">
+
+          <label>
+
+              <input type="checkbox" checked>
+
+              Enable AI Voice Interview
+
+            </label>
+
+          <label>
+
+              <input type="checkbox" checked>
+
+              Enable AI Feedback
+
+            </label>
+
+          <label>
+
+              <input type="checkbox">
+
+              Enable Webcam Analysis
+
+            </label>
+
+          <label>
+
+              <input type="checkbox" checked>
+
+              Save Interview History
+
+            </label>
+
+      </div>
+
+      <!-- Start Button -->
+
+      <div class="start-section">
+
+          <button id="startInterview" class="start-btn">
+
+              <i class="fa-solid fa-play"></i>
+
+              Start AI Interview
+
+            </button>
+
+      </div>
+
+  </div>
+
+</section>
+<!-- ==========================================
+            AI INTERVIEW ROOM
+========================================== -->
+
+<section class="interview-room">
+
+  <!-- ==========================
+            LEFT PANEL
+    =========================== -->
+
+  <div class="interviewer-panel">
+
+      <div class="avatar">
+
+          <i class="fa-solid fa-user-tie"></i>
+      </div>
+
+      <h2>AI Interviewer</h2>
+
+      <p id="interviewerStatus">
+
+           Ready to Start
+
+        </p>
+
+      <div class="voice-animation">
+
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+
+      </div>
+
+      <div class="interview-timer">
+
+          <i class="fa-solid fa-clock"></i>
+
+          <span id="timer">
+
+              00: 00
+
+            </span>
+
+      </div>
+
+      <div class="interview-progress">
+
+          <h4>Interview Progress</h4>
+
+          <div class="progress-bar">
+
+              <div class="progress-fill" id="progressFill"></div>
+
+          </div>
+
+          <p>
+
+              <span id="currentQuestion">
+
+                  0
+
+                </span>
+
+              /
+
+                <span>
+
+                  10
+
+                </span>
+
+              Questions
+
+            </p>
+
+      </div>
+
+  </div>
+
+
+  <!-- ==========================
+            CENTER PANEL
+    =========================== -->
+
+  <div class="question-panel">
+
+      <div class="question-header">
+
+          <h2>
+
+              <i class="fa-solid fa-circle-question"></i>
+
+              Current Question
+
+            </h2>
+
+      </div>
+
+      <div class="question-box">
+
+          <p id="questionText">
+
+              Click <strong>Start AI Interview</strong>
+              to begin your interview session.
+
+            </p>
+
+      </div>
+
+      <div class="answer-section">
+
+          <label>
+
+              Your Answer
+
+            </label>
+
+          <textarea
+
+                id="answerBox"placeholder="Type your answer here or use voice recording..."></textarea>
+
+      </div>
+
+  </div>
+
+
+  <!-- ==========================
+            RIGHT PANEL
+    =========================== -->
+
+  <div class="assistant-panel">
+
+      <h2>
+
+          <i class="fa-solid fa-robot"></i>
+
+          AI Interview Assistant
+
+        </h2>
+
+      <div class="assistant-card">
+
+          <h4>
+
+              Confidence Score
+
+            </h4>
+
+          <h2 id="confidence">
+
+              -- %
+
+            </h2>
+
+      </div>
+
+      <div class="assistant-card">
+
+          <h4>
+
+              Communication
+
+            </h4>
+
+          <h2 id="communication">
+
+              -- %
+
+            </h2>
+
+      </div>
+
+      <div class="assistant-card">
+
+          <h4>
+
+              Technical Score
+
+            </h4>
+
+          <h2 id="technical">
+
+              -- %
+
+            </h2>
+
+      </div>
+
+      <div class="assistant-card">
+
+          <h4>
+
+              Grammar
+
+            </h4>
+
+          <h2 id="grammar">
+
+              -- %
+
+            </h2>
+
+      </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==========================================
+            INTERVIEW CONTROLS
+========================================== -->
+
+<section class="interview-controls">
+
+  <button class="record-btn">
+
+      <i class="fa-solid fa-microphone"></i>
+
+      Record Answer
+
+    </button>
+
+  <button class="next-btn">
+
+      <i class="fa-solid fa-forward"></i>
+
+      Next Question
+
+    </button>
+
+  <button class="skip-btn">
+
+      <i class="fa-solid fa-forward-step"></i>
+
+      Skip
+
+    </button>
+
+  <button class="end-btn">
+
+      <i class="fa-solid fa-stop"></i>
+
+      End Interview
+
+    </button>
+
+</section>
+<!-- ==========================================
+            AI FEEDBACK & REPORT
+========================================== -->
+
+<section class="interview-report">
+
+  <!-- AI Feedback -->
+
+  <div class="feedback-card">
+
+      <h2>
+
+          <i class="fa-solid fa-robot"></i>
+
+          AI Feedback
+
+        </h2>
+
+      <div id="aiFeedback">
+
+          <p>
+
+              After completing the interview, the AI will analyze your
+                answers and provide personalized feedback.
+
+            </p>
+
+      </div>
+
+  </div>
+
+
+  <!-- Live Transcript -->
+
+  <div class="feedback-card">
+
+      <h2>
+
+          <i class="fa-solid fa-file-lines"></i>
+
+          Interview Transcript
+
+        </h2>
+
+      <div id="transcript">
+
+          <p>
+
+              Your interview conversation will appear here.
+
+            </p>
+
+      </div>
+
+  </div>
+
+
+  <!-- Performance -->
+
+  <div class="feedback-card">
+
+      <h2>
+
+          <i class="fa-solid fa-chart-line"></i>
+
+          Performance Summary
+
+        </h2>
+
+      <div class="performance-grid">
+
+          <div class="performance-item">
+
+              <h3 id="overallScore">
+
+                  0%
+
+                </h3>
+
+              <p>Overall Score</p>
+
+          </div>
+
+          <div class="performance-item">
+
+              <h3 id="questionsAnswered">
+
+                  0/10
+
+                </h3>
+
+              <p>Questions Answered</p>
+
+          </div>
+
+          <div class="performance-item">
+
+              <h3 id="interviewLevel">
+
+                  Beginner
+
+                </h3>
+
+              <p>Performance Level</p>
+
+          </div>
+
+          <div class="performance-item">
+
+              <h3 id="recommendation">
+
+                  Pending
+
+                </h3>
+
+              <p>AI Recommendation</p>
+
+          </div>
+
+      </div>
+
+  </div>
+
+
+  <!-- Strengths -->
+
+  <div class="feedback-card">
+
+      <h2>
+
+          <i class="fa-solid fa-thumbs-up"></i>
+
+          Strengths
+
+        </h2>
+
+      <ul id="strengthList">
+
+          <li>Communication Skills</li>
+
+          <li>Problem Solving</li>
+
+          <li>Confidence</li>
+
+      </ul>
+
+  </div>
+
+
+  <!-- Improvements -->
+
+  <div class="feedback-card">
+
+      <h2>
+
+          <i class="fa-solid fa-lightbulb"></i>
+
+          Areas for Improvement
+
+        </h2>
+
+      <ul id="improvementList">
+
+          <li>Answer Structure</li>
+
+          <li>Technical Depth</li>
+
+          <li>Time Management</li>
+
+      </ul>
+
+  </div>
+
+</section>
+
+
+<!-- ==========================================
+            REPORT ACTIONS
+========================================== -->
+
+<section class="report-actions">
+
+  <button class="download-report">
+
+      <i class="fa-solid fa-download"></i>
+
+      Download Report
+
+    </button>
+
+  <button class="retry-btn">
+
+      <i class="fa-solid fa-rotate-right"></i>
+
+      Retry Interview
+
+    </button>
+
+  <button class="dashboard-btn">
+
+      <i class="fa-solid fa-house"></i>
+
+      Back to Dashboard
+
+    </button>
+
+</section>
+
+</main>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="./js/ai/interview.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>XTRAGRAD AI | Student Dashboard</title>
+
+  <link rel="stylesheet" href="css/pages/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<!--=================================
+BACKGROUND
+==================================-->
+
+<div class="bg-circle circle1"></div>
+
+<div class="bg-circle circle2"></div>
+
+<div class="bg-circle circle3"></div>
+
+<div class="grid-bg"></div>
+
+<!--=================================
+DASHBOARD
+==================================-->
+
+<div class="dashboard">
+
+<!--=================================
+SIDEBAR
+==================================-->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<h2>XTRAGRAD
+
+<span>AI</span>
+
+</h2>
+
+</div>
+
+<ul class="menu">
+
+<li class="active">
+
+<a href="#">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Dashboard</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="./resume_builder.html">
+
+<i class="fa-solid fa-file-lines"></i>
+
+<span>Resume Builder</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="./learning-roadmap.html">
+
+<i class="fa-solid fa-road"></i>
+
+<span>learning roadmap </span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="./project-generator.html">
+
+<i class="fa-solid fa-road"></i>
+
+<span>Project generator </span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="./mock-interview.html">
+
+<i class="fa-solid fa-robot"></i>
+
+<span>Mock Interview</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="./coding-practice.html">
+
+<i class="fa-solid fa-code"></i>
+
+<span>Coding Practice</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="./job.html">
+
+<i class="fa-solid fa-briefcase"></i>
+
+<span>Job Recommendations</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="./assistant.html">
+
+<i class="fa-solid fa-comments"></i>
+
+<span>AI Assistant</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="./ai-analytics.html">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<span>Analytics</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="./settings.html">
+
+<i class="fa-solid fa-gear"></i>
+
+<span>Settings</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="./index.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+<span>Logout</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</aside>
+
+<!--=================================
+MAIN CONTENT
+==================================-->
+
+<div class="main-content">
+
+<!--=================================
+TOP NAVBAR
+==================================-->
+
+<header class="topbar">
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input type="text"placeholder="Search anything...">
+
+</div>
+
+<div class="top-actions">
+
+<button>
+
+<i class="fa-solid fa-bell"></i>
+
+<span class="badge">5</span>
+
+</button>
+
+<button>
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+<div class="profile">
+
+<img src="./pic1.jpeg">
+
+<div>
+
+<h4>Swaroop</h4>
+
+<p>AI Engineer</p>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!--=================================
+WELCOME SECTION
+==================================-->
+
+<section class="welcome">
+
+<div>
+
+<h1>Welcome Back,
+
+<span>Swaroop </span>
+
+</h1>
+
+<p>Your AI-powered placement journey starts here.
+Track your resume score, placement readiness,
+coding performance and interview progress.
+
+</p>
+
+</div>
+
+<button class="resume-btn">
+
+<i class="fa-solid fa-upload"></i>Upload Resume
+
+</button>
+
+</section>
+
+<!--=================================
+STATISTICS
+==================================-->
+
+<section class="stats">
+
+<div class="card">
+
+<div>
+
+<h3>Resume Score</h3>
+
+<h2 id="resumeScore">92%</h2>
+
+<p>+4% This Week
+
+</p>
+
+</div>
+
+<div class="icon">
+
+<i class="fa-solid fa-file-lines"></i>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div>
+
+<h3>Placement Readiness</h3>
+
+<h2 id="placementScore">87%
+
+</h2>
+
+<p>Excellent Progress
+
+</p>
+
+</div>
+
+<div class="icon">
+
+<i class="fa-solid fa-chart-line"></i>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div>
+
+<h3>Coding Rating</h3>
+
+<h2>845
+
+</h2>
+
+<p>LeetCode
+
+</p>
+
+</div>
+
+<div class="icon">
+
+<i class="fa-solid fa-code"></i>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div>
+
+<h3>Interview Score</h3>
+
+<h2>91%
+
+</h2>
+
+<p>AI Evaluation
+
+</p>
+
+</div>
+
+<div class="icon">
+
+<i class="fa-solid fa-microphone"></i>
+
+</div>
+
+</div>
+
+</section>
+
+<!--=================================
+MAIN GRID
+==================================-->
+
+<section class="dashboard-grid">
+
+  <!--=============================
+    LEFT COLUMN
+    ==============================-->
+
+  <div class="left-column">
+
+      <!-- AI Recommendations -->
+
+      <div class="dashboard-card ai-card">
+
+          <div class="card-header">
+
+              <h2>
+                   AI Recommendations
+                </h2>
+
+              <button>
+                  View All
+                </button>
+
+          </div>
+
+          <div class="recommendation-list">
+
+              <div class="recommend-item">
+
+                  <i class="fa-solid fa-circle-check"></i>
+
+                  <div>
+
+                      <h4>Improve Resume</h4>
+
+                      <p>
+                          Add Docker, Kubernetes and AWS projects to increase ATS score.
+                        </p>
+
+                  </div>
+
+              </div>
+
+              <div class="recommend-item">
+
+                  <i class="fa-solid fa-circle-check"></i>
+
+                  <div>
+
+                      <h4>Practice DSA</h4>
+
+                      <p>
+                          Solve 5 LeetCode Medium problems daily.
+                        </p>
+
+                  </div>
+
+              </div>
+
+              <div class="recommend-item">
+
+                  <i class="fa-solid fa-circle-check"></i>
+
+                  <div>
+
+                      <h4>Mock Interview</h4>
+
+                      <p>
+                          Complete one AI interview before your placement drive.
+                        </p>
+
+                  </div>
+
+              </div>
+
+              <div class="recommend-item">
+
+                  <i class="fa-solid fa-circle-check"></i>
+
+                  <div>
+
+                      <h4>System Design</h4>
+
+                      <p>
+                          Start learning Low Level Design and REST APIs.
+                        </p>
+
+                  </div>
+
+              </div>
+
+          </div>
+
+      </div>
+
+
+      <!-- Resume Progress -->
+
+      <div class="dashboard-card">
+
+          <div class="card-header">
+
+              <h2>
+
+                  Resume Performance
+
+                </h2>
+
+          </div>
+
+          <canvas id="resumeChart"></canvas>
+
+      </div>
+
+
+      <!-- Coding Progress -->
+
+      <div class="dashboard-card">
+
+          <div class="card-header">
+
+              <h2>
+
+                  Coding Progress
+
+                </h2>
+
+          </div>
+
+          <canvas id="codingChart"></canvas>
+
+      </div>
+
+  </div>
+
+
+  <!--=============================
+    RIGHT COLUMN
+    ==============================-->
+
+  <div class="right-column">
+
+      <!-- Placement Prediction -->
+
+      <div class="dashboard-card">
+
+          <div class="card-header">
+
+              <h2>
+
+                  Placement Prediction
+
+                </h2>
+
+          </div>
+
+          <div class="prediction-box">
+
+              <div class="prediction-circle">
+
+                  <span>
+
+                      88%
+
+                    </span>
+
+              </div>
+
+              <h3>
+
+                  Excellent Chance
+
+                </h3>
+
+              <p>
+
+                  Based on resume, coding profile,
+                    interview performance and AI analysis.
+
+                </p>
+
+          </div>
+
+      </div>
+
+
+      <!-- AI Skills -->
+
+      <div class="dashboard-card">
+
+          <div class="card-header">
+
+              <h2>
+
+                  Recommended Skills
+
+                </h2>
+
+          </div>
+
+          <div class="skills">
+
+              <span>LangGraph</span>
+
+              <span>FastAPI</span>
+
+              <span>Docker</span>
+
+              <span>AWS</span>
+
+              <span>Kubernetes</span>
+
+              <span>System Design</span>
+
+              <span>React</span>
+
+              <span>Redis</span>
+
+          </div>
+
+      </div>
+
+
+      <!-- Upcoming Drives -->
+
+      <div class="dashboard-card">
+
+          <div class="card-header">
+
+              <h2>
+
+                  Upcoming Drives
+
+                </h2>
+
+          </div>
+
+          <div class="drive">
+
+              <h4>Google</h4>
+
+              <p>Software Engineer</p>
+
+              <span>18 July 2026</span>
+
+          </div>
+
+          <div class="drive">
+
+              <h4>Microsoft</h4>
+
+              <p>AI Engineer</p>
+
+              <span>22 July 2026</span>
+
+          </div>
+
+          <div class="drive">
+
+              <h4>Amazon</h4>
+
+              <p>ML Engineer</p>
+
+              <span>28 July 2026</span>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!--=================================
+BOTTOM SECTION
+==================================-->
+
+<section class="bottom-grid">
+
+  <!--=================================
+    JOB RECOMMENDATIONS
+    ==================================-->
+
+  <div class="dashboard-card jobs-card">
+
+      <div class="card-header">
+
+          <h2>
+
+               Recommended Jobs
+
+            </h2>
+
+          <button>
+
+              View All
+
+            </button>
+
+      </div>
+
+      <div class="job-list">
+
+          <div class="job-item">
+
+              <div class="company">
+
+                  <img src="assets/images/google.png" alt="Google">
+
+                  <div>
+
+                      <h3>Google</h3>
+
+                      <p>Software Engineer</p>
+
+                  </div>
+
+              </div>
+
+              <button>Apply</button>
+
+          </div>
+
+          <div class="job-item">
+
+              <div class="company">
+
+                  <img src="assets/images/microsoft.png" alt="Microsoft">
+
+                  <div>
+
+                      <h3>Microsoft</h3>
+
+                      <p>AI Engineer</p>
+
+                  </div>
+
+              </div>
+
+              <button>Apply</button>
+
+          </div>
+
+          <div class="job-item">
+
+              <div class="company">
+
+                  <img src="assets/images/amazon.png" alt="Amazon">
+
+                  <div>
+
+                      <h3>Amazon</h3>
+
+                      <p>Machine Learning Engineer</p>
+
+                  </div>
+
+              </div>
+
+              <button>Apply</button>
+
+          </div>
+
+      </div>
+
+  </div>
+
+
+  <!--=================================
+    RECENT ACTIVITY
+    ==================================-->
+
+  <div class="dashboard-card">
+
+      <div class="card-header">
+
+          <h2>
+
+               Recent Activity
+
+            </h2>
+
+      </div>
+
+      <div class="timeline">
+
+          <div class="timeline-item">
+
+              <i class="fa-solid fa-file-lines"></i>
+
+              <div>
+
+                  <h4>
+
+                      Resume Updated
+
+                    </h4>
+
+                  <p>
+
+                      AI increased ATS score from 86% to 92%.
+
+                    </p>
+
+              </div>
+
+              <span>
+
+                  Today
+
+                </span>
+
+          </div>
+
+          <div class="timeline-item">
+
+              <i class="fa-solid fa-microphone"></i>
+
+              <div>
+
+                  <h4>
+
+                      Mock Interview
+
+                    </h4>
+
+                  <p>
+
+                      Technical Interview Completed.
+
+                    </p>
+
+              </div>
+
+              <span>
+
+                  Yesterday
+
+                </span>
+
+          </div>
+
+          <div class="timeline-item">
+
+              <i class="fa-solid fa-code"></i>
+
+              <div>
+
+                  <h4>
+
+                      Coding Progress
+
+                    </h4>
+
+                  <p>
+
+                      Solved 12 LeetCode Problems.
+
+                    </p>
+
+              </div>
+
+              <span>
+
+                  2 Days Ago
+
+                </span>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+
+
+<!--=================================
+ACHIEVEMENTS
+==================================-->
+
+<section class="dashboard-card achievements">
+
+  <div class="card-header">
+
+      <h2>
+
+           Achievements
+
+        </h2>
+
+  </div>
+
+  <div class="badges">
+
+      <div class="badge-card">
+
+          <i class="fa-solid fa-medal"></i>
+
+          <h4>
+
+              Resume Expert
+
+            </h4>
+
+      </div>
+
+      <div class="badge-card">
+
+          <i class="fa-solid fa-brain"></i>
+
+          <h4>
+
+              AI Learner
+
+            </h4>
+
+      </div>
+
+      <div class="badge-card">
+
+          <i class="fa-solid fa-code"></i>
+
+          <h4>
+
+              Coding Master
+
+            </h4>
+
+      </div>
+
+      <div class="badge-card">
+
+          <i class="fa-solid fa-star"></i>
+
+          <h4>
+
+              Placement Ready
+
+            </h4>
+
+      </div>
+
+  </div>
+
+</section>
+
+
+<!--=================================
+AI INSIGHTS
+==================================-->
+
+<section class="dashboard-card">
+
+  <div class="card-header">
+
+      <h2>
+
+           AI Career Insights
+
+        </h2>
+
+  </div>
+
+  <div class="insights">
+
+      <div class="insight">
+
+          <i class="fa-solid fa-lightbulb"></i>
+
+          <p>
+
+              Your resume matches <b>91%</b> of AI Engineer job descriptions.
+
+            </p>
+
+      </div>
+
+      <div class="insight">
+
+          <i class="fa-solid fa-chart-line"></i>
+
+          <p>
+
+              Improving System Design can increase placement probability by <b>12%</b>.
+
+            </p>
+
+      </div>
+
+      <div class="insight">
+
+          <i class="fa-solid fa-graduation-cap"></i>
+
+          <p>
+
+              Complete 2 more mock interviews to become interview ready.
+
+            </p>
+
+      </div>
+
+  </div>
+
+</section>
+
+
+<!--=================================
+FLOATING AI ASSISTANT
+==================================-->
+
+<div class="ai-assistant">
+
+  <button>
+
+      <i class="fa-solid fa-robot"></i>
+
+  </button>
+
+</div>
+
+<!--=================================
+PROFILE & ANALYTICS
+==================================-->
+
+<section class="extra-grid">
+
+  <!-- Profile Completion -->
+
+  <div class="dashboard-card">
+
+      <div class="card-header">
+
+          <h2>
+               Profile Completion
+            </h2>
+
+      </div>
+
+      <div class="profile-progress">
+
+          <div class="progress-circle">
+
+              <span>82%</span>
+
+          </div>
+
+          <div class="progress-info">
+
+              <h3>Your Profile is Almost Ready</h3>
+
+              <p>
+                  Complete your certifications,
+                    GitHub,
+                    LinkedIn,
+                    projects,
+                    and skills to reach 100%.
+                </p>
+
+              <button class="primary-btn">
+                  Complete Profile
+                </button>
+
+          </div>
+
+      </div>
+
+  </div>
+
+
+  <!-- Weekly Analytics -->
+
+  <div class="dashboard-card">
+
+      <div class="card-header">
+
+          <h2>
+
+               Weekly Analytics
+
+            </h2>
+
+      </div>
+
+      <canvas id="analyticsChart"></canvas>
+
+  </div>
+
+</section>
+
+
+<!--=================================
+QUICK ACTIONS
+==================================-->
+
+<section class="dashboard-card">
+
+  <div class="card-header">
+
+      <h2>
+
+           Quick Actions
+
+        </h2>
+
+  </div>
+
+  <div class="quick-actions">
+
+      <button>
+
+          <i class="fa-solid fa-file-arrow-up"></i>
+
+          Upload Resume
+
+        </button>
+
+      <button>
+
+          <i class="fa-solid fa-robot"></i>
+
+          Start AI Interview
+
+        </button>
+
+      <button>
+
+          <i class="fa-solid fa-road"></i>
+
+          Generate Roadmap
+
+        </button>
+
+      <button>
+
+          <i class="fa-solid fa-briefcase"></i>
+
+          Find Jobs
+
+        </button>
+
+      <button>
+
+          <i class="fa-solid fa-code"></i>
+
+          Coding Practice
+
+        </button>
+
+      <button>
+
+          <i class="fa-solid fa-comments"></i>
+
+          Ask AI Mentor
+
+        </button>
+
+  </div>
+
+</section>
+
+
+<!--=================================
+NOTIFICATIONS
+==================================-->
+
+<section class="dashboard-card">
+
+  <div class="card-header">
+
+      <h2>
+
+           Latest Notifications
+
+        </h2>
+
+  </div>
+
+  <div class="notification-list">
+
+      <div class="notification">
+
+          <i class="fa-solid fa-circle-info"></i>
+
+          <div>
+
+              <h4>
+
+                  Google Hiring Drive
+
+                </h4>
+
+              <p>
+
+                  Applications close in 3 days.
+
+                </p>
+
+          </div>
+
+      </div>
+
+      <div class="notification">
+
+          <i class="fa-solid fa-circle-check"></i>
+
+          <div>
+
+              <h4>
+
+                  Resume Analysis Completed
+
+                </h4>
+
+              <p>
+
+                  ATS score improved successfully.
+
+                </p>
+
+          </div>
+
+      </div>
+
+      <div class="notification">
+
+          <i class="fa-solid fa-star"></i>
+
+          <div>
+
+              <h4>
+
+                  New Achievement Unlocked
+
+                </h4>
+
+              <p>
+
+                  AI Placement Expert Badge earned.
+
+                </p>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+
+</div>
+
+</div>
+
+
+<!--=================================
+FOOTER
+==================================-->
+
+<footer class="dashboard-footer">
+
+  <p>
+
+      © 2026 XTRAGRAD AI |
+        Powered by Artificial Intelligence 
+
+    </p>
+
+</footer>
+
+
+<script src="./js/dashboard/dashboard.js"></script>
+
+</body>
+
+</html>

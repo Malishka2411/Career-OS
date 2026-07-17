@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>XTRAGRAD AI | Coding Practice</title>
+
+  <!-- Google Font -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- CSS -->
+
+
+
+
+  <link rel="stylesheet" href="./css/components/sidebar.css">
+
+  <link rel="stylesheet" href="./css/pages/coding.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+  <!-- Sidebar -->
+
+  <aside class="sidebar">
+
+      <div class="logo">
+
+          <h1>XTRAGRAD <span>AI</span></h1>
+
+      </div>
+
+      <ul>
+
+          <li><a href="./student-dashboard.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+
+          <li><a href="./resume_builder.html"><i class="fa-solid fa-file-lines"></i><span>Resume Builder</span></a></li>
+
+          <li><a href="./learning-roadmap.html"><i class="fa-solid fa-road"></i><span>Learning Roadmap</span></a></li>
+
+          <li><a href="./project-generator.html"><i class="fa-solid fa-diagram-project"></i><span>AI Project Generator</span></a></li>
+
+          <li><a class="active" href="coding-practice.html"><i class="fa-solid fa-code"></i><span>Coding Practice</span></a></li>
+
+          <li><a href="mock-interview.html"><i class="fa-solid fa-microphone"></i><span>Mock Interview</span></a></li>
+
+          <li><a href="./job.html"><i class="fa-solid fa-briefcase"></i><span>Job Recommendations</span></a></li>
+
+          <li><a href="./assistant.html"><i class="fa-solid fa-robot"></i><span>AI Assistant</span></a></li>
+
+          <li><a href="./ai-analytics.html"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a></li>
+
+          <li><a href="./settings.html"><i class="fa-solid fa-gear"></i><span>Settings</span></a></li>
+
+          <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></li>
+
+      </ul>
+
+  </aside>
+
+  <!-- Main Content -->
+
+  <main class="main-content">
+
+      <header class="top-navbar">
+
+          <div>
+
+              <h1>Coding Practice</h1>
+
+              <p>Improve your coding skills with AI-powered practice and real interview questions.</p>
+
+          </div>
+
+      </header>
+      <!-- ==========================================
+            CODING STATISTICS
+========================================== -->
+
+<section class="coding-stats">
+
+  <div class="stat-card">
+
+      <div class="stat-icon">
+
+          <i class="fa-solid fa-code"></i>
+
+      </div>
+
+      <div class="stat-info">
+
+          <h2 id="problemsSolved">125</h2>
+
+          <p>Problems Solved</p>
+
+      </div>
+
+  </div>
+
+  <div class="stat-card">
+
+      <div class="stat-icon">
+
+          <i class="fa-solid fa-fire"></i>
+
+      </div>
+
+      <div class="stat-info">
+
+          <h2 id="streak">18 Days</h2>
+
+          <p>Current Streak</p>
+
+      </div>
+
+  </div>
+
+  <div class="stat-card">
+
+      <div class="stat-icon">
+
+          <i class="fa-solid fa-star"></i>
+
+      </div>
+
+      <div class="stat-info">
+
+          <h2 id="xpPoints">2,450</h2>
+
+          <p>XP Points</p>
+
+      </div>
+
+  </div>
+
+  <div class="stat-card">
+
+      <div class="stat-icon">
+
+          <i class="fa-solid fa-bullseye"></i>
+
+      </div>
+
+      <div class="stat-info">
+
+          <h2 id="accuracy">92%</h2>
+
+          <p>Accuracy</p>
+
+      </div>
+
+  </div>
+
+  <div class="stat-card">
+
+      <div class="stat-icon">
+
+          <i class="fa-solid fa-clock"></i>
+
+      </div>
+
+      <div class="stat-info">
+
+          <h2 id="codingTime">3h 25m</h2>
+
+          <p>Today's Coding</p>
+
+      </div>
+
+  </div>
+
+  <div class="stat-card">
+
+      <div class="stat-icon">
+
+          <i class="fa-solid fa-ranking-star"></i>
+
+      </div>
+
+      <div class="stat-info">
+
+          <h2 id="rank">#432</h2>
+
+          <p>Global Rank</p>
+
+      </div>
+
+  </div>
+
+</section>
+<!-- ==========================================
+            CODING WORKSPACE
+========================================== -->
+
+<section class="coding-workspace">
+
+  <!-- ==========================
+         LEFT PANEL
+    =========================== -->
+
+  <div class="question-list">
+
+      <div class="panel-header">
+
+          <h2>
+
+              <i class="fa-solid fa-list-check"></i>
+
+              Problem List
+
+            </h2>
+
+      </div>
+
+      <input
+            type="text"placeholder="Search problems..."id="searchProblem">
+
+      <select id="difficultyFilter">
+
+          <option>All Difficulties</option>
+
+          <option>Easy</option>
+
+          <option>Medium</option>
+
+          <option>Hard</option>
+
+      </select>
+
+      <div class="problem-items">
+
+          <div class="problem active">
+
+              <span></span>
+
+              <p>Two Sum</p>
+
+              <small>Easy</small>
+
+          </div>
+
+          <div class="problem">
+
+              <span>○</span>
+
+              <p>Longest Substring Without Repeating Characters</p>
+
+              <small>Medium</small>
+
+          </div>
+
+          <div class="problem">
+
+              <span>○</span>
+
+              <p>Merge Two Sorted Lists</p>
+
+              <small>Easy</small>
+
+          </div>
+
+          <div class="problem">
+
+              <span>○</span>
+
+              <p>Binary Tree Level Order Traversal</p>
+
+              <small>Medium</small>
+
+          </div>
+
+          <div class="problem">
+
+              <span>○</span>
+
+              <p>LRU Cache</p>
+
+              <small>Hard</small>
+
+          </div>
+
+      </div>
+
+  </div>
+
+
+  <!-- ==========================
+         CENTER PANEL
+    =========================== -->
+
+  <div class="problem-statement">
+
+      <div class="panel-header">
+
+          <h2>
+
+              <i class="fa-solid fa-code"></i>
+
+              Two Sum
+
+            </h2>
+
+          <span class="difficulty easy">
+
+              Easy
+
+            </span>
+
+      </div>
+
+      <div class="companies">
+
+          <span>Amazon</span>
+
+          <span>Google</span>
+
+          <span>Microsoft</span>
+
+          <span>Adobe</span>
+
+      </div>
+
+      <h3>Description</h3>
+
+      <p>
+
+          Given an array of integers and a target value,
+            return the indices of the two numbers such that
+            they add up to the target.
+
+        </p>
+
+      <h3>Example</h3>
+
+<pre>
+Input:
+nums = [2,7,11,15]
+target = 9
+
+Output:
+[0,1]
+</pre>
+
+      <h3>Constraints</h3>
+
+      <ul>
+
+          <li>2 ≤ nums.length ≤ 10⁴</li>
+
+          <li>-10⁹ ≤ nums[i] ≤ 10⁹</li>
+
+          <li>Only one valid answer exists.</li>
+
+      </ul>
+
+  </div>
+
+
+  <!-- ==========================
+         RIGHT PANEL
+    =========================== -->
+
+  <div class="ai-assistant">
+
+      <div class="panel-header">
+
+          <h2>
+
+              <i class="fa-solid fa-robot"></i>
+
+              AI Coding Assistant
+
+            </h2>
+
+      </div>
+
+      <button class="ai-btn">
+
+           Get Hint
+
+        </button>
+
+      <button class="ai-btn">
+
+           Explain Problem
+
+        </button>
+
+      <button class="ai-btn">
+
+           Optimize Solution
+
+        </button>
+
+      <button class="ai-btn">
+
+           Explain Time Complexity
+
+        </button>
+
+      <button class="ai-btn">
+
+           Generate Similar Question
+
+        </button>
+
+      <button class="ai-btn">
+
+           Review My Code
+
+        </button>
+
+      <div class="ai-output">
+
+          <h3>AI Response</h3>
+
+          <p>
+
+              Your AI explanation will appear here after
+                clicking any assistant button.
+
+            </p>
+
+      </div>
+
+  </div>
+
+</section>
+<!-- ==========================================
+            CODE EDITOR SECTION
+========================================== -->
+
+<section class="code-editor-section">
+
+  <div class="editor-header">
+
+      <h2>
+
+          <i class="fa-solid fa-laptop-code"></i>
+
+          Code Editor
+
+        </h2>
+
+      <div class="editor-controls">
+
+          <select id="languageSelect">
+
+              <option value="cpp">C++</option>
+
+              <option value="python">Python</option>
+
+              <option value="java">Java</option>
+
+              <option value="javascript">JavaScript</option>
+
+          </select>
+
+      </div>
+
+  </div>
+
+
+  <!-- Code Editor -->
+
+  <textarea
+        id="codeEditor"spellcheck="false"placeholder="// Write your solution here..."></textarea>
+
+
+  <!-- Action Buttons -->
+
+  <div class="editor-actions">
+
+      <button class="run-btn">
+
+          <i class="fa-solid fa-play"></i>
+
+          Run Code
+
+        </button>
+
+      <button class="submit-btn">
+
+          <i class="fa-solid fa-paper-plane"></i>
+
+          Submit Solution
+
+        </button>
+
+      <button class="reset-btn">
+
+          <i class="fa-solid fa-rotate-left"></i>
+
+          Reset
+
+        </button>
+
+  </div>
+
+
+  <!-- Test Cases -->
+
+  <div class="testcase-section">
+
+      <h3>
+
+          <i class="fa-solid fa-vial"></i>
+
+          Sample Test Cases
+
+        </h3>
+
+      <div class="testcase">
+
+          <strong>Input</strong>
+
+<pre>
+nums = [2,7,11,15]
+target = 9
+</pre>
+
+          <strong>Expected Output</strong>
+
+<pre>
+[0,1]
+</pre>
+
+      </div>
+
+  </div>
+
+
+  <!-- Output Console -->
+
+  <div class="console-output">
+
+      <h3>
+
+          <i class="fa-solid fa-terminal"></i>
+
+          Output Console
+
+        </h3>
+
+<pre id="consoleResult">
+Waiting for code execution...
+</pre>
+
+  </div>
+
+
+  <!-- Submission Report -->
+
+  <div class="submission-report">
+
+      <h3>
+
+          <i class="fa-solid fa-chart-column"></i>
+
+          Submission Result
+
+        </h3>
+
+      <div class="report-grid">
+
+          <div class="report-card">
+
+              <h4>Status</h4>
+
+              <p id="submissionStatus">
+
+                  Not Submitted
+
+                </p>
+
+          </div>
+
+          <div class="report-card">
+
+              <h4>Execution Time</h4>
+
+              <p id="executionTime">
+
+                  -- ms
+
+                </p>
+
+          </div>
+
+          <div class="report-card">
+
+              <h4>Memory Usage</h4>
+
+              <p id="memoryUsage">
+
+                  -- MB
+
+                </p>
+
+          </div>
+
+          <div class="report-card">
+
+              <h4>Test Cases Passed</h4>
+
+              <p id="testCases">
+
+                  0 / 0
+
+                </p>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+
+</main>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="./js/ai/coding.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"content="width=device-width, initial-scale=1.0">
+
+  <title>XTRAGRAD AI | Admin Settings</title>
+
+  <link rel="stylesheet" href="./css/pages/admin-settings.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+
+
+  <link rel="preconnect"href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"href="https://fonts.gstatic.com"crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"rel="stylesheet">
+
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--=========================
+        SIDEBAR
+==========================-->
+
+<aside class="sidebar">
+
+  <div class="logo">
+
+      <i class="fa-solid fa-graduation-cap"></i>
+
+      <h2>XTRAGRAD AI</h2>
+
+  </div>
+
+  <ul>
+
+      <li>
+          <a href="admin-dashboard.html">
+              <i class="fa-solid fa-house"></i>
+              Dashboard
+            </a>
+      </li>
+
+      <li>
+          <a href="student-management.html">
+              <i class="fa-solid fa-user-graduate"></i>
+              Students
+            </a>
+      </li>
+
+      <li>
+          <a href="companies.html">
+              <i class="fa-solid fa-building"></i>
+              Companies
+            </a>
+      </li>
+
+      <li>
+          <a href="courses.html">
+              <i class="fa-solid fa-book-open"></i>
+              Courses
+            </a>
+      </li>
+
+      <li>
+          <a href="ai-monitor.html">
+              <i class="fa-solid fa-robot"></i>
+              AI Monitoring
+            </a>
+      </li>
+
+      <li>
+          <a href="report.html">
+              <i class="fa-solid fa-file-lines"></i>
+              Reports
+            </a>
+      </li>
+
+      <li class="active">
+          <a href="#">
+              <i class="fa-solid fa-gear"></i>
+              Settings
+            </a>
+      </li>
+
+      <li>
+          <a href="index.html">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              Logout
+            </a>
+      </li>
+
+  </ul>
+
+</aside>
+
+<!--=========================
+      MAIN CONTENT
+==========================-->
+
+<main class="main-content">
+
+<!--=========================
+          HEADER
+==========================-->
+
+<header class="top-header">
+
+  <div>
+
+      <h1>Admin Settings</h1>
+
+      <p>Manage profile, security, AI and system preferences.</p>
+
+  </div>
+
+  <div class="header-right">
+
+      <button class="icon-btn">
+
+          <i class="fa-solid fa-bell"></i>
+
+      </button>
+
+      <button class="icon-btn">
+
+          <i class="fa-solid fa-moon"></i>
+
+      </button>
+
+      <div class="admin-profile">
+
+          <img src="https://i.pravatar.cc/150?img=12"alt="Admin">
+
+          <div>
+
+              <h4>Super Admin</h4>
+
+              <span>Placement Administrator</span>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</header>
+
+<!--=========================
+     SEARCH & ACTIONS
+==========================-->
+
+<section class="search-section">
+
+  <div class="search-box">
+
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+      <input
+            type="text"id="settingsSearch"placeholder="Search Settings...">
+
+  </div>
+
+  <div class="top-buttons">
+
+      <button class="save-btn">
+
+          <i class="fa-solid fa-floppy-disk"></i>
+
+          Save Settings
+
+        </button>
+
+      <button class="reset-btn">
+
+          <i class="fa-solid fa-rotate-left"></i>
+
+          Reset
+
+        </button>
+
+  </div>
+
+</section>
+<!--====================================
+            PROFILE SETTINGS
+=====================================-->
+
+<section class="settings-card">
+
+  <div class="section-header">
+
+      <h2>
+          <i class="fa-solid fa-user"></i>
+          Profile Settings
+        </h2>
+
+  </div>
+
+  <div class="profile-container">
+
+      <div class="profile-image">
+
+          <img src="https://i.pravatar.cc/200?img=12"alt="Admin Profile">
+
+          <button class="upload-btn">
+
+              <i class="fa-solid fa-camera"></i>
+
+              Change Photo
+
+            </button>
+
+      </div>
+
+      <div class="profile-form">
+
+          <div class="input-group">
+
+              <label>Full Name</label>
+
+              <input type="text"id="adminName"value="Super Admin">
+
+          </div>
+
+          <div class="input-group">
+
+              <label>Email Address</label>
+
+              <input type="email"id="adminEmail"value="admin@xtragrad.ai">
+
+          </div>
+
+          <div class="input-group">
+
+              <label>Phone Number</label>
+
+              <input type="text"id="adminPhone"value="+91 9876543210">
+
+          </div>
+
+          <div class="input-group">
+
+              <label>Role</label>
+
+              <input type="text"value="Placement Administrator"readonly>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!--====================================
+            SECURITY SETTINGS
+=====================================-->
+
+<section class="settings-card">
+
+  <div class="section-header">
+
+      <h2>
+
+          <i class="fa-solid fa-lock"></i>
+
+          Security Settings
+
+        </h2>
+
+  </div>
+
+  <div class="security-grid">
+
+      <div class="input-group">
+
+          <label>Current Password</label>
+
+          <input type="password"id="currentPassword">
+
+      </div>
+
+      <div class="input-group">
+
+          <label>New Password</label>
+
+          <input type="password"id="newPassword">
+
+      </div>
+
+      <div class="input-group">
+
+          <label>Confirm Password</label>
+
+          <input type="password"id="confirmPassword">
+
+      </div>
+
+      <div class="toggle-item">
+
+          <span>Two-Factor Authentication</span>
+
+          <label class="switch">
+
+              <input type="checkbox"id="twoFactor">
+
+              <span class="slider"></span>
+
+          </label>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!--====================================
+          APPEARANCE SETTINGS
+=====================================-->
+
+<section class="settings-card">
+
+  <div class="section-header">
+
+      <h2>
+
+          <i class="fa-solid fa-palette"></i>
+
+          Appearance
+
+        </h2>
+
+  </div>
+
+  <div class="appearance-grid">
+
+      <div class="input-group">
+
+          <label>Theme</label>
+
+          <select id="theme">
+
+              <option>Dark</option>
+
+              <option>Light</option>
+
+          </select>
+
+      </div>
+
+      <div class="input-group">
+
+          <label>Accent Color</label>
+
+          <select id="accentColor">
+
+              <option>Blue</option>
+
+              <option>Purple</option>
+
+              <option>Green</option>
+
+              <option>Orange</option>
+
+          </select>
+
+      </div>
+
+      <div class="input-group">
+
+          <label>Font Size</label>
+
+          <select id="fontSize">
+
+              <option>Small</option>
+
+              <option selected>Medium</option>
+
+              <option>Large</option>
+
+          </select>
+
+      </div>
+
+      <div class="input-group">
+
+          <label>Dashboard Layout</label>
+
+          <select id="layout">
+
+              <option>Default</option>
+
+              <option>Compact</option>
+
+              <option>Wide</option>
+
+          </select>
+
+      </div>
+
+  </div>
+
+</section>
+<!--====================================
+        NOTIFICATION SETTINGS
+=====================================-->
+
+<section class="settings-card">
+
+  <div class="section-header">
+
+      <h2>
+          <i class="fa-solid fa-bell"></i>
+          Notification Settings
+        </h2>
+
+  </div>
+
+  <div class="notification-grid">
+
+      <div class="toggle-item">
+
+          <span>Email Notifications</span>
+
+          <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider"></span>
+          </label>
+
+      </div>
+
+      <div class="toggle-item">
+
+          <span>SMS Notifications</span>
+
+          <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+          </label>
+
+      </div>
+
+      <div class="toggle-item">
+
+          <span>Push Notifications</span>
+
+          <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider"></span>
+          </label>
+
+      </div>
+
+      <div class="toggle-item">
+
+          <span>AI Monitoring Alerts</span>
+
+          <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider"></span>
+          </label>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!--====================================
+            AI SETTINGS
+=====================================-->
+
+<section class="settings-card">
+
+  <div class="section-header">
+
+      <h2>
+          <i class="fa-solid fa-robot"></i>
+          AI Configuration
+        </h2>
+
+  </div>
+
+  <div class="appearance-grid">
+
+      <div class="input-group">
+
+          <label>AI Provider</label>
+
+          <select id="aiProvider">
+
+              <option selected>Gemini</option>
+              <option>OpenAI</option>
+              <option>Ollama</option>
+
+          </select>
+
+      </div>
+
+      <div class="input-group">
+
+          <label>AI Model</label>
+
+          <select id="aiModel">
+
+              <option selected>Gemini 2.5 Flash</option>
+              <option>Gemini 2.5 Pro</option>
+              <option>GPT-5</option>
+              <option>Llama 3</option>
+
+          </select>
+
+      </div>
+
+      <div class="input-group">
+
+          <label>Temperature</label>
+
+          <input
+                type="range"min="0"max="1"step="0.1"value="0.5"id="temperature">
+
+      </div>
+
+      <div class="input-group">
+
+          <label>Maximum Tokens</label>
+
+          <input
+                type="number"value="2048"id="maxTokens">
+
+      </div>
+
+  </div>
+
+</section>
+
+<!--====================================
+        PLACEMENT SETTINGS
+=====================================-->
+
+<section class="settings-card">
+
+  <div class="section-header">
+
+      <h2>
+          <i class="fa-solid fa-graduation-cap"></i>
+          Placement Portal Settings
+        </h2>
+
+  </div>
+
+  <div class="appearance-grid">
+
+      <div class="input-group">
+
+          <label>College Name</label>
+
+          <input
+                type="text"value="XTRAGRAD University">
+
+      </div>
+
+      <div class="input-group">
+
+          <label>Academic Year</label>
+
+          <input
+                type="text"value="2026-2027">
+
+      </div>
+
+      <div class="input-group">
+
+          <label>Placement Officer</label>
+
+          <input
+                type="text"value="Dr. Ramesh Kumar">
+
+      </div>
+
+      <div class="input-group">
+
+          <label>Registration Deadline</label>
+
+          <input
+                type="date">
+
+      </div>
+
+  </div>
+
+</section>
+
+<!--====================================
+        BACKUP & RESTORE
+=====================================-->
+
+<section class="settings-card">
+
+  <div class="section-header">
+
+      <h2>
+
+          <i class="fa-solid fa-database"></i>
+
+          Backup & Restore
+
+        </h2>
+
+  </div>
+
+  <div class="backup-buttons">
+
+      <button class="backup-btn">
+
+          <i class="fa-solid fa-download"></i>
+
+          Backup Database
+
+        </button>
+
+      <button class="restore-btn">
+
+          <i class="fa-solid fa-upload"></i>
+
+          Restore Database
+
+        </button>
+
+      <button class="export-btn">
+
+          <i class="fa-solid fa-file-export"></i>
+
+          Export Settings
+
+        </button>
+
+      <button class="import-btn">
+
+          <i class="fa-solid fa-file-import"></i>
+
+          Import Settings
+
+        </button>
+
+  </div>
+
+</section>
+<!--====================================
+        SYSTEM INFORMATION
+=====================================-->
+
+<section class="settings-card">
+
+  <div class="section-header">
+
+      <h2>
+
+          <i class="fa-solid fa-server"></i>
+
+          System Information
+
+        </h2>
+
+  </div>
+
+  <div class="system-grid">
+
+      <div class="system-card">
+
+          <i class="fa-solid fa-code"></i>
+
+          <h3>System Version</h3>
+
+          <p>v2.0.1</p>
+
+      </div>
+
+      <div class="system-card">
+
+          <i class="fa-solid fa-database"></i>
+
+          <h3>Database</h3>
+
+          <p class="status online">Connected</p>
+
+      </div>
+
+      <div class="system-card">
+
+          <i class="fa-solid fa-robot"></i>
+
+          <h3>AI Engine</h3>
+
+          <p class="status online">Running</p>
+
+      </div>
+
+      <div class="system-card">
+
+          <i class="fa-solid fa-hard-drive"></i>
+
+          <h3>Storage</h3>
+
+          <p>68% Used</p>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!--====================================
+        ACCOUNT MANAGEMENT
+=====================================-->
+
+<section class="settings-card">
+
+  <div class="section-header">
+
+      <h2>
+
+          <i class="fa-solid fa-user-shield"></i>
+
+          Account Management
+
+        </h2>
+
+  </div>
+
+  <div class="account-actions">
+
+      <button class="logout-all-btn">
+
+          <i class="fa-solid fa-right-from-bracket"></i>
+
+          Logout All Devices
+
+        </button>
+
+      <button class="reset-system-btn">
+
+          <i class="fa-solid fa-rotate"></i>
+
+          Reset System
+
+        </button>
+
+      <button class="delete-account-btn">
+
+          <i class="fa-solid fa-trash"></i>
+
+          Delete Account
+
+        </button>
+
+  </div>
+
+</section>
+
+<!--====================================
+            FOOTER
+=====================================-->
+
+<footer class="footer">
+
+  <p>
+
+      © 2026 XTRAGRAD AI |
+        Admin Settings Dashboard
+
+    </p>
+
+</footer>
+
+</main>
+
+<!--====================================
+            JAVASCRIPT
+=====================================-->
+
+<script src="./js/ai/admin-settings.js"></script>
+
+</body>
+
+</html>

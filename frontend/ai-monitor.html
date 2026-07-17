@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>XTRAGRAD AI | AI Monitoring</title>
+
+  <link rel="stylesheet" href="./css/pages/ai-monitor.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--======================
+        SIDEBAR
+=======================-->
+
+<aside class="sidebar">
+
+  <div class="logo">
+
+      <i class="fa-solid fa-brain"></i>
+
+      <h2>XTRAGRAD AI</h2>
+
+  </div>
+
+  <ul>
+
+      <li>
+          <a href="admin-dashboard.html">
+              <i class="fa-solid fa-house"></i>
+              Dashboard
+            </a>
+      </li>
+
+      <li>
+          <a href="./student-management.html">
+              <i class="fa-solid fa-user-graduate"></i>
+              Students
+            </a>
+      </li>
+
+
+      <li>
+          <a href="./companies.html">
+              <i class="fa-solid fa-book-open"></i>
+              companies
+            </a>
+      </li>
+
+      <li class="active">
+          <a href="./ai-monitor.html">
+              <i class="fa-solid fa-robot"></i>
+              AI Monitoring
+            </a>
+      </li>
+
+      <li>
+          <a href="./report.html">
+              <i class="fa-solid fa-file-lines"></i>
+              Reports
+            </a>
+      </li>
+
+      <li>
+          <a href="./admin-settings.html">
+              <i class="fa-solid fa-gear"></i>
+              Settings
+            </a>
+      </li>
+
+      <li>
+          <a href="./index.html">
+              <i class="fa-solid fa-right-from-bracket"></i>
+              Logout
+            </a>
+      </li>
+
+  </ul>
+
+</aside>
+
+<!--======================
+      MAIN CONTENT
+=======================-->
+
+<main class="main-content">
+
+<!--======================
+          HEADER
+=======================-->
+
+<header class="top-header">
+
+  <div>
+
+      <h1>AI Monitoring Center</h1>
+
+      <p>Monitor AI services, system health, logs and performance.</p>
+
+  </div>
+
+  <div class="header-right">
+
+      <button class="icon-btn">
+
+          <i class="fa-solid fa-bell"></i>
+
+      </button>
+
+      <button class="icon-btn">
+
+          <i class="fa-solid fa-moon"></i>
+
+      </button>
+
+      <div class="admin-profile">
+
+          <img src="https://i.pravatar.cc/150?img=12" alt="Admin">
+
+          <div>
+
+              <h4>Super Admin</h4>
+
+              <span>AI Administrator</span>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</header>
+
+<!--======================
+     SEARCH & ACTIONS
+=======================-->
+
+<section class="search-section">
+
+  <div class="search-box">
+
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+      <input
+            type="text"id="serviceSearch"placeholder="Search AI Service, Model or Status...">
+
+  </div>
+
+  <div class="top-buttons">
+
+      <button class="restart-btn">
+
+          <i class="fa-solid fa-rotate"></i>
+
+          Restart AI
+
+        </button>
+
+      <button class="logs-btn">
+
+          <i class="fa-solid fa-file-arrow-down"></i>
+
+          Export Logs
+
+        </button>
+
+      <button class="refresh-btn">
+
+          <i class="fa-solid fa-arrows-rotate"></i>
+
+          Refresh
+
+        </button>
+
+  </div>
+
+</section>
+<!--====================================
+            AI STATISTICS
+=====================================-->
+
+<section class="stats-section">
+
+  <div class="stat-card">
+
+      <div class="stat-icon blue">
+          <i class="fa-solid fa-brain"></i>
+      </div>
+
+      <div class="stat-content">
+          <h2 id="totalRequests">15,842</h2>
+          <p>Total AI Requests</p>
+      </div>
+
+  </div>
+
+  <div class="stat-card">
+
+      <div class="stat-icon green">
+          <i class="fa-solid fa-check-circle"></i>
+      </div>
+
+      <div class="stat-content">
+          <h2 id="successfulRequests">15,326</h2>
+          <p>Successful Requests</p>
+      </div>
+
+  </div>
+
+  <div class="stat-card">
+
+      <div class="stat-icon orange">
+          <i class="fa-solid fa-clock"></i>
+      </div>
+
+      <div class="stat-content">
+          <h2 id="responseTime">1.4s</h2>
+          <p>Average Response</p>
+      </div>
+
+  </div>
+
+  <div class="stat-card">
+
+      <div class="stat-icon red">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+
+      <div class="stat-content">
+          <h2 id="failedRequests">516</h2>
+          <p>Failed Requests</p>
+      </div>
+
+  </div>
+
+</section>
+
+<!--====================================
+            AI HEALTH
+=====================================-->
+
+<section class="health-section">
+
+  <div class="health-card">
+
+      <h2>
+
+          <i class="fa-solid fa-heart-pulse"></i>
+
+          Overall AI Health
+
+        </h2>
+
+      <div class="health-score">
+
+          <h1>96%</h1>
+
+          <span class="healthy">
+
+               Excellent
+
+            </span>
+
+      </div>
+
+      <div class="health-progress">
+
+          <div class="progress-bar">
+
+              <div class="progress-fill" style="width:96%;"></div>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!--====================================
+            AI SERVICES
+=====================================-->
+
+<section class="services-section">
+
+  <div class="section-header">
+
+      <h2>AI Services Status</h2>
+
+  </div>
+
+  <div class="services-grid">
+
+      <div class="service-card">
+
+          <i class="fa-solid fa-file"></i>
+
+          <h3>Resume Analyzer</h3>
+
+          <p>ATS Score & Resume Review</p>
+
+          <span class="online"> Online</span>
+
+      </div>
+
+      <div class="service-card">
+
+          <i class="fa-solid fa-user-check"></i>
+
+          <h3>Placement Prediction</h3>
+
+          <p>AI Placement Model</p>
+
+          <span class="online"> Online</span>
+
+      </div>
+
+      <div class="service-card">
+
+          <i class="fa-solid fa-comments"></i>
+
+          <h3>Career Chatbot</h3>
+
+          <p>Student Assistant</p>
+
+          <span class="busy"> Busy</span>
+
+      </div>
+
+      <div class="service-card">
+
+          <i class="fa-solid fa-building"></i>
+
+          <h3>Company Recommendation</h3>
+
+          <p>Job Recommendation AI</p>
+
+          <span class="online"> Online</span>
+
+      </div>
+
+      <div class="service-card">
+
+          <i class="fa-solid fa-chart-line"></i>
+
+          <h3>Performance Analytics</h3>
+
+          <p>AI Analytics Engine</p>
+
+          <span class="online"> Online</span>
+
+      </div>
+
+      <div class="service-card">
+
+          <i class="fa-solid fa-robot"></i>
+
+          <h3>Interview Feedback AI</h3>
+
+          <p>Interview Evaluation</p>
+
+          <span class="offline"> Offline</span>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!--====================================
+        AI PERFORMANCE OVERVIEW
+=====================================-->
+
+<section class="performance-section">
+
+  <div class="performance-card">
+
+      <h2>
+
+          <i class="fa-solid fa-microchip"></i>
+
+          AI Performance
+
+        </h2>
+
+      <div class="performance-grid">
+
+          <div>
+
+              <h4>CPU Usage</h4>
+
+              <p>41%</p>
+
+          </div>
+
+          <div>
+
+              <h4>Memory Usage</h4>
+
+              <p>63%</p>
+
+          </div>
+
+          <div>
+
+              <h4>GPU Usage</h4>
+
+              <p>55%</p>
+
+          </div>
+
+          <div>
+
+              <h4>Network</h4>
+
+              <p>Stable</p>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+<!--====================================
+            AI ACTIVITY LOGS
+=====================================-->
+
+<section class="logs-section">
+
+  <div class="section-header">
+
+      <h2>AI Activity Logs</h2>
+
+      <button class="view-all-btn">
+
+          <i class="fa-solid fa-eye"></i>
+
+          View All
+
+        </button>
+
+  </div>
+
+  <div class="table-container">
+
+      <table id="activityTable">
+
+          <thead>
+
+              <tr>
+
+                  <th>Time</th>
+                  <th>Student</th>
+                  <th>AI Service</th>
+                  <th>Request</th>
+                  <th>Status</th>
+                  <th>Response Time</th>
+
+              </tr>
+
+          </thead>
+
+          <tbody>
+
+              <tr>
+
+                  <td>10:15 AM</td>
+                  <td>Sai Swaroop</td>
+                  <td>Resume Analyzer</td>
+                  <td>Resume Upload</td>
+                  <td><span class="success">Success</span></td>
+                  <td>1.2 s</td>
+
+              </tr>
+
+              <tr>
+
+                  <td>10:22 AM</td>
+                  <td>Rahul</td>
+                  <td>Career Chatbot</td>
+                  <td>Career Guidance</td>
+                  <td><span class="success">Success</span></td>
+                  <td>0.9 s</td>
+
+              </tr>
+
+              <tr>
+
+                  <td>10:31 AM</td>
+                  <td>Priya</td>
+                  <td>Placement Prediction</td>
+                  <td>Prediction Request</td>
+                  <td><span class="success">Success</span></td>
+                  <td>1.6 s</td>
+
+              </tr>
+
+              <tr>
+
+                  <td>10:40 AM</td>
+                  <td>Kiran</td>
+                  <td>Interview AI</td>
+                  <td>Interview Analysis</td>
+                  <td><span class="failed">Failed</span></td>
+                  <td>Timeout</td>
+
+              </tr>
+
+              <tr>
+
+                  <td>10:55 AM</td>
+                  <td>Anjali</td>
+                  <td>Company Recommendation</td>
+                  <td>Recommendation</td>
+                  <td><span class="success">Success</span></td>
+                  <td>1.1 s</td>
+
+              </tr>
+
+          </tbody>
+
+      </table>
+
+  </div>
+
+</section>
+
+<!--====================================
+            ERROR LOGS
+=====================================-->
+
+<section class="error-section">
+
+  <div class="section-header">
+
+      <h2>Recent AI Errors</h2>
+
+  </div>
+
+  <div class="error-list">
+
+      <div class="error-card">
+
+          <i class="fa-solid fa-circle-exclamation"></i>
+
+          <div>
+
+              <h4>Interview Feedback AI</h4>
+
+              <p>API Timeout - 10:40 AM</p>
+
+          </div>
+
+      </div>
+
+      <div class="error-card">
+
+          <i class="fa-solid fa-circle-exclamation"></i>
+
+          <div>
+
+              <h4>Resume Analyzer</h4>
+
+              <p>Invalid Resume Format - PDF Corrupted</p>
+
+          </div>
+
+      </div>
+
+      <div class="error-card">
+
+          <i class="fa-solid fa-circle-exclamation"></i>
+
+          <div>
+
+              <h4>Career Chatbot</h4>
+
+              <p>Rate Limit Reached</p>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!--====================================
+            AI MODELS
+=====================================-->
+
+<section class="models-section">
+
+  <div class="section-header">
+
+      <h2>AI Models</h2>
+
+  </div>
+
+  <div class="models-grid">
+
+      <div class="model-card">
+
+          <h3>Resume Analyzer</h3>
+
+          <p>Gemini 2.5 Flash</p>
+
+      </div>
+
+      <div class="model-card">
+
+          <h3>Career Chatbot</h3>
+
+          <p>GPT / Gemini</p>
+
+      </div>
+
+      <div class="model-card">
+
+          <h3>Placement Prediction</h3>
+
+          <p>Machine Learning Model</p>
+
+      </div>
+
+      <div class="model-card">
+
+          <h3>Company Recommendation</h3>
+
+          <p>Recommendation Engine</p>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!--====================================
+            AI CONTROL PANEL
+=====================================-->
+
+<section class="control-section">
+
+  <div class="section-header">
+
+      <h2>AI Control Panel</h2>
+
+  </div>
+
+  <div class="control-buttons">
+
+      <button class="restart-ai">
+
+          <i class="fa-solid fa-rotate"></i>
+
+          Restart AI
+
+        </button>
+
+      <button class="clear-cache">
+
+          <i class="fa-solid fa-trash"></i>
+
+          Clear Cache
+
+        </button>
+
+      <button class="pause-ai">
+
+          <i class="fa-solid fa-pause"></i>
+
+          Pause AI
+
+        </button>
+
+      <button class="resume-ai">
+
+          <i class="fa-solid fa-play"></i>
+
+          Resume AI
+
+        </button>
+
+  </div>
+
+</section>
+<!--====================================
+            AI USAGE SUMMARY
+=====================================-->
+
+<section class="summary-section">
+
+  <div class="section-header">
+
+      <h2>Today's AI Usage Summary</h2>
+
+  </div>
+
+  <div class="summary-grid">
+
+      <div class="summary-card">
+
+          <h3>Most Used Service</h3>
+
+          <p>Resume Analyzer</p>
+
+      </div>
+
+      <div class="summary-card">
+
+          <h3>Total Predictions</h3>
+
+          <p>328</p>
+
+      </div>
+
+      <div class="summary-card">
+
+          <h3>Chatbot Conversations</h3>
+
+          <p>1,248</p>
+
+      </div>
+
+      <div class="summary-card">
+
+          <h3>Average Accuracy</h3>
+
+          <p>97.6%</p>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!--====================================
+            AI DETAILS MODAL
+=====================================-->
+
+<div class="modal" id="serviceModal">
+
+  <div class="modal-content">
+
+      <span class="close-modal">&times;</span>
+
+      <div class="modal-header">
+
+          <i class="fa-solid fa-robot modal-icon"></i>
+
+          <h2 id="serviceTitle">Resume Analyzer</h2>
+
+          <p id="serviceStatus"> Online</p>
+
+      </div>
+
+      <div class="modal-grid">
+
+          <div class="modal-card">
+
+              <h3>Service Information</h3>
+
+              <p><strong>Model:</strong> Gemini 2.5 Flash</p>
+
+              <p><strong>Version:</strong> v2.5</p>
+
+              <p><strong>Status:</strong> Online</p>
+
+              <p><strong>Requests:</strong> 5,842</p>
+
+          </div>
+
+          <div class="modal-card">
+
+              <h3>Performance</h3>
+
+              <p><strong>Accuracy:</strong> 98.4%</p>
+
+              <p><strong>Response:</strong> 1.2 sec</p>
+
+              <p><strong>CPU:</strong> 41%</p>
+
+              <p><strong>Memory:</strong> 63%</p>
+
+          </div>
+
+          <div class="modal-card">
+
+              <h3>Recent Activity</h3>
+
+              <ul>
+
+                  <li>Resume Uploaded</li>
+                  <li>ATS Score Generated</li>
+                  <li>Skills Analyzed</li>
+                  <li>Suggestions Generated</li>
+
+              </ul>
+
+          </div>
+
+          <div class="modal-card">
+
+              <h3>Actions</h3>
+
+              <button class="restart-service">
+
+                  Restart Service
+
+                </button>
+
+              <button class="clear-service-cache">
+
+                  Clear Cache
+
+                </button>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</div>
+
+<!--====================================
+                FOOTER
+=====================================-->
+
+<footer class="footer">
+
+  <p>
+
+      © 2026 XTRAGRAD AI |
+        AI Monitoring Dashboard
+
+    </p>
+
+</footer>
+
+</main>
+
+<!--====================================
+            JAVASCRIPT
+=====================================-->
+
+<script src="./js/ai/ai-monitor.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"content="width=device-width, initial-scale=1.0">
+
+  <title>XTRAGRAD AI | AI Assistant</title>
+
+  <!-- Google Font -->
+
+  <link rel="preconnect"href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"href="https://fonts.gstatic.com"crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- CSS -->
+
+
+
+
+  <link rel="stylesheet" href="./css/components/sidebar.css">
+
+  <link rel="stylesheet" href="./css/pages/assistant.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+  <!-- ======================================
+                SIDEBAR
+    ======================================= -->
+
+  <aside class="sidebar">
+
+      <div class="logo">
+
+          <h1>XTRAGRAD <span>AI</span></h1>
+
+      </div>
+
+      <ul>
+
+          <li><a href="./student-dashboard.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
+
+          <li><a href="./resume_builder.html"><i class="fa-solid fa-file-lines"></i><span>Resume Builder</span></a></li>
+
+          <li><a href="./learning-roadmap.html"><i class="fa-solid fa-road"></i><span>Learning Roadmap</span></a></li>
+
+          <li><a href="./project-generator.html"><i class="fa-solid fa-diagram-project"></i><span>Project Generator</span></a></li>
+
+          <li><a href="./coding-practice.html"><i class="fa-solid fa-code"></i><span>Coding Practice</span></a></li>
+
+          <li><a href="./mock-interview.html"><i class="fa-solid fa-microphone"></i><span>Mock Interview</span></a></li>
+
+          <li><a href="./job.html"><i class="fa-solid fa-briefcase"></i><span>Job Recommendations</span></a></li>
+
+          <li>
+
+              <a class="active" href="./assistant.html">
+
+                  <i class="fa-solid fa-robot"></i>
+
+                  <span>AI Assistant</span>
+
+              </a>
+
+          </li>
+
+          <li><a href="./ai-analytics.html"><i class="fa-solid fa-chart-line"></i><span>Analytics</span></a></li>
+
+          <li><a href="./settings.html"><i class="fa-solid fa-gear"></i><span>Settings</span></a></li>
+
+          <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></a></li>
+
+      </ul>
+
+  </aside>
+
+  <!-- ======================================
+                MAIN CONTENT
+    ======================================= -->
+
+  <main class="main-content">
+
+      <!-- Header -->
+
+      <header class="top-navbar">
+
+          <div>
+
+              <h1>
+
+                   XTRAGRAD AI Assistant
+
+                </h1>
+
+              <p>
+
+                  Your intelligent career and learning companion.
+
+                </p>
+
+          </div>
+
+          <button class="new-chat-btn">
+
+              <i class="fa-solid fa-plus"></i>
+
+              New Chat
+
+            </button>
+
+      </header>
+
+      <!-- ======================================
+                    AI ASSISTANT LAYOUT
+        ======================================= -->
+
+      <section class="assistant-container">
+
+          <!-- Left Chat History -->
+
+          <div class="chat-sidebar">
+
+              <h3>
+
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+
+                  Recent Chats
+
+                </h3>
+
+              <div class="history-list">
+
+                  <div class="history-item">
+
+                      Resume Analysis
+
+                    </div>
+
+                  <div class="history-item">
+
+                      Mock Interview
+
+                    </div>
+
+                  <div class="history-item">
+
+                      Python Roadmap
+
+                    </div>
+
+                  <div class="history-item">
+
+                      GenAI Projects
+
+                    </div>
+
+              </div>
+
+          </div>
+                      <!-- ======================================
+                    CHAT AREA
+            ======================================= -->
+
+          <div class="chat-container">
+
+              <!-- AI Welcome -->
+
+              <div class="welcome-screen">
+
+                  <div class="ai-avatar">
+
+                      <i class="fa-solid fa-robot"></i>
+
+                  </div>
+
+                  <h2>
+
+                      Hello, I'm XTRAGRAD AI 
+
+                    </h2>
+
+                  <p>
+
+                      I can help you with resume building, coding,
+                        interview preparation, learning roadmaps,
+                        GenAI projects, and career guidance.
+
+                    </p>
+
+              </div>
+
+              <!-- Suggested Prompts -->
+
+              <div class="suggested-prompts">
+
+                  <div class="prompt-card">
+
+                      <i class="fa-solid fa-file-lines"></i>
+
+                      <h4>Analyze My Resume</h4>
+
+                      <p>
+
+                          Get ATS score and improvement suggestions.
+
+                        </p>
+
+                  </div>
+
+                  <div class="prompt-card">
+
+                      <i class="fa-solid fa-code"></i>
+
+                      <h4>Review My Code</h4>
+
+                      <p>
+
+                          Detect bugs and improve code quality.
+
+                        </p>
+
+                  </div>
+
+                  <div class="prompt-card">
+
+                      <i class="fa-solid fa-microphone"></i>
+
+                      <h4>Start Mock Interview</h4>
+
+                      <p>
+
+                          Practice HR and technical interviews.
+
+                        </p>
+
+                  </div>
+
+                  <div class="prompt-card">
+
+                      <i class="fa-solid fa-road"></i>
+
+                      <h4>Create Learning Roadmap</h4>
+
+                      <p>
+
+                          Build a personalized learning plan.
+
+                        </p>
+
+                  </div>
+
+              </div>
+
+              <!-- Chat Messages -->
+
+              <div class="chat-messages" id="chatMessages">
+
+                  <!-- AI Message -->
+
+                  <div class="message ai-message">
+
+                      <div class="message-avatar">
+
+                          <i class="fa-solid fa-robot"></i>
+
+                      </div>
+
+                      <div class="message-content">
+
+                          <h4>XTRAGRAD AI</h4>
+
+                          <p>
+
+                              Welcome! 
+
+                                Ask me anything about programming,
+                                AI, placements, projects, resumes,
+                                coding interviews, or career guidance.
+
+                            </p>
+
+                      </div>
+
+                  </div>
+
+                  <!-- User Message Example -->
+
+                  <div class="message user-message">
+
+                      <div class="message-content">
+
+                          <h4>You</h4>
+
+                          <p>
+
+                              Help me become a GenAI Engineer.
+
+                            </p>
+
+                      </div>
+
+                      <div class="message-avatar user">
+
+                          <i class="fa-solid fa-user"></i>
+
+                      </div>
+
+                  </div>
+
+                  <!-- AI Reply Example -->
+
+                  <div class="message ai-message">
+
+                      <div class="message-avatar">
+
+                          <i class="fa-solid fa-robot"></i>
+
+                      </div>
+
+                      <div class="message-content">
+
+                          <h4>XTRAGRAD AI</h4>
+
+                          <p>
+
+                              Great goal! I recommend mastering
+                                Python, DSA, Machine Learning,
+                                Deep Learning, Transformers,
+                                LangChain, LangGraph, MCP,
+                                RAG, FastAPI, Docker, and
+                                production AI deployment.
+
+                            </p>
+
+                      </div>
+
+                  </div>
+
+              </div>
+
+          </div>
+                      <!-- ======================================
+                    AI TOOLS PANEL
+            ======================================= -->
+
+          <aside class="tools-panel">
+
+              <h3>
+
+                  <i class="fa-solid fa-toolbox"></i>
+
+                  AI Tools
+
+                </h3>
+
+              <div class="tool-list">
+
+                  <div class="tool-card">
+
+                      <i class="fa-solid fa-file-lines"></i>
+
+                      <span>Resume Analyzer</span>
+
+                  </div>
+
+                  <div class="tool-card">
+
+                      <i class="fa-solid fa-code"></i>
+
+                      <span>Code Reviewer</span>
+
+                  </div>
+
+                  <div class="tool-card">
+
+                      <i class="fa-solid fa-microphone"></i>
+
+                      <span>Mock Interview</span>
+
+                  </div>
+
+                  <div class="tool-card">
+
+                      <i class="fa-solid fa-road"></i>
+
+                      <span>Learning Roadmap</span>
+
+                  </div>
+
+                  <div class="tool-card">
+
+                      <i class="fa-solid fa-briefcase"></i>
+
+                      <span>Job Recommendations</span>
+
+                  </div>
+
+                  <div class="tool-card">
+
+                      <i class="fa-solid fa-diagram-project"></i>
+
+                      <span>Project Generator</span>
+
+                  </div>
+
+                  <div class="tool-card">
+
+                      <i class="fa-solid fa-chart-line"></i>
+
+                      <span>Career Analytics</span>
+
+                  </div>
+
+                  <div class="tool-card">
+
+                      <i class="fa-solid fa-book"></i>
+
+                      <span>Study Assistant</span>
+
+                  </div>
+
+              </div>
+
+          </aside>
+
+      </section>
+
+      <!-- ======================================
+                CHAT INPUT SECTION
+        ======================================= -->
+
+      <section class="chat-input-section">
+
+          <div class="chat-input-container">
+
+              <button class="input-btn" id="uploadBtn">
+
+                  <i class="fa-solid fa-paperclip"></i>
+
+              </button>
+
+              <input
+
+                    type="file"id="fileInput"hidden
+
+                >
+
+              <button class="input-btn" id="voiceBtn">
+
+                  <i class="fa-solid fa-microphone"></i>
+
+              </button>
+
+              <button class="input-btn" id="emojiBtn">
+
+                  <i class="fa-regular fa-face-smile"></i>
+
+              </button>
+
+              <textarea
+
+                    id="messageInput"placeholder="Ask XTRAGRAD AI anything..."rows="1"></textarea>
+
+              <button class="send-btn" id="sendBtn">
+
+                  <i class="fa-solid fa-paper-plane"></i>
+
+              </button>
+
+          </div>
+
+          <div class="chat-actions">
+
+              <button class="action-btn" id="stopBtn">
+
+                  <i class="fa-solid fa-stop"></i>
+
+                  Stop
+
+                </button>
+
+              <button class="action-btn" id="clearBtn">
+
+                  <i class="fa-solid fa-trash"></i>
+
+                  Clear Chat
+
+                </button>
+
+              <button class="action-btn" id="historyBtn">
+
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+
+                  History
+
+                </button>
+
+              <button class="action-btn" id="exportBtn">
+
+                  <i class="fa-solid fa-download"></i>
+
+                  Export Chat
+
+                </button>
+
+          </div>
+
+      </section>
+              <!-- ======================================
+                AI STATUS PANEL
+        ======================================= -->
+
+      <section class="assistant-footer">
+
+          <div class="assistant-status">
+
+              <div class="status-item">
+
+                  <span class="status-dot"></span>
+
+                  <span>AI Status: Online</span>
+
+              </div>
+
+              <div class="status-item">
+
+                  <i class="fa-solid fa-microchip"></i>
+
+                  <span>Model: XTRAGRAD AI v1.0</span>
+
+              </div>
+
+              <div class="status-item">
+
+                  <i class="fa-solid fa-bolt"></i>
+
+                  <span>Response Time: ~1.2s</span>
+
+              </div>
+
+          </div>
+
+          <!-- ======================================
+                    AI STATISTICS
+            ======================================= -->
+
+          <div class="assistant-stats">
+
+              <div class="stat-card">
+
+                  <h3>245</h3>
+
+                  <p>Chats Today</p>
+
+              </div>
+
+              <div class="stat-card">
+
+                  <h3>98%</h3>
+
+                  <p>Accuracy</p>
+
+              </div>
+
+              <div class="stat-card">
+
+                  <h3>7</h3>
+
+                  <p>AI Agents</p>
+
+              </div>
+
+              <div class="stat-card">
+
+                  <h3>24/7</h3>
+
+                  <p>Availability</p>
+
+              </div>
+
+          </div>
+
+          <!-- ======================================
+                    KEYBOARD SHORTCUTS
+            ======================================= -->
+
+          <div class="shortcut-card">
+
+              <h3>
+
+                  <i class="fa-solid fa-keyboard"></i>
+
+                  Keyboard Shortcuts
+
+                </h3>
+
+              <ul>
+
+                  <li>
+
+                      <strong>Enter</strong>
+
+                      Send Message
+
+                    </li>
+
+                  <li>
+
+                      <strong>Shift + Enter</strong>
+
+                      New Line
+
+                    </li>
+
+                  <li>
+
+                      <strong>Ctrl + K</strong>
+
+                      Clear Chat
+
+                    </li>
+
+                  <li>
+
+                      <strong>Ctrl + N</strong>
+
+                      New Chat
+
+                    </li>
+
+              </ul>
+
+          </div>
+
+      </section>
+
+  </main>
+
+</div>
+
+<!-- ======================================
+        JAVASCRIPT
+====================================== -->
+
+<script src="./js/ai/assistant.js"></script>
+
+</body>
+
+</html>
