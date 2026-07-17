@@ -1,0 +1,306 @@
+/*==================================================
+    XTRAGRAD AI - RESPONSIVE.CSS
+    Mobile / tablet breakpoints for index.html
+    (loaded AFTER style.css — only adds responsive
+    behaviour, does not change the desktop design)
+==================================================*/
+
+
+/*========================
+MOBILE NAV TOGGLE (hidden on desktop)
+=========================*/.nav-toggle{
+    display:none;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.1);
+    color:#ffffff;
+    width:46px;
+    height:46px;
+    border-radius:12px;
+    font-size:20px;
+    align-items:center;
+    justify-content:center;
+    transition:.3s;
+}.nav-toggle:hover{
+    background:rgba(255,255,255,.12);
+}.nav-toggle.active{
+    background:#5B5FFB;
+    border-color:#5B5FFB;
+}
+
+
+/*==================================================
+    1200px — large tablets / small laptops
+==================================================*/
+
+@media(max-width:1200px){.hero-left h1{
+        font-size:58px;
+    }.feature-grid,.modules-grid,.testimonial-grid,.pricing-grid{
+        grid-template-columns:repeat(2,1fr);
+    }.steps{
+        grid-template-columns:repeat(2,1fr);
+    }.companies{
+        grid-template-columns:repeat(3,1fr);
+    }.stats.container{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+
+/*==================================================
+    992px — tablets
+==================================================*/
+
+@media(max-width:992px){
+
+    section{
+        padding:80px 0;
+    }.navbar{
+        padding:16px 24px;
+    }.nav-toggle{
+        display:flex;
+    }.nav-links{
+        position:fixed;
+        top:0;
+        right:0;
+        height:100vh;
+        width:min(320px,80%);
+        background:rgba(6,9,22,.98);
+        backdrop-filter:blur(20px);
+        border-left:1px solid rgba(255,255,255,.08);
+        flex-direction:column;
+        align-items:flex-start;
+        justify-content:flex-start;
+        gap:0;
+        padding:110px 30px 30px;
+        transform:translateX(100%);
+        transition:transform.35s ease;
+        z-index:1000;
+    }.nav-links.active{
+        transform:translateX(0);
+    }.nav-links li{
+        width:100%;
+        border-bottom:1px solid rgba(255,255,255,.06);
+    }.nav-links a{
+        display:block;
+        padding:16px 0;
+        font-size:17px;
+    }.buttons{
+        display:none;
+    }.hero{
+        min-height:auto;
+        padding-top:150px;
+    }.hero-container,.dashboard-wrapper,.contact-wrapper{
+        grid-template-columns:1fr;
+    }.hero-right{
+        margin-top:50px;
+    }.dashboard{
+        width:100%;
+        max-width:500px;
+    }.hero-stats{
+        flex-wrap:wrap;
+        gap:35px;
+    }.feature-grid,.modules-grid,.testimonial-grid,.pricing-grid{
+        grid-template-columns:repeat(2,1fr);
+    }.steps{
+        grid-template-columns:repeat(2,1fr);
+    }.companies{
+        grid-template-columns:repeat(3,1fr);
+    }.stats.container{
+        grid-template-columns:repeat(2,1fr);
+    }.footer-grid{
+        grid-template-columns:1fr 1fr;
+        gap:40px;
+    }
+
+    /* Timeline: keep everything on one side on tablets/mobile */.timeline::before{
+        left:20px;
+    }.timeline-item{
+        width:100%;
+        padding-left:60px;
+        padding-right:0;
+    }.timeline-item:nth-child(odd),.timeline-item:nth-child(even){
+        left:0;
+        text-align:left;
+    }.timeline-item:nth-child(odd).circle,.timeline-item:nth-child(even).circle{
+        left:20px;
+        right:auto;
+        transform:translateX(-50%);
+    }
+}
+
+
+/*==================================================
+    768px — large phones / small tablets
+==================================================*/
+
+@media(max-width:768px){
+
+    section{
+        padding:60px 0;
+    }.container{
+        width:92%;
+    }.tag{
+        font-size:13px;
+        padding:10px 18px;
+    }.hero-left h1{
+        font-size:42px;
+    }.hero-left p{
+        font-size:16px;
+        line-height:1.7;
+        margin-bottom:30px;
+    }.hero-buttons{
+        flex-direction:column;
+        gap:14px;
+        margin-bottom:35px;
+    }.hero-buttons.btn,.hero-buttons.btn-outline{
+        width:100%;
+        text-align:center;
+    }.hero-stats{
+        gap:28px;
+    }.hero-stats h2{
+        font-size:32px;
+    }.dashboard{
+        padding:24px;
+    }.score-card h1{
+        font-size:46px;
+    }.mini-cards{
+        grid-template-columns:repeat(2,1fr);
+    }.section-title h2{
+        font-size:30px;
+    }.companies{
+        grid-template-columns:repeat(2,1fr);
+    }.stats.container{
+        grid-template-columns:1fr 1fr;
+        gap:20px;
+    }.stat-box{
+        padding:28px 20px;
+    }.stat-box h1{
+        font-size:38px;
+    }.feature-grid,.modules-grid,.testimonial-grid,.pricing-grid{
+        grid-template-columns:1fr;
+    }.steps{
+        grid-template-columns:1fr;
+    }.footer-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+        text-align:left;
+    }.footer-grid form{
+        flex-direction:column;
+        align-items:stretch;
+    }.contact-wrapper{
+        gap:30px;
+    }.price-card.popular{
+        transform:none;
+    }
+}
+
+
+/*==================================================
+    480px — phones
+==================================================*/
+
+@media(max-width:480px){.navbar{
+        padding:14px 16px;
+        border-radius:16px;
+    }.logo h2{
+        font-size:22px;
+    }.nav-toggle{
+        width:40px;
+        height:40px;
+        font-size:17px;
+    }.hero{
+        padding-top:130px;
+    }.hero-left h1{
+        font-size:32px;
+    }.hero-left p{
+        font-size:15px;
+    }.hero-stats{
+        gap:22px;
+    }.hero-stats h2{
+        font-size:26px;
+    }.hero-stats span{
+        font-size:13px;
+    }.dashboard-header h3{
+        font-size:19px;
+    }.score-card{
+        padding:22px;
+    }.score-card h1{
+        font-size:36px;
+    }.mini-cards{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }.mini-card{
+        padding:15px;
+    }.section-title h2{
+        font-size:24px;
+    }.section-title p{
+        font-size:14px;
+    }.companies{
+        grid-template-columns:1fr 1fr;
+    }.companies div{
+        padding:18px;
+        font-size:16px;
+    }.stats.container{
+        grid-template-columns:1fr;
+    }.feature-card,.module,.step,.dashboard-box,.testimonial-card,.price-card{
+        padding:26px 22px;
+    }.feature-card h3,.step h3{
+        font-size:20px;
+    }.icon,.number{
+        width:56px;
+        height:56px;
+    }.icon i{
+        font-size:24px;
+    }.price-card h1{
+        font-size:38px;
+    }.faq-question{
+        font-size:15px;
+        padding:18px 20px;
+    }.contact-form input,.contact-form textarea{
+        padding:14px;
+    }.footer-grid h2{
+        font-size:26px;
+    }.footer-bottom p{
+        font-size:13px;
+        text-align:center;
+    }.btn,.btn-outline{
+        padding:12px 20px;
+        font-size:14px;
+    }
+}
+
+
+/*==================================================
+    360px — small/older phones
+==================================================*/
+
+@media(max-width:360px){.hero-left h1{
+        font-size:28px;
+    }.tag{
+        font-size:12px;
+        padding:9px 14px;
+    }.mini-cards{
+        grid-template-columns:1fr;
+    }.companies{
+        grid-template-columns:1fr;
+    }.dashboard{
+        padding:18px;
+    }.score-card h1{
+        font-size:30px;
+    }
+}
+
+
+/*==================================================
+    Landscape phones (short height)
+==================================================*/
+
+@media(max-height:480px) and (orientation:landscape){.hero{
+        min-height:auto;
+        padding-top:110px;
+        padding-bottom:40px;
+    }.nav-links{
+        padding-top:90px;
+        overflow-y:auto;
+    }
+}
