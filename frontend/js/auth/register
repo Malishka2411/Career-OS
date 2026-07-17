@@ -1,0 +1,757 @@
+/*==================================================
+            XTRAGRAD AI ADMIN DASHBOARD
+==================================================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    initializeDashboard();
+
+});
+
+
+/*==================================================
+            INITIALIZE
+==================================================*/
+
+function initializeDashboard(){
+
+    animateCounters();
+
+    initializeNotifications();
+
+    initializeSidebar();
+
+}
+
+
+/*==================================================
+            SIDEBAR ACTIVE
+==================================================*/
+
+function initializeSidebar(){
+
+    const menuItems=document.querySelectorAll(".sidebar a");
+
+    menuItems.forEach(item=>{
+
+        item.addEventListener("click",()=>{
+
+            menuItems.forEach(link=>{
+
+                link.classList.remove("active");
+
+            });
+
+            item.classList.add("active");
+
+        });
+
+    });
+
+}
+
+
+/*==================================================
+            KPI COUNTERS
+==================================================*/
+
+function animateValue(element,start,end,duration){
+
+    let startTime=null;
+
+    function animation(currentTime){
+
+        if(!startTime){
+
+            startTime=currentTime;
+
+        }
+
+        const progress=Math.min(
+
+            (currentTime-startTime)/duration,
+
+            1
+
+        );
+
+        const value=Math.floor(
+
+            progress*(end-start)+start
+
+        );
+
+        element.textContent=value.toLocaleString();
+
+        if(progress<1){
+
+            requestAnimationFrame(animation);
+
+        }
+
+    }
+
+    requestAnimationFrame(animation);
+
+}
+
+
+function animateCounters(){
+
+    animateValue(
+
+        document.getElementById("studentsCount"),
+
+        0,
+
+        12548,
+
+        1500
+
+    );
+
+    animateValue(
+
+        document.getElementById("activeUsers"),
+
+        0,
+
+        8920,
+
+        1700
+
+    );
+
+    animateValue(
+
+        document.getElementById("aiRequests"),
+
+        0,
+
+        215000,
+
+        2000
+
+    );
+
+    animateValue(
+
+        document.getElementById("resumesCreated"),
+
+        0,
+
+        4875,
+
+        1800
+
+    );
+
+}
+
+
+/*==================================================
+            NOTIFICATIONS
+==================================================*/
+
+function initializeNotifications(){
+
+    const bell=document.querySelector(".notification-btn");
+
+    if(!bell) return;
+
+    bell.addEventListener("click",()=>{
+
+        showToast(" No new notifications","info");
+
+    });
+
+}
+/*==================================================
+            USER GROWTH CHART
+==================================================*/
+
+const userGrowthCtx=document.getElementById("userGrowthChart");
+
+if(userGrowthCtx){
+
+    new Chart(userGrowthCtx,{
+
+        type:"line",
+
+        data:{
+
+            labels:["Jan","Feb","Mar","Apr","May","Jun","Jul"],
+
+            datasets:[{
+
+                label:"Students",
+
+                data:[
+
+                    1200,
+
+                    1900,
+
+                    2800,
+
+                    3600,
+
+                    5200,
+
+                    7900,
+
+                    12548
+
+                ],
+
+                borderColor:"#5B5FFB",
+
+                backgroundColor:"rgba(91,95,251,.15)",
+
+                fill:true,
+
+                tension:.4,
+
+                borderWidth:3,
+
+                pointRadius:5,
+
+                pointHoverRadius:8
+
+            }]
+
+        },
+
+        options:{
+
+            responsive:true,
+
+            maintainAspectRatio:false,
+
+            plugins:{
+
+                legend:{
+
+                    labels:{
+
+                        color:"#ffffff"}
+
+                }
+
+            },
+
+            scales:{
+
+                x:{
+
+                    ticks:{
+
+                        color:"#CBD5E1"},
+
+                    grid:{
+
+                        color:"rgba(255,255,255,.05)"}
+
+                },
+
+                y:{
+
+                    beginAtZero:true,
+
+                    ticks:{
+
+                        color:"#CBD5E1"},
+
+                    grid:{
+
+                        color:"rgba(255,255,255,.05)"}
+
+                }
+
+            }
+
+        }
+
+    });
+
+}
+
+
+/*==================================================
+            AI USAGE CHART
+==================================================*/
+
+const aiUsageCtx=document.getElementById("aiUsageChart");
+
+if(aiUsageCtx){
+
+    new Chart(aiUsageCtx,{
+
+        type:"doughnut",
+
+        data:{
+
+            labels:["Resume AI","Interview AI","Career AI","Coding AI"],
+
+            datasets:[{
+
+                data:[
+
+                    35,
+
+                    25,
+
+                    20,
+
+                    20
+
+                ],
+
+                backgroundColor:["#5B5FFB","#00D4FF","#22C55E","#F59E0B"],
+
+                borderWidth:0
+
+            }]
+
+        },
+
+        options:{
+
+            responsive:true,
+
+            maintainAspectRatio:false,
+
+            plugins:{
+
+                legend:{
+
+                    position:"bottom",
+
+                    labels:{
+
+                        color:"#ffffff",
+
+                        padding:20
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    });
+
+}
+
+
+/*==================================================
+            LIVE STATUS UPDATE
+==================================================*/
+
+setInterval(()=>{
+
+    const statuses=document.querySelectorAll(".status");
+
+    statuses.forEach(status=>{
+
+        if(
+
+            status.classList.contains("warning")
+
+        ){
+
+            status.textContent="● High Usage";
+
+        }
+
+    });
+
+},5000);
+
+
+/*==================================================
+            AUTO REFRESH MESSAGE
+==================================================*/
+
+setInterval(()=>{
+
+    showToast("Dashboard Updated","info");
+
+},60000);
+/*==================================================
+            QUICK ACTION BUTTONS
+==================================================*/
+
+initializeQuickActions();
+
+function initializeQuickActions(){
+
+    const buttons=document.querySelectorAll(".quick-btn");
+
+    buttons.forEach(button=>{
+
+        button.addEventListener("click",()=>{
+
+            const action=button.textContent.trim();
+
+            switch(action){
+
+                case "Add Student":
+
+                    showToast("Opening Student Management...","success");
+
+                    break;
+
+                case "Add Company":
+
+                    showToast("Opening Company Portal...","success");
+
+                    break;
+
+                case "Add Course":
+
+                    showToast("Opening Course Manager...","success");
+
+                    break;
+
+                case "Send Notification":
+
+                    showToast("Notification Sent Successfully","success");
+
+                    break;
+
+                case "Export Report":
+
+                    exportReport();
+
+                    break;
+
+                case "Backup Database":
+
+                    backupDatabase();
+
+                    break;
+
+                default:
+
+                    showToast("Feature Coming Soon","info");
+
+            }
+
+        });
+
+    });
+
+}
+
+
+/*==================================================
+            COMPANY CARDS
+==================================================*/
+
+const companies=document.querySelectorAll(".company-item");
+
+companies.forEach(company=>{
+
+    company.addEventListener("click",()=>{
+
+        const companyName=
+
+        company.querySelector("h3").textContent;
+
+        showToast(
+
+            companyName+" Selected","success");
+
+    });
+
+});
+
+
+/*==================================================
+            STUDENT TABLE
+==================================================*/
+
+const rows=document.querySelectorAll("tbody tr");
+
+rows.forEach(row=>{
+
+    row.style.cursor="pointer";
+
+    row.addEventListener("click",()=>{
+
+        const student=row.children[0].textContent;
+
+        showToast("Opening "+student+"'s Profile","info");
+
+    });
+
+});
+
+
+/*==================================================
+            AI PERFORMANCE
+==================================================*/
+
+window.addEventListener("load",()=>{
+
+    const bars=document.querySelectorAll(".progress-fill");
+
+    bars.forEach(bar=>{
+
+        const width=bar.style.width;
+
+        bar.style.width="0";
+
+        setTimeout(()=>{
+
+            bar.style.width=width;
+
+        },400);
+
+    });
+
+});
+
+
+/*==================================================
+            EXPORT REPORT
+==================================================*/
+
+function exportReport(){
+
+    const report={
+
+        students:12548,
+
+        activeUsers:8920,
+
+        aiRequests:215000,
+
+        resumes:4875,
+
+        generatedAt:new Date().toLocaleString()
+
+    };
+
+    const blob=new Blob(
+
+        [
+
+            JSON.stringify(report,null,4)
+
+        ],
+
+        {
+
+            type:"application/json"}
+
+    );
+
+    const url=URL.createObjectURL(blob);
+
+    const a=document.createElement("a");
+
+    a.href=url;
+
+    a.download="admin_report.json";
+
+    a.click();
+
+    URL.revokeObjectURL(url);
+
+    showToast("Admin Report Downloaded","success");
+
+}
+
+
+/*==================================================
+            DATABASE BACKUP
+==================================================*/
+
+function backupDatabase(){
+
+    showToast("Database Backup Started...","info");
+
+    setTimeout(()=>{
+
+        showToast("Backup Completed Successfully","success");
+
+    },2500);
+
+}
+/*==================================================
+                TOAST NOTIFICATION
+==================================================*/
+
+function showToast(message,type="success"){
+
+    const oldToast=document.querySelector(".admin-toast");
+
+    if(oldToast){
+
+        oldToast.remove();
+
+    }
+
+    const toast=document.createElement("div");
+
+    toast.className="admin-toast";
+
+    let bgColor="#22C55E";
+
+    let icon="fa-circle-check";
+
+    if(type==="info"){
+
+        bgColor="#3B82F6";
+
+        icon="fa-circle-info";
+
+    }
+
+    if(type==="error"){
+
+        bgColor="#EF4444";
+
+        icon="fa-circle-xmark";
+
+    }
+
+    toast.innerHTML=`<i class="fa-solid ${icon}"></i>
+      <span>${message}</span>`;
+
+    toast.style.position="fixed";
+    toast.style.top="30px";
+    toast.style.right="30px";
+    toast.style.background=bgColor;
+    toast.style.color="#fff";
+    toast.style.padding="16px 22px";
+    toast.style.borderRadius="12px";
+    toast.style.display="flex";
+    toast.style.alignItems="center";
+    toast.style.gap="12px";
+    toast.style.fontWeight="600";
+    toast.style.zIndex="99999";
+    toast.style.boxShadow="0 12px 30px rgba(0,0,0,.25)";
+    toast.style.animation="fadeIn.35s ease";
+
+    document.body.appendChild(toast);
+
+    setTimeout(()=>{
+
+        toast.style.opacity="0";
+        toast.style.transition=".4s";
+
+        setTimeout(()=>{
+
+            toast.remove();
+
+        },400);
+
+    },3000);
+
+}
+
+
+/*==================================================
+                LIVE KPI UPDATE
+==================================================*/
+
+setInterval(()=>{
+
+    const activeUsers=document.getElementById("activeUsers");
+
+    if(activeUsers){
+
+        let current=parseInt(
+
+            activeUsers.textContent.replace(/,/g,"")
+
+        );
+
+        current+=Math.floor(Math.random()*5);
+
+        activeUsers.textContent=current.toLocaleString();
+
+    }
+
+},8000);
+
+
+/*==================================================
+                KEYBOARD SHORTCUTS
+==================================================*/
+
+document.addEventListener("keydown",(e)=>{
+
+    if(e.ctrlKey && e.key.toLowerCase()==="r"){
+
+        e.preventDefault();
+
+        showToast("Refreshing Dashboard...","info");
+
+        setTimeout(()=>{
+
+            location.reload();
+
+        },1000);
+
+    }
+
+    if(e.ctrlKey && e.key.toLowerCase()==="e"){
+
+        e.preventDefault();
+
+        exportReport();
+
+    }
+
+});
+
+
+/*==================================================
+                ANNOUNCEMENT CLICK
+==================================================*/
+
+document.querySelectorAll(".announcement-card li").forEach(item=>{
+
+    item.style.cursor="pointer";
+
+    item.addEventListener("click",()=>{
+
+        showToast(
+
+            item.textContent.trim(),"info");
+
+    });
+
+});
+
+
+/*==================================================
+                DASHBOARD LOADED
+==================================================*/
+
+window.addEventListener("load",()=>{
+
+    setTimeout(()=>{
+
+        showToast(" Welcome to XTRAGRAD AI Admin Dashboard","success");
+
+    },600);
+
+});
+
+
+/*==================================================
+                FUTURE API EXAMPLE
+
+fetch("http://localhost:8000/api/admin/dashboard").then(response=>response.json()).then(data=>{
+
+    console.log(data);
+
+});
+*/
