@@ -1,0 +1,2169 @@
+/*==================================================
+        XTRAGRAD AI - STYLE.CSS (PART 1)
+==================================================*/
+
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+/*========================
+    RESET
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:#050816;
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:white;
+
+}
+
+li{
+
+    list-style:none;
+
+}
+
+img{
+
+    max-width:100%;
+
+}
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    outline:none;
+
+}.container{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+section{
+
+    padding:110px 0;
+
+}
+
+
+/*========================
+    SCROLL BAR
+=========================*/::-webkit-scrollbar{
+
+    width:10px;
+
+}::-webkit-scrollbar-track{
+
+    background:#050816;
+
+}::-webkit-scrollbar-thumb{
+
+    background:#5b5ffb;
+
+    border-radius:30px;
+
+}::-webkit-scrollbar-thumb:hover{
+
+    background:#7b61ff;
+
+}
+
+
+/*========================
+BACKGROUND
+=========================*/
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:700px;
+
+    height:700px;
+
+    background:radial-gradient(circle,#5B5FFB33,transparent);
+
+    top:-250px;
+
+    left:-200px;
+
+    z-index:-2;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:600px;
+
+    height:600px;
+
+    background:radial-gradient(circle,#00D4FF20,transparent);
+
+    bottom:-250px;
+
+    right:-180px;
+
+    z-index:-2;
+
+}
+
+
+/*========================
+SECTION TITLE
+=========================*/.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}.section-title span{
+
+    color:#00D4FF;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-weight:600;
+
+}.section-title h2{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:48px;
+
+    margin-top:15px;
+
+    margin-bottom:20px;
+
+}.section-title p{
+
+    width:700px;
+
+    max-width:100%;
+
+    margin:auto;
+
+    color:#a8b3cf;
+
+    line-height:1.8;
+
+}
+
+
+/*========================
+BUTTONS
+=========================*/.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:15px 34px;
+
+    background:linear-gradient(135deg,#5B5FFB,#7B61FF);
+
+    border-radius:12px;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.4s;
+
+    box-shadow:0 15px 40px rgba(91,95,251,.35);
+
+}.btn:hover{
+
+    transform:translateY(-6px);
+
+}.btn-outline{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:15px 34px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:12px;
+
+    transition:.4s;
+
+    background:rgba(255,255,255,.03);
+
+}.btn-outline:hover{
+
+    background:#00D4FF;
+
+    color:#050816;
+
+}
+
+
+/*========================
+HEADER
+=========================*/.header{
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    left:0;
+
+    z-index:999;
+
+    padding:18px 0;
+
+}.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    padding:18px 40px;
+
+}.logo h2{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:30px;
+
+}.logo span{
+
+    color:#00D4FF;
+
+}.nav-links{
+
+    display:flex;
+
+    gap:35px;
+
+}.nav-links a{
+
+    color:#d5ddf4;
+
+    transition:.3s;
+
+    position:relative;
+
+}.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:2px;
+
+    background:#00D4FF;
+
+    left:0;
+
+    bottom:-8px;
+
+    transition:.3s;
+
+}.nav-links a:hover::after{
+
+    width:100%;
+
+}.nav-links a:hover{
+
+    color:white;
+
+}.buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}.login-btn{
+
+    padding:14px 26px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}.login-btn:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+
+/*========================
+HERO
+=========================*/.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+}.hero-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}.tag{
+
+    display:inline-block;
+
+    padding:12px 24px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#00D4FF;
+
+    margin-bottom:30px;
+
+}.hero-left h1{
+
+    font-size:72px;
+
+    line-height:1.1;
+
+    font-family:'Poppins',sans-serif;
+
+    margin-bottom:30px;
+
+}.hero-left p{
+
+    font-size:18px;
+
+    color:#aab6d4;
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+
+}.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-bottom:50px;
+
+}.hero-stats{
+
+    display:flex;
+
+    gap:60px;
+
+}.hero-stats h2{
+
+    color:#00D4FF;
+
+    font-size:42px;
+
+}.hero-stats span{
+
+    color:#9aa7c4;
+
+}
+
+/*==================================================
+        XTRAGRAD AI - STYLE.CSS (PART 2)
+   Hero Dashboard + Trusted + Stats + Features
+==================================================*/
+
+
+/*========================
+HERO RIGHT
+=========================*/.hero-right{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}.dashboard{
+    width:500px;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+    animation:float 5s ease-in-out infinite;
+}.dashboard-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}.dashboard-header h3{
+    font-size:24px;
+    font-family:'Poppins',sans-serif;
+}.live{
+    color:#00ff88;
+    font-weight:600;
+}.score-card{
+    text-align:center;
+    background:linear-gradient(135deg,#5B5FFB,#7B61FF);
+    padding:30px;
+    border-radius:20px;
+    margin-bottom:30px;
+}.score-card h4{
+    font-size:18px;
+    margin-bottom:10px;
+}.score-card h1{
+    font-size:60px;
+}.progress-card{
+    margin-bottom:25px;
+}.row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+}.progress{
+    width:100%;
+    height:10px;
+    background:#1d2436;
+    border-radius:50px;
+    overflow:hidden;
+}.fill{
+    height:100%;
+    border-radius:50px;
+}.fill1{
+    width:96%;
+    background:#00D4FF;
+}.fill2{
+    width:87%;
+    background:#5B5FFB;
+}.fill3{
+    width:91%;
+    background:#00ff88;
+}.mini-cards{
+    margin-top:35px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}.mini-card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.06);
+    padding:20px;
+    text-align:center;
+    border-radius:15px;
+    transition:.4s;
+}.mini-card:hover{
+    transform:translateY(-10px);
+    background:#5B5FFB;
+}.mini-card i{
+    font-size:28px;
+    margin-bottom:15px;
+    color:#00D4FF;
+}.mini-card h4{
+    margin-bottom:8px;
+}.mini-card p{
+    color:#b8c3dd;
+    font-size:14px;
+}
+
+
+/*========================
+TRUSTED COMPANIES
+=========================*/.trusted{
+    padding:70px 0;
+}.trusted h3{
+    text-align:center;
+    color:#a8b3cf;
+    margin-bottom:40px;
+}.companies{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:25px;
+}.companies div{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:15px;
+    text-align:center;
+    padding:25px;
+    font-size:20px;
+    font-weight:600;
+    transition:.4s;
+}.companies div:hover{
+    background:#5B5FFB;
+    transform:translateY(-8px);
+}
+
+
+/*========================
+STATISTICS
+=========================*/.stats{
+    padding:100px 0;
+}.stats.container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}.stat-box{
+    background:rgba(255,255,255,.05);
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.4s;
+}.stat-box:hover{
+    transform:translateY(-12px);
+}.stat-box h1{
+    font-size:55px;
+    color:#00D4FF;
+    margin-bottom:10px;
+    font-family:'Poppins',sans-serif;
+}.stat-box p{
+    color:#b4bfd7;
+}
+
+
+/*========================
+FEATURES
+=========================*/.features{
+    padding:120px 0;
+}.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}.feature-card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    padding:40px;
+    transition:.4s;
+    position:relative;
+    overflow:hidden;
+}.feature-card:hover{
+    transform:translateY(-12px);
+    border-color:#5B5FFB;
+}.feature-card::before{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:radial-gradient(circle,#5B5FFB30,transparent);
+    top:-120px;
+    right:-120px;
+}.icon{
+    width:70px;
+    height:70px;
+    background:linear-gradient(135deg,#5B5FFB,#7B61FF);
+    border-radius:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:25px;
+}.icon i{
+    font-size:30px;
+}.feature-card h3{
+    font-size:26px;
+    margin-bottom:18px;
+    font-family:'Poppins',sans-serif;
+}.feature-card p{
+    color:#b4bfd7;
+    line-height:1.8;
+    margin-bottom:25px;
+}.feature-card a{
+    color:#00D4FF;
+    font-weight:600;
+}
+
+
+/*========================
+FLOAT ANIMATION
+=========================*/
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/*==================================================
+        XTRAGRAD AI - STYLE.CSS (PART 3)
+    HOW IT WORKS + AI MODULES + DASHBOARD PREVIEW
+==================================================*/
+
+
+/*========================
+HOW IT WORKS
+=========================*/.how-it-works{
+
+    padding:120px 0;
+
+}.steps{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}.step{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    position:relative;
+
+}.step:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#5B5FFB;
+
+}.number{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#5B5FFB,#7B61FF);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}.step h3{
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+    font-family:'Poppins',sans-serif;
+
+}.step p{
+
+    color:#b4bfd7;
+
+    line-height:1.8;
+
+}
+
+
+/*========================
+AI MODULES
+=========================*/.ai-modules{
+
+    padding:120px 0;
+
+}.modules-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}.module{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    text-align:center;
+
+    padding:50px 30px;
+
+    transition:.4s;
+
+}.module:hover{
+
+    transform:translateY(-10px);
+
+    background:#5B5FFB;
+
+}.module i{
+
+    font-size:55px;
+
+    margin-bottom:25px;
+
+    color:#00D4FF;
+
+}.module h3{
+
+    font-size:24px;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+
+/*========================
+DASHBOARD PREVIEW
+=========================*/.dashboard-preview{
+
+    padding:120px 0;
+
+}.dashboard-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+}.dashboard-box{
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:22px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:35px;
+
+    transition:.4s;
+
+}.dashboard-box:hover{
+
+    transform:translateY(-8px);
+
+}.dashboard-box h3{
+
+    margin-bottom:30px;
+
+    font-size:28px;
+
+    font-family:'Poppins',sans-serif;
+
+}.progress-item{
+
+    margin-bottom:30px;
+
+}.label{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:12px;
+
+}.progress-bar{
+
+    width:100%;
+
+    height:10px;
+
+    background:#1e293b;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}.bar{
+
+    height:100%;
+
+    border-radius:30px;
+
+}.resume{
+
+    width:96%;
+
+    background:#00D4FF;
+
+}.technical{
+
+    width:90%;
+
+    background:#5B5FFB;
+
+}.interview{
+
+    width:87%;
+
+    background:#00ff88;
+
+}.dashboard-box ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}.dashboard-box li{
+
+    background:#111827;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    color:#c9d3eb;
+
+    transition:.3s;
+
+}.dashboard-box li:hover{
+
+    background:#5B5FFB;
+
+}
+
+
+/*========================
+COMMON HOVER
+=========================*/.step,.module,.dashboard-box{
+
+    box-shadow:0 10px 40px rgba(0,0,0,.25);
+
+}
+
+/*==================================================
+        XTRAGRAD AI - STYLE.CSS (PART 4)
+     TESTIMONIALS + JOURNEY + PRICING
+==================================================*/
+
+
+/*========================
+TESTIMONIALS
+=========================*/.testimonials{
+
+    padding:120px 0;
+
+}.testimonial-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}.testimonial-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:40px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}.testimonial-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#5B5FFB;
+
+}.testimonial-card img{
+
+    width:110px;
+
+    height:110px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    margin-bottom:25px;
+
+    border:4px solid #5B5FFB;
+
+}.testimonial-card h3{
+
+    font-size:26px;
+
+    margin-bottom:8px;
+
+    font-family:'Poppins',sans-serif;
+
+}.testimonial-card span{
+
+    color:#00D4FF;
+
+    display:block;
+
+    margin-bottom:20px;
+
+}.testimonial-card p{
+
+    color:#b4bfd7;
+
+    line-height:1.8;
+
+}
+
+
+/*========================
+PLACEMENT JOURNEY
+=========================*/.journey{
+
+    padding:120px 0;
+
+}.timeline{
+
+    position:relative;
+
+    max-width:900px;
+
+    margin:auto;
+
+}.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:4px;
+
+    height:100%;
+
+    background:#5B5FFB;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}.timeline-item{
+
+    position:relative;
+
+    width:50%;
+
+    padding:20px 50px;
+
+}.timeline-item:nth-child(odd){
+
+    left:0;
+
+    text-align:right;
+
+}.timeline-item:nth-child(even){
+
+    left:50%;
+
+}.circle{
+
+    position:absolute;
+
+    width:24px;
+
+    height:24px;
+
+    border-radius:50%;
+
+    background:#00D4FF;
+
+    border:5px solid #5B5FFB;
+
+    top:30px;
+
+}.timeline-item:nth-child(odd).circle{
+
+    right:-12px;
+
+}.timeline-item:nth-child(even).circle{
+
+    left:-12px;
+
+}.content{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:30px;
+
+    transition:.4s;
+
+}.content:hover{
+
+    transform:scale(1.03);
+
+}.content h3{
+
+    margin-bottom:12px;
+
+    font-size:24px;
+
+    font-family:'Poppins',sans-serif;
+
+}.content p{
+
+    color:#b4bfd7;
+
+    line-height:1.8;
+
+}
+
+
+/*========================
+PRICING
+=========================*/.pricing{
+
+    padding:120px 0;
+
+}.pricing-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}.price-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    padding:45px;
+
+    position:relative;
+
+    transition:.4s;
+
+}.price-card:hover{
+
+    transform:translateY(-12px);
+
+}.popular{
+
+    border:2px solid #5B5FFB;
+
+    transform:scale(1.05);
+
+}.popular:hover{
+
+    transform:scale(1.08);
+
+}.popular-tag{
+
+    position:absolute;
+
+    top:-15px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#5B5FFB;
+
+    padding:8px 22px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}.price-card h3{
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+    font-family:'Poppins',sans-serif;
+
+}.price-card h1{
+
+    font-size:60px;
+
+    color:#00D4FF;
+
+    margin-bottom:10px;
+
+}.price-card p{
+
+    color:#b4bfd7;
+
+    margin-bottom:25px;
+
+}.price-card ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+}.price-card ul li{
+
+    color:#d8def0;
+
+}.price-card ul li i{
+
+    color:#00ff88;
+
+    margin-right:10px;
+
+}.price-card.btn{
+
+    width:100%;
+
+    text-align:center;
+
+    justify-content:center;
+
+}
+
+
+/*========================
+COMMON EFFECTS
+=========================*/.price-card,.testimonial-card,.content{
+
+    box-shadow:0 15px 45px rgba(0,0,0,.30);
+
+}
+
+/*==================================================
+        XTRAGRAD AI - STYLE.CSS (PART 5)
+            FAQ + CONTACT + FOOTER
+==================================================*/
+
+
+/*========================
+FAQ
+=========================*/.faq{
+
+    padding:120px 0;
+
+}.faq-container{
+
+    max-width:900px;
+
+    margin:auto;
+
+}.faq-item{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    margin-bottom:20px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+}.faq-item:hover{
+
+    border-color:#5B5FFB;
+
+}.faq-question{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:transparent;
+
+    color:#fff;
+
+    font-size:20px;
+
+    padding:28px;
+
+    cursor:pointer;
+
+}.faq-question i{
+
+    color:#00D4FF;
+
+    transition:.3s;
+
+}.faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height.5s ease;
+
+}.faq-answer p{
+
+    padding:0 28px 28px;
+
+    color:#b5bfd6;
+
+    line-height:1.8;
+
+}.faq-item.active.faq-answer{
+
+    max-height:250px;
+
+}.faq-item.active i{
+
+    transform:rotate(45deg);
+
+}
+
+
+/*========================
+CONTACT
+=========================*/.contact{
+
+    padding:120px 0;
+
+}.contact-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+}.contact-info{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:45px;
+
+}.contact-info h3{
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+    font-family:'Poppins',sans-serif;
+
+}.contact-info p{
+
+    color:#b5bfd6;
+
+    line-height:1.8;
+
+}.info{
+
+    margin-top:35px;
+
+}.info p{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:22px;
+
+    font-size:18px;
+
+}.info i{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#5B5FFB;
+
+    color:white;
+
+}.contact-form{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:45px;
+
+}.contact-form form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}.contact-form input,.contact-form textarea{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:#111827;
+
+    color:white;
+
+    font-size:16px;
+
+}.contact-form textarea{
+
+    resize:none;
+
+}.contact-form.btn{
+
+    width:220px;
+
+}
+
+
+/*========================
+FOOTER
+=========================*/
+
+footer{
+
+    padding:90px 0 30px;
+
+    background:#02040d;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1.5fr;
+
+    gap:50px;
+
+}.footer-grid h2{
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+    font-family:'Poppins',sans-serif;
+
+}.footer-grid h2 span{
+
+    color:#00D4FF;
+
+}.footer-grid h3{
+
+    margin-bottom:25px;
+
+    font-size:22px;
+
+}.footer-grid p{
+
+    color:#b5bfd6;
+
+    line-height:1.8;
+
+}.footer-grid ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}.footer-grid ul li a{
+
+    color:#b5bfd6;
+
+    transition:.3s;
+
+}.footer-grid ul li a:hover{
+
+    color:#00D4FF;
+
+    padding-left:8px;
+
+}.footer-grid form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}.footer-grid input{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#111827;
+
+    color:white;
+
+}.footer-grid.btn{
+
+    width:180px;
+
+}.social-icons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}.social-icons a{
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#111827;
+
+    transition:.4s;
+
+}.social-icons a:hover{
+
+    background:#5B5FFB;
+
+    transform:translateY(-6px);
+
+}.footer-bottom{
+
+    margin-top:70px;
+
+    padding-top:30px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    text-align:center;
+
+}.footer-bottom p{
+
+    color:#8b95ac;
+
+}
+
+
+/*========================
+GENERAL HOVER EFFECTS
+=========================*/.contact-info,.contact-form,.faq-item{
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+}.contact-info:hover,.contact-form:hover{
+
+    transform:translateY(-8px);
+
+    transition:.4s;
+
+}
+
+
+/*========================
+TEXT SELECTION
+=========================*/::selection{
+
+    background:#5B5FFB;
+
+    color:#fff;
+
+}
+/*==================================================
+        XTRAGRAD AI - STYLE.CSS (PART 6)
+      PREMIUM EFFECTS + ANIMATIONS + UTILITIES
+==================================================*/
+
+
+/*========================
+CARD GLOW EFFECT
+=========================*/.feature-card,.module,.step,.stat-box,.testimonial-card,.price-card,.dashboard-box{
+
+    position:relative;
+    overflow:hidden;
+
+}.feature-card::after,.module::after,.step::after,.stat-box::after,.testimonial-card::after,.price-card::after,.dashboard-box::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:radial-gradient(circle,
+    rgba(91,95,251,.35),transparent);
+
+    top:-90px;
+
+    right:-90px;
+
+    transition:.5s;
+
+}.feature-card:hover::after,.module:hover::after,.step:hover::after,.stat-box:hover::after,.testimonial-card:hover::after,.price-card:hover::after,.dashboard-box:hover::after{
+
+    transform:scale(1.4);
+
+}
+
+
+/*========================
+HOVER EFFECT
+=========================*/.feature-card:hover,.module:hover,.step:hover,.stat-box:hover,.testimonial-card:hover,.price-card:hover,.dashboard-box:hover{
+
+    box-shadow:
+    0 15px 50px rgba(91,95,251,.25),
+    0 0 30px rgba(0,212,255,.15);
+
+}
+
+
+/*========================
+BUTTON EFFECT
+=========================*/.btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:100%;
+
+    top:0;
+
+    left:0;
+
+    background:rgba(255,255,255,.18);
+
+    transition:.5s;
+
+}.btn:hover::before{
+
+    width:100%;
+
+}
+
+
+/*========================
+IMAGE EFFECT
+=========================*/
+
+img{
+
+    transition:.5s;
+
+}
+
+img:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+/*========================
+SOCIAL ICONS
+=========================*/.social-icons a{
+
+    transition:.4s;
+
+}.social-icons a:hover{
+
+    transform:translateY(-8px) rotate(360deg);
+
+}
+
+
+/*========================
+INPUT EFFECT
+=========================*/
+
+input:focus,
+textarea:focus{
+
+    border:1px solid #5B5FFB;
+
+    box-shadow:0 0 20px rgba(91,95,251,.3);
+
+}
+
+
+/*========================
+SCROLL ANIMATION
+=========================*/.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/*========================
+FLOATING BACKGROUND
+=========================*/
+
+body{
+
+    position:relative;
+
+}
+
+body::before{
+
+    animation:blob1 15s linear infinite;
+
+}
+
+body::after{
+
+    animation:blob2 18s linear infinite;
+
+}
+
+@keyframes blob1{
+
+    0%{
+
+        transform:translate(0,0);
+
+    }
+
+    50%{
+
+        transform:translate(120px,80px);
+
+    }
+
+    100%{
+
+        transform:translate(0,0);
+
+    }
+
+}
+
+@keyframes blob2{
+
+    0%{
+
+        transform:translate(0,0);
+
+    }
+
+    50%{
+
+        transform:translate(-120px,-80px);
+
+    }
+
+    100%{
+
+        transform:translate(0,0);
+
+    }
+
+}
+
+
+/*========================
+SMOOTH FADE
+=========================*/.fade-up{
+
+    animation:fadeUp 1s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*========================
+ROTATE ICON
+=========================*/.icon i,.module i{
+
+    transition:.4s;
+
+}.feature-card:hover.icon i,.module:hover i{
+
+    transform:rotate(12deg) scale(1.2);
+
+}
+
+
+/*========================
+TEXT GRADIENT
+=========================*/.gradient-text{
+
+    background:linear-gradient(
+    90deg,
+    #00D4FF,
+    #5B5FFB,
+    #7B61FF);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+
+/*========================
+LOADER
+=========================*/.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#050816;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}.loader::before{
+
+    content:"";
+
+    width:70px;
+
+    height:70px;
+
+    border:6px solid rgba(255,255,255,.2);
+
+    border-top:6px solid #00D4FF;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/*========================
+BACK TO TOP BUTTON
+=========================*/.top-btn{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#5B5FFB;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.4s;
+
+    z-index:999;
+
+}.top-btn.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}.top-btn:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 30px rgba(91,95,251,.4);
+
+}
+
+/*==================================================
+        XTRAGRAD AI - STYLE.CSS (PART 7)
+        FINAL POLISH + RESPONSIVE HELPERS
+==================================================*/
+
+
+/*========================
+SECTION SPACING
+=========================*/.hero,.features,.how-it-works,.ai-modules,.dashboard-preview,.testimonials,.journey,.pricing,.faq,.contact{
+    position:relative;
+    overflow:hidden;
+}
+
+
+/*========================
+GLASS EFFECT
+=========================*/.dashboard,.feature-card,.module,.step,.dashboard-box,.testimonial-card,.price-card,.contact-info,.contact-form,.faq-item{
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+}
+
+
+/*========================
+SHADOWS
+=========================*/.dashboard{
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.45),
+    0 0 40px rgba(91,95,251,.15);
+
+}.feature-card,.module,.step,.dashboard-box,.testimonial-card,.price-card{
+
+    box-shadow:
+    0 15px 45px rgba(0,0,0,.30);
+
+}
+
+
+/*========================
+SMOOTH TRANSITIONS
+=========================*/
+
+*{
+
+    transition:
+    background.35s,
+    color.35s,
+    border.35s,
+    transform.35s;
+
+}
+
+
+/*========================
+LINK EFFECT
+=========================*/
+
+a{
+
+    transition:.35s;
+
+}
+
+a:hover{
+
+    color:#00D4FF;
+
+}
+
+
+/*========================
+SELECTION
+=========================*/::selection{
+
+    background:#5B5FFB;
+
+    color:#fff;
+
+}
+
+
+/*========================
+PLACEHOLDER
+=========================*/
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#8793b2;
+
+}
+
+
+/*========================
+IMAGE RADIUS
+=========================*/
+
+img{
+
+    border-radius:15px;
+
+}
+
+
+/*========================
+GRADIENT LINE
+=========================*/.section-title::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:5px;
+
+    margin:20px auto 0;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+    90deg,
+    #5B5FFB,
+    #00D4FF);
+
+}
+
+
+/*========================
+HOVER SCALE
+=========================*/.feature-card:hover,.module:hover,.step:hover,.price-card:hover,.testimonial-card:hover,.dashboard-box:hover{
+
+    transform:translateY(-10px) scale(1.02);
+
+}
+
+
+/*========================
+TEXT COLORS
+=========================*/
+
+p{
+
+    color:#b6c0d8;
+
+}
+
+h1,h2,h3,h4{
+
+    color:#fff;
+
+}
+
+
+/*========================
+UTILITY CLASSES
+=========================*/.text-center{
+
+    text-align:center;
+
+}.mt-2{
+
+    margin-top:20px;
+
+}.mt-3{
+
+    margin-top:30px;
+
+}.mt-4{
+
+    margin-top:40px;
+
+}.mb-2{
+
+    margin-bottom:20px;
+
+}.mb-3{
+
+    margin-bottom:30px;
+
+}.mb-4{
+
+    margin-bottom:40px;
+
+}.py{
+
+    padding:120px 0;
+
+}
+
+
+/*========================
+END OF FILE
+=========================*/
