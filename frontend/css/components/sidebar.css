@@ -1,0 +1,165 @@
+/*=========================================
+            DASHBOARD SIDEBAR
+=========================================*/.dashboard-container{
+    display:flex;
+    min-height:100vh;
+    background:#08111f;
+}
+
+/*=========================================
+SIDEBAR
+=========================================*/.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:280px;
+
+    height:100vh;
+
+    background:linear-gradient(
+        180deg,
+        #161C36,
+        #0F1325
+    );
+
+    padding:30px 20px;
+
+    overflow-y:auto;
+
+    border-right:1px solid rgba(255,255,255,.08);
+
+}
+
+/*=========================================
+LOGO
+=========================================*/.logo{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}.logo h1{
+
+    color:#ffffff;
+
+    font-size:42px;
+
+    font-weight:700;
+
+}.logo span{
+
+    color:#00D4FF;
+
+}
+
+/*=========================================
+MENU
+=========================================*/.sidebar ul{
+
+    list-style:none;
+
+}.sidebar ul li{
+
+    margin-bottom:12px;
+
+}.sidebar ul li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px 18px;
+
+    text-decoration:none;
+
+    color:#D8DEF7;
+
+    border-radius:14px;
+
+    transition:.3s;
+
+    font-size:17px;
+
+}.sidebar ul li a:hover{
+
+    background:#5B5FFB;
+
+    color:#ffffff;
+
+}.sidebar ul li a.active{
+
+    background:linear-gradient(
+        135deg,
+        #5B5FFB,
+        #00D4FF
+    );
+
+    color:#ffffff;
+
+}.sidebar ul li a i{
+
+    width:25px;
+
+    text-align:center;
+
+    font-size:20px;
+
+}
+
+/*=========================================
+MAIN CONTENT
+=========================================*/.main-content{
+
+    margin-left:280px;
+
+    width:calc(100% - 280px);
+
+    padding:35px;
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){.sidebar{
+
+        width:90px;
+
+    }.sidebar.logo h1{
+
+        font-size:22px;
+
+    }.sidebar ul li a span{
+
+        display:none;
+
+    }.main-content{
+
+        margin-left:90px;
+
+        width:calc(100% - 90px);
+
+    }
+
+}
+
+@media(max-width:768px){.sidebar{
+
+        display:none;
+
+    }.main-content{
+
+        margin-left:0;
+
+        width:100%;
+
+    }
+
+}
