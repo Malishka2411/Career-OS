@@ -6,9 +6,57 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    /* ---- Auth Guard ---- */
+    const token = localStorage.getItem("access_token");
+    if (!token) {
+        window.location.href = "login.html";
+        return;
+    }
+
     initializeDashboard();
 
+    /* ---- Load backend stats ---- */
+    loadDashboardStats(token);
+
 });
+
+
+/*=========================================================
+            LOAD STATS FROM BACKEND
+=========================================================*/
+
+async function loadDashboardStats(token) {
+    try {
+        const resp = await fetch("http://localhost:8000/dashboard/stats", {
+            headers: { "Authorization": "Bearer " + token },
+        });
+        if (!resp.ok) {
+            if (resp.status === 401) {
+                localStorage.clear();
+                window.location.href = "login.html";
+            }
+            return;
+        }
+        const data = await resp.json();
+
+        const userName = (data.user && data.user.full_name) || localStorage.getItem("user_name") || "Student";
+        document.querySelectorAll(".user-name, .profile-name, .welcome-name, #userName").forEach(function(el) {
+            el.textContent = userName;
+        });
+
+        var stats = data.stats || {};
+        if (stats.resume_score > 0) {
+            animateValue("resumeScore", 0, Math.round(stats.resume_score), 2000, "%");
+        }
+        if (stats.placement_score > 0) {
+            animateValue("placementScore", 0, Math.round(stats.placement_score), 2200, "%");
+        }
+    } catch (e) {
+        console.warn("Could not fetch dashboard stats:", e.message);
+    }
+}
+
+
 
 
 /*=========================================================

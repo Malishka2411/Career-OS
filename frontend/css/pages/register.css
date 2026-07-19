@@ -3,9 +3,6 @@
             REGISTER PAGE
 =====================================================*/
 
-@import url('../variables.css');
-@import url('../typography.css');
-
 *{
     margin:0;
     padding:0;
@@ -245,6 +242,8 @@ REGISTER CARD
 
     box-shadow:0 20px 50px rgba(0,0,0,.35);
 
+    overflow:visible;
+
 }.register-card h2{
 
     font-size:34px;
@@ -284,6 +283,26 @@ FORM
 
     gap:10px;
 
+    position:relative;
+
+    z-index:1;
+
+}.input-group.select-field{
+
+    z-index:20;
+
+}.input-group.select-field:focus-within{
+
+    z-index:30;
+
+}.input-group.year-field{
+
+    margin-bottom:6px;
+
+}.input-group.password-field{
+
+    z-index:1;
+
 }.input-group label{
 
     font-size:15px;
@@ -317,6 +336,18 @@ INPUT BOX
 
     transition:.35s;
 
+}.input-box.select-box{
+
+    height:auto;
+
+    min-height:60px;
+
+    overflow:visible;
+
+    padding-top:8px;
+
+    padding-bottom:8px;
+
 }.input-box:hover{
 
     border-color:#5B5FFB;
@@ -327,11 +358,15 @@ INPUT BOX
 
     box-shadow:0 0 18px rgba(0,212,255,.25);
 
-}.input-box i{
+}.input-box i:not(.toggle-password){
 
     color:#00D4FF;
 
     font-size:18px;
+
+    pointer-events:none;
+
+    flex-shrink:0;
 
 }.input-box input,.input-box select{
 
@@ -348,6 +383,20 @@ INPUT BOX
     font-size:16px;
 
     font-family:'Poppins',sans-serif;
+
+}.input-box select{
+
+    width:100%;
+
+    cursor:pointer;
+
+    position:relative;
+
+    z-index:2;
+
+    appearance:auto;
+
+    -webkit-appearance:menulist;
 
 }.input-box input::placeholder{
 
