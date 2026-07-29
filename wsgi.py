@@ -65,7 +65,7 @@ _ensure_frontend()
 # ---------------------------------------------------------------------------
 # Import the FastAPI app from backend/main.py so uvicorn can find `wsgi:app`
 # ---------------------------------------------------------------------------
-from main import app  # noqa: E402, F401
+from backend.main import app  # noqa: E402, F401
 
 print()
 print("=" * 50)
