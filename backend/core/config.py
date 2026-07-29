@@ -28,6 +28,9 @@ class Settings(BaseSettings):
     # CORS
     CORS_ORIGINS: str = "http://localhost:5500,http://127.0.0.1:5500,http://localhost:3000,http://127.0.0.1:3000"
 
+    # Frontend URL (Netlify deployed URL — added to CORS automatically)
+    FRONTEND_URL: str = ""
+
     # AI Engine (internal service)
     AI_ENGINE_URL: str = "http://localhost:8001"
     AI_ENGINE_SECRET: str = ""

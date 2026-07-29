@@ -44,7 +44,7 @@ app = FastAPI(
 )
 
 # -------------------------------------------------------
-# CORS — allow frontend dev server and file:// origins
+# CORS — allow frontend dev server and deployed origins
 # -------------------------------------------------------
 cors_origins = settings.cors_origins_list
 # Always include localhost dev ports
@@ -53,6 +53,14 @@ for port in [5500, 5173, 3000, 8080]:
         origin = f"{host}:{port}"
         if origin not in cors_origins:
             cors_origins.append(origin)
+
+# Include Netlify frontend URL if set
+if settings.FRONTEND_URL and settings.FRONTEND_URL not in cors_origins:
+    cors_origins.append(settings.FRONTEND_URL)
+    # Also allow without trailing slash
+    clean = settings.FRONTEND_URL.rstrip("/")
+    if clean not in cors_origins:
+        cors_origins.append(clean)
 
 app.add_middleware(
     CORSMiddleware,

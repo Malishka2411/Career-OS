@@ -1,8 +1,34 @@
 /*=========================================================
             XTRAGRAD AI — API Configuration
+  Auto-detects environment:
+    • Local dev  → http://localhost:8000
+    • Production → Render backend URL
 =========================================================*/
 
-const API_BASE = "http://localhost:8000";
+/**
+ * Detect API base URL automatically.
+ * On Netlify (or any non-localhost host), use the Render backend.
+ * Locally, use http://localhost:8000.
+ *
+ * To override, set window.__API_BASE__ before this script loads,
+ * or change the RENDER_BACKEND_URL below after deploying to Render.
+ */
+const RENDER_BACKEND_URL = "https://ai-careeros.onrender.com";
+
+const API_BASE = (function () {
+    // Allow manual override
+    if (window.__API_BASE__) return window.__API_BASE__;
+    // Local development
+    if (
+        location.hostname === "localhost" ||
+        location.hostname === "127.0.0.1" ||
+        location.protocol === "file:"
+    ) {
+        return "http://localhost:8000";
+    }
+    // Production (Netlify / any deployed frontend)
+    return RENDER_BACKEND_URL;
+})();
 
 /**
  * Helper: get stored JWT token.

@@ -1,0 +1,3 @@
+# Netlify _redirects — serve all routes as static files
+# SPA-style fallback to index.html for unmatched routes
+/*    /index.html   200

@@ -1,0 +1,39 @@
+# ───────────────────────────────────────────────
+#  XTRAGRAD AI CareerOS — Netlify Configuration
+# ───────────────────────────────────────────────
+
+[build]
+  # The frontend folder is published as-is (plain HTML/CSS/JS, no build step)
+  publish = "frontend"
+  # No build command needed — static site
+  command = "echo 'Static site — no build needed'"
+
+# ── Headers ─────────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ── Redirects ───────────────────────────────────
+# Fallback: serve index.html for unknown paths (SPA-style)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

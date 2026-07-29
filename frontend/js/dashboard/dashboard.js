@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function loadDashboardStats(token) {
     try {
-        const resp = await fetch("http://localhost:8000/dashboard/stats", {
+        const resp = await fetch(`${API_BASE}/dashboard/stats`, {
             headers: { "Authorization": "Bearer " + token },
         });
         if (!resp.ok) {
