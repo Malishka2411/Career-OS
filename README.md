@@ -1,8 +1,8 @@
 # AI-CareerOS
-XTRAGRAD AI CareerOS is an AI-powered Career Operating System designed to transform how students learn, develop skills, prepare for placements, and get hired. The platform connects students, universities, recruiters, and enterprises, creating a continuous flow of data and insights that help every stakeholder make better decisions.
+AI CareerOS is an AI-powered Career Operating System designed to transform how students learn, develop skills, prepare for placements, and get hired. The platform connects students, universities, recruiters, and enterprises, creating a continuous flow of data and insights that help every stakeholder make better decisions.
 
 
-# 🚀 XTRAGRAD AI CareerOS
+# 🚀 AI CareerOS
 
 > **The Future of Learning, Careers, and Recruitment — Unified by Artificial Intelligence**
 
@@ -17,7 +17,7 @@ XTRAGRAD AI CareerOS is an AI-powered Career Operating System designed to transf
 
 # 🌍 Overview
 
-**XTRAGRAD AI CareerOS** is an AI-powered Career Operating System designed to transform how students learn, develop skills, prepare for placements, and get hired.
+** AI CareerOS** is an AI-powered Career Operating System designed to transform how students learn, develop skills, prepare for placements, and get hired.
 
 Instead of using multiple disconnected platforms for learning, coding, resume building, mock interviews, internships, and job applications, XTRAGRAD unifies the entire career journey into one intelligent AI ecosystem.
 
@@ -59,7 +59,7 @@ This fragmented journey leads to:
 
 # 🚀 Solution
 
-XTRAGRAD AI CareerOS creates a single AI-powered platform that accompanies learners throughout their entire professional journey.
+AI CareerOS creates a single AI-powered platform that accompanies learners throughout their entire professional journey.
 
 ```
 Discover Skills
@@ -603,7 +603,7 @@ Career Growth
 
 ---
 
-# 🌟 Why XTRAGRAD?
+# 🌟 Why Career OS?
 
 Unlike traditional platforms that focus on only one aspect of career development, XTRAGRAD integrates learning, coding, projects, portfolio creation, interview preparation, and recruitment into a single AI-powered ecosystem.
 
@@ -614,7 +614,7 @@ Every achievement becomes verified evidence of skill, enabling students to showc
 # 📌 Repository Structure
 
 ```
-XTRAGRAD-AI-CareerOS/
+Career-OS/
 
 │
 
@@ -669,7 +669,7 @@ This project is licensed under the **MIT License**.
 
 # 📬 Contact
 
-**Project Name:** XTRAGRAD AI CareerOS
+**Project Name:** CareerOS
 
 **Tagline**
 
