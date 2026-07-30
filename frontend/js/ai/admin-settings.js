@@ -451,7 +451,7 @@ exportBtn.addEventListener("click", () => {
     const a = document.createElement("a");
 
     a.href = url;
-    a.download = "XTRAGRAD_Settings.json";
+    a.download = "Career OS_Settings.json";
     a.click();
 
     URL.revokeObjectURL(url);
@@ -630,6 +630,6 @@ window.addEventListener("load", () => {
 
     showToast("Admin Settings Ready");
 
-    console.log("XTRAGRAD AI Admin Settings Loaded");
+    console.log("Career OS AI Admin Settings Loaded");
 
 });

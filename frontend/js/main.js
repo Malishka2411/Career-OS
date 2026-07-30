@@ -1,5 +1,5 @@
 /*=================================================
-            XTRAGRAD AI - MAIN.JS
+            Career OS AI - MAIN.JS
 =================================================*/
 
 
@@ -347,7 +347,7 @@ if (year) {
 }
 
 
-console.log(" XTRAGRAD AI Loaded Successfully");
+console.log(" Career OS AI Loaded Successfully");
 
 
 /*==========================

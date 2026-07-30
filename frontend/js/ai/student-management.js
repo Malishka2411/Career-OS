@@ -1,5 +1,5 @@
 /*=========================================
-        XTRAGRAD AI STUDENT MANAGEMENT
+        Career OS AI STUDENT MANAGEMENT
 ==========================================*/
 
 document.addEventListener("DOMContentLoaded", () => {

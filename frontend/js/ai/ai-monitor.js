@@ -584,7 +584,7 @@ window.addEventListener("load", () => {
 
 console.log(`
 ===========================================
-       XTRAGRAD AI MONITORING SYSTEM
+       Career OS AI MONITORING SYSTEM
 ===========================================
  Live Search
  Animated Counters

@@ -1,5 +1,5 @@
 /*==================================================
-            XTRAGRAD AI ADMIN DASHBOARD
+            Career OS AI ADMIN DASHBOARD
 ==================================================*/
 
 document.addEventListener("DOMContentLoaded", () => {

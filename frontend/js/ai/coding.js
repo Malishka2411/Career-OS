@@ -1,5 +1,5 @@
 /*=========================================================
-                XTRAGRAD AI
+                Career OS AI
              CODING PRACTICE MODULE
 =========================================================*/
 
@@ -148,7 +148,7 @@ function saveCode(){
 
     };
 
-    localStorage.setItem("xtragradCodingData",
+    localStorage.setItem("Career OS CodingData",
 
         JSON.stringify(codingData)
 
@@ -163,7 +163,7 @@ function saveCode(){
 
 function loadSavedCode(){
 
-    const data=localStorage.getItem("xtragradCodingData");
+    const data=localStorage.getItem("Career OSCodingData");
 
     if(!data) return;
 

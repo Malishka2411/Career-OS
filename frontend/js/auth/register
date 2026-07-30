@@ -1,5 +1,5 @@
 /*==================================================
-            XTRAGRAD AI ADMIN DASHBOARD
+            Career OS AI ADMIN DASHBOARD
 ==================================================*/
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -739,7 +739,7 @@ window.addEventListener("load",()=>{
 
     setTimeout(()=>{
 
-        showToast(" Welcome to XTRAGRAD AI Admin Dashboard","success");
+        showToast(" Welcome to Career OS AI Admin Dashboard","success");
 
     },600);
 

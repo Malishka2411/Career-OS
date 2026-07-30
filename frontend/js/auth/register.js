@@ -1,5 +1,5 @@
 /*=========================================================
-            XTRAGRAD AI — REGISTER.JS
+            Career OS AI — REGISTER.JS
       Connected to FastAPI Backend (port 8000)
 =========================================================*/
 
@@ -210,4 +210,4 @@ function loader() {
 }
 
 
-console.log("✅ XTRAGRAD AI Register Module Loaded");
+console.log("✅ Career OS AI Register Module Loaded");

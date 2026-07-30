@@ -1,5 +1,5 @@
 /*=========================================================
-                XTRAGRAD AI
+                Career OS AI
             COMPANIES MANAGEMENT
 =========================================================*/
 
@@ -878,7 +878,7 @@ window.addEventListener("load", () => {
 
 console.log(`
 ==========================================
-      XTRAGRAD AI - Companies Module
+      Career OS AI - Companies Module
 ==========================================
  Live Search
  Filters

@@ -1,5 +1,5 @@
 /*==================================================
-            XTRAGRAD AI ROLE LOGIN
+            Career OS AI ROLE LOGIN
 ==================================================*/
 
 document.addEventListener("DOMContentLoaded", () => {

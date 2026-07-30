@@ -1,5 +1,5 @@
 /*====================================================
-                XTRAGRAD AI SETTINGS
+                Career OS AI SETTINGS
 ====================================================*/
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -476,7 +476,7 @@ function exportData(){
 
     a.href=url;
 
-    a.download="xtragrad_settings.json";
+    a.download="Career OS_settings.json";
 
     a.click();
 
@@ -736,7 +736,7 @@ window.addEventListener("load",()=>{
 
     setTimeout(()=>{
 
-        showToast(" Welcome to XTRAGRAD AI Settings","success");
+        showToast(" Welcome to Career OS AI Settings","success");
 
     },600);
 

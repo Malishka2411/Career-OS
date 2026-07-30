@@ -1,5 +1,5 @@
 /*=========================================================
-                XTRAGRAD AI
+                Career OS AI
                 DASHBOARD.JS
                 PART 1
 =========================================================*/
@@ -719,7 +719,7 @@ if(logout){
 
 setTimeout(()=>{
 
-    showToast("Welcome to XTRAGRAD AI ");
+    showToast("Welcome to Career OS AI ");
 
 },1200);
 
@@ -728,4 +728,4 @@ setTimeout(()=>{
                 CONSOLE
 =========================================================*/
 
-console.log(" XTRAGRAD AI Dashboard Loaded Successfully");
+console.log(" Career OS AI Dashboard Loaded Successfully");

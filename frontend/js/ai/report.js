@@ -1,5 +1,5 @@
 /*=========================================================
-                XTRAGRAD AI
+                Career OS AI
               REPORTS MANAGEMENT
 =========================================================*/
 
@@ -775,7 +775,7 @@ window.addEventListener("load", () => {
 
 console.log(`
 ==========================================
-        XTRAGRAD AI REPORTS MODULE
+        Career OS AI REPORTS MODULE
 ==========================================
  Live Search
  Advanced Filters

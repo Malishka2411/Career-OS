@@ -1,5 +1,5 @@
 /*=========================================================
-            XTRAGRAD AI — API Configuration
+            Career OS AI — API Configuration
   Auto-detects environment:
     • Local dev  → http://localhost:8000
     • Production → Render backend URL
@@ -81,4 +81,4 @@ function logout() {
     window.location.href = "login.html";
 }
 
-console.log("✅ XTRAGRAD AI API Config Loaded — Backend:", API_BASE);
+console.log("✅ Career OS AI API Config Loaded — Backend:", API_BASE);
