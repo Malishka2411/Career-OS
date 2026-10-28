@@ -1,4 +1,4 @@
-# AI Engine — XTRAGRAD AI CareerOS
+# AI Engine —  AI CareerOS
 
 This folder contains all AI Team code: models, generative pipelines, and
 FastAPI services that power the platform's intelligence layer.
