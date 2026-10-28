@@ -26,7 +26,7 @@ from technical_assessment.router import router as technical_assessment_router
 logger = get_logger(__name__)
 
 app = FastAPI(
-    title="XTRAGRAD AI CareerOS — AI Engine",
+    title=" AI CareerOS — AI Engine",
     description="Intelligence layer: skill assessment, generative pipelines, "
                  "assessment engine, interview simulation, digital twin, "
                  "placement readiness, and recruiter agent.",
