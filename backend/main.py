@@ -1,5 +1,5 @@
 """
-FastAPI Backend — XTRAGRAD AI CareerOS
+FastAPI Backend —  AI CareerOS
 Entry point: uvicorn main:app --reload --port 8000
 """
 from contextlib import asynccontextmanager
@@ -35,7 +35,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="XTRAGRAD AI CareerOS — Backend API",
+    title=" AI CareerOS — Backend API",
     description="FastAPI backend with Supabase PostgreSQL and Groq AI integration",
     version="1.0.0",
     docs_url="/docs",
